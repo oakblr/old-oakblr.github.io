@@ -25,6 +25,16 @@
             box-shadow: none!important;
         }
     </style>
+    <script type = "text/javascript">
+        function onhover(elem)
+        {
+            elem.className = "collapsible-header center-align blue-grey darken-2";
+        }
+        function onnothover(elem)
+        {
+            elem.className = "collapsible-header center-align blue-grey darken-4";
+        }
+    </script>
 
 </head>
 
@@ -144,22 +154,22 @@
                 <h5 class = "flow-text center-align">General themes</h5>
                 <ul class="collapsible popout" data-collapsible="accordion">
                     <li>
-                        <div class="collapsible-header center-align blue-grey darken-4"><i class="material-icons">filter_drama</i>Internet of things</div>
+                        <div class="collapsible-header center-align blue-grey darken-4" onmouseover = "onhover(this);" onmouseout = "onnothover(this);"><i class="material-icons">filter_drama</i>Internet of things</div>
                         <div class="collapsible-body blue-grey darken-4"><span>Lorem ipsum dolor sit amet.</span></div>
                     </li>
                     <li>
-                        <div class="collapsible-header center-align blue-grey darken-4"><i class="material-icons">book</i>Education Innovation</div>
+                        <div class="collapsible-header center-align blue-grey darken-4" onmouseover = "onhover(this);" onmouseout = "onnothover(this);"><i class="material-icons">book</i>Education Innovation</div>
                         <div class="collapsible-body blue-grey darken-4"><span>Lorem ipsum dolor sit amet.</span></div>
                     </li>
                     <li>
-                        <div class="collapsible-header center-align blue-grey darken-4"><i class="material-icons">nature_people</i>Environment and Sustainability</div>
+                        <div class="collapsible-header center-align blue-grey darken-4" onmouseover = "onhover(this);" onmouseout = "onnothover(this);"><i class="material-icons">nature_people</i>Environment and Sustainability</div>
                         <div class="collapsible-body blue-grey darken-4"><span>Lorem ipsum dolor sit amet.</span></div>
                     </li>
                 </ul>
                 <h5 class = "flow-text center-align">Sponsor themes</h5>
                  <ul class="collapsible popout" data-collapsible="accordion">
                     <li>
-                        <div class="collapsible-header center-align blue-grey darken-4"><i class="material-icons">filter_drama</i>.TECH website innovation</div>
+                        <div class="collapsible-header center-align blue-grey darken-4" onmouseover = "onhover(this);" onmouseout = "onnothover(this);"><i class="material-icons">filter_drama</i>.TECH website innovation</div>
                         <div class="collapsible-body blue-grey darken-4">
                             <div class = "row">
                                 <div class = "col s6">
@@ -215,7 +225,7 @@
                     <p class="flow-text">All participants will receive goodies for their participation</p>
                     <ul class="collapsible popout" data-collapsible="accordion">
                         <li>
-                            <div class="collapsible-header blue-grey darken-4">
+                            <div class="collapsible-header blue-grey darken-4" onmouseover = "onhover(this);" onmouseout = "onnothover(this);">
                                 <i class="material-icons">computer</i>Certification Courses
                             </div>
                             <div class="collapsible-body blue-grey darken-4">
@@ -228,7 +238,7 @@
                             </div>
                         </li>
                         <li>
-                            <div class="collapsible-header blue-grey darken-4">
+                            <div class="collapsible-header blue-grey darken-4" onmouseover = "onhover(this);" onmouseout = "onnothover(this);">
                                 <i class="material-icons">domain</i>Free domain names
                             </div>
                             <div class="collapsible-body blue-grey darken-4">
@@ -242,7 +252,7 @@
                             </div>
                         </li>
                         <li>
-                            <div class="collapsible-header blue-grey darken-4">
+                            <div class="collapsible-header blue-grey darken-4" onmouseover = "onhover(this);" onmouseout = "onnothover(this);">
                                 <i class="material-icons">insert_emoticon</i>T-shirts and stickers
                             </div>
                             <div class="collapsible-body blue-grey darken-4">

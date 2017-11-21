@@ -17,6 +17,7 @@
         body {
             color: #71DDC5;
         }
+
         .collapsible-header,
         .collapsible-body,
         .collapsible,
@@ -24,25 +25,42 @@
             border: 0!important;
             box-shadow: none!important;
         }
+
+        #clockdiv {
+            font-family: sans-serif;
+            color: #71DDC5;
+            display: inline-block;
+            font-weight: 100;
+            text-align: center;
+            font-size: 50px;
+        }
+
+        #clockdiv>div {
+            padding: 10px;
+            border-radius: 3px;
+            display: inline-block;
+        }
+
+        #clockdiv div>span {
+            padding: 15px;
+            border-radius: 3px;
+            background: #263238;
+            display: inline-block;
+        }
+
+        .smalltext {
+            padding-top: 5px;
+            font-size: 16px;
+        }
     </style>
-    <script type = "text/javascript">
-        function onhover(elem)
-        {
-            elem.className = "collapsible-header center-align blue-grey darken-2";
-        }
-        function onnothover(elem)
-        {
-            elem.className = "collapsible-header center-align blue-grey darken-4";
-        }
-    </script>
 
 </head>
 
 <body style="background: url('images/background.jpg') no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;">
+                 -webkit-background-size: cover;
+                 -moz-background-size: cover;
+                 -o-background-size: cover;
+                 background-size: cover;">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109731761-1"></script>
     <script>
@@ -60,12 +78,13 @@
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <nav class="transparent z-depth-0">
         <div class="nav-wrapper">
-            <a href="index.html" class="brand-logo left"><img class = "responsive-img" width = 155px src = "images/oakridge-logo.png"/>
+            <a href="index.html" class="brand-logo left"><img class = "responsive-img" width = 155px src = "images/oakridge-logo.png"/></a>
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="#theme" class="waves-effect hoverable large right ">Themes</a></li>
                 <li><a href="#prizes" class="waves-effect hoverable large right ">Prizes</a></li>
                 <li><a href="#sponsor" class="waves-effect hoverable large right">Sponsor</a></li>
+                <li><a href="#faq" class="waves-effect hoverable large right">FAQ</a></li>
                 <li><a class="typeform-share link" href="https://oakridgecodefest.typeform.com/to/YLU5qH" data-mode="drawer_right" style="color:#ffffff;font-size:20px;" data-hide-headers=true data-hide-footer=true target="_blank">Register Now </a>
                     <script>
                         (function() {
@@ -91,6 +110,7 @@
                     <li><a href="#theme" class="waves-effect large right ">Themes</a></li>
                     <li><a href="#prizes" class="waves-effect large">Prizes</a></li>
                     <li><a href="#sponsor" class="waves-effect large">Sponsor</a></li>
+                    <li><a href="#faq" class="waves-effect hoverable large right">FAQ</a></li>
                     <li><a class="typeform-share link" href="https://oakridgecodefest.typeform.com/to/YLU5qH" data-mode="drawer_right" style="color:#ffffff;font-size:20px;" data-hide-headers=true data-hide-footer=true target="_blank">Register Now </a>
                         <script>
                             (function() {
@@ -111,13 +131,42 @@
                         </script>
                     </li>
                 </ul>
+            </ul>
         </div>
     </nav>
     <div class="parallax-container">
-        <div class="parallax"><img src="images/banner.png" alt="images/bgbackup.jpg"></div>
+        <div class="row">
+            <div class="col s12">
+                <div class="parallax"><img src="images/banner.jpg"></div>
+            </div>
+        </div>
     </div>
     <div class="container">
         <section id="intro">
+            <div class="row">
+            </div>
+            <div class="row center-align">
+                <div class="col s12">
+                    <div id="clockdiv">
+                        <div>
+                            <span class="days"></span>
+                            <div class="smalltext">Days</div>
+                        </div>
+                        <div>
+                            <span class="hours"></span>
+                            <div class="smalltext">Hours</div>
+                        </div>
+                        <div>
+                            <span class="minutes"></span>
+                            <div class="smalltext">Minutes</div>
+                        </div>
+                        <div>
+                            <span class="seconds"></span>
+                            <div class="smalltext">Seconds</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="row valign-wrapper">
                 <div class="col s12 m4">
                     <div class="icon-block">
@@ -150,37 +199,43 @@
         </section>
         <div class="divider white"></div>
         <section id="theme">
-           <h3 class="center-align">Themes</h3>
-                <h5 class = "flow-text center-align">General themes</h5>
-                <ul class="collapsible popout" data-collapsible="accordion">
-                    <li>
-                        <div class="collapsible-header center-align blue-grey darken-4" onmouseover = "onhover(this);" onmouseout = "onnothover(this);"><i class="material-icons">filter_drama</i>Internet of things</div>
-                        <div class="collapsible-body blue-grey darken-4"><span>Lorem ipsum dolor sit amet.</span></div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header center-align blue-grey darken-4" onmouseover = "onhover(this);" onmouseout = "onnothover(this);"><i class="material-icons">book</i>Education Innovation</div>
-                        <div class="collapsible-body blue-grey darken-4"><span>Lorem ipsum dolor sit amet.</span></div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header center-align blue-grey darken-4" onmouseover = "onhover(this);" onmouseout = "onnothover(this);"><i class="material-icons">nature_people</i>Environment and Sustainability</div>
-                        <div class="collapsible-body blue-grey darken-4"><span>Lorem ipsum dolor sit amet.</span></div>
-                    </li>
-                </ul>
-                <h5 class = "flow-text center-align">Sponsor themes</h5>
-                 <ul class="collapsible popout" data-collapsible="accordion">
-                    <li>
-                        <div class="collapsible-header center-align blue-grey darken-4" onmouseover = "onhover(this);" onmouseout = "onnothover(this);"><i class="material-icons">filter_drama</i>.TECH website innovation</div>
-                        <div class="collapsible-body blue-grey darken-4">
-                            <div class = "row">
-                                <div class = "col s6">
-                                    <span>Sponsored by dotTech domains, teams that host their website and/or app on the .tech domain
-                                    are eligible for this theme and will win special prizes.</span>
-                                </div>
-                                <div class = "col s3 offset"><a href="http://get.tech"><img class="responsive-img" src="images/sponsors/dotTech.png"></a></div>
+            <h3 class="center-align">Themes</h3>
+            <h5 class="flow-text center-align">General themes</h5>
+            <ul class="collapsible popout" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header center-align blue-grey darken-4" onmouseover="onhover(this);" onmouseout="onnothover(this);"><i class="material-icons">filter_drama</i>Internet of things</div>
+                    <div class="collapsible-body blue-grey darken-4"><span>IOT is one of the most progressive and ground breaking fields in our current time, making this an excellent theme to tackle. 
+                            We would like for participants to use physical devices on a network to
+                            innovate in fields such as but not limited to: home automation, wearables, smart vehicles, etc.</span></div>
+                </li>
+                <li>
+                    <div class="collapsible-header center-align blue-grey darken-4" onmouseover="onhover(this);" onmouseout="onnothover(this);"><i class="material-icons">book</i>Education Innovation</div>
+                    <div class="collapsible-body blue-grey darken-4"><span>Education as a theme creates a collaborative platform for students, designers, developers, and schools to innovate. 
+                            Our focus is on building solutions for today’s education related problems and implementing creative ideas and solutions in the form of prototypes through a multidisciplinary approach.</span></div>
+                </li>
+                <li>
+                    <div class="collapsible-header center-align blue-grey darken-4" onmouseover="onhover(this);" onmouseout="onnothover(this);"><i class="material-icons">nature_people</i>Environment and Sustainability</div>
+                    <div class="collapsible-body blue-grey darken-4"><span>Sustainability and the environment are great concerns that need to be addressed. 
+                            Participants are expected to come up with ideas to solve these problems, either by improving existing technologies or coming up new ones by using the skills and tools that they have at their disposal. 
+                            Topics of interest include the pollution of affected lakes, long periods of gridlocked traffic jams and smog problems in Delhi. 
+                            This isn’t a extensive list, but instead aims to provide some ideas for reference.</span></div>
+                </li>
+            </ul>
+            <h5 class="flow-text center-align">Sponsor themes</h5>
+            <ul class="collapsible popout" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header center-align blue-grey darken-4" onmouseover="onhover(this);" onmouseout="onnothover(this);"><i class="material-icons">filter_drama</i>.TECH website innovation</div>
+                    <div class="collapsible-body blue-grey darken-4">
+                        <div class="row">
+                            <div class="col s6">
+                                <span>Sponsored by dotTech domains, teams that host their website and/or app on the .tech domain
+                                        are eligible for this theme and will win special prizes.</span>
                             </div>
+                            <div class="col s3 offset"><a href="http://get.tech"><img class="responsive-img" src="images/sponsors/dotTech.png"></a></div>
                         </div>
-                    </li>
-                </ul>
+                    </div>
+                </li>
+            </ul>
         </section>
     </div>
     <div class="parallax-container">
@@ -193,11 +248,11 @@
             </div>
             <div class="row">
                 <div class="col s8 offset-s2">
-                     <h4 class = "center-align">General Prizes</h4>
+                    <h4 class="center-align">General Prizes</h4>
                     <div id="fp" class="card-panel blue-grey darken-2 pulse center-align hoverable">
                         <span>
-                        <h4> <i class="material-icons">looks_one</i>First Place</h4>
-                        <span class="flow-text">₹30,000 Cash Prize</span>
+                                <h4> <i class="material-icons">looks_one</i>First Place</h4>
+                                <span class="flow-text">₹30,000 Cash Prize</span>
                         </span>
                     </div>
                 </div>
@@ -206,16 +261,16 @@
                 <div class="col s6">
                     <div class="card-panel hoverable blue-grey darken-2 center-align ">
                         <span>
-                        <h4> <i class="material-icons">looks_two</i>Second Place</h4>
-                        <span class="flow-text">₹15,000 Cash Prize</span>
+                                <h4> <i class="material-icons">looks_two</i>Second Place</h4>
+                                <span class="flow-text">₹15,000 Cash Prize</span>
                         </span>
                     </div>
                 </div>
                 <div class="col s6">
                     <div class="card-panel hoverable blue-grey darken-2 center-align">
                         <span>
-                        <h4> <i class="material-icons">looks_3</i>Third Place</h4>
-                        <span class="flow-text">₹5,000 Cash Prize</span>
+                                <h4> <i class="material-icons">looks_3</i>Third Place</h4>
+                                <span class="flow-text">₹5,000 Cash Prize</span>
                         </span>
                     </div>
                 </div>
@@ -225,7 +280,7 @@
                     <p class="flow-text">All participants will receive goodies for their participation</p>
                     <ul class="collapsible popout" data-collapsible="accordion">
                         <li>
-                            <div class="collapsible-header blue-grey darken-4" onmouseover = "onhover(this);" onmouseout = "onnothover(this);">
+                            <div class="collapsible-header blue-grey darken-4" onmouseover="onhover(this);" onmouseout="onnothover(this);">
                                 <i class="material-icons">computer</i>Certification Courses
                             </div>
                             <div class="collapsible-body blue-grey darken-4">
@@ -238,21 +293,20 @@
                             </div>
                         </li>
                         <li>
-                            <div class="collapsible-header blue-grey darken-4" onmouseover = "onhover(this);" onmouseout = "onnothover(this);">
+                            <div class="collapsible-header blue-grey darken-4" onmouseover="onhover(this);" onmouseout="onnothover(this);">
                                 <i class="material-icons">domain</i>Free domain names
                             </div>
                             <div class="collapsible-body blue-grey darken-4">
                                 <div class="row">
                                     <div class="col s6">
-                                        <p>Rare and Unique domain names valid for three years free for all participants.
+                                        <p>Rare and Unique domain names valid for three years free for all participants. </p>
                                     </div>
                                     <div class="col s3"><a href="http://get.tech/"><img class="responsive-img" src="images/sponsors/dotTech.png"></a></div>
-                                    </p>
                                 </div>
                             </div>
                         </li>
                         <li>
-                            <div class="collapsible-header blue-grey darken-4" onmouseover = "onhover(this);" onmouseout = "onnothover(this);">
+                            <div class="collapsible-header blue-grey darken-4" onmouseover="onhover(this);" onmouseout="onnothover(this);">
                                 <i class="material-icons">insert_emoticon</i>T-shirts and stickers
                             </div>
                             <div class="collapsible-body blue-grey darken-4">
@@ -264,14 +318,81 @@
                     </ul>
 
                 </div>
+            </div>
         </section>
-        </div>
     </div>
     <div class="parallax-container">
         <div class="parallax"><img src="images/servers_room-wallpaper-2048x1152.jpg" alt="images/bgbackup.jpg"></div>
     </div>
     <section class="black">
         <div class="container">
+            <div class="row"></div>
+            <section id="faq">
+                <div class="card blue-grey darken-4">
+                    <div class="card-content">
+                        <h3 class="center-align">FAQ</h3>
+                    </div>
+                    <div class="card-tabs blue-grey darken-4">
+                        <ul class="tabs tabs-fixed-width">
+                            <li class="tab blue-grey darken-3"><a class="active" href="#questions1">1</a></li>
+                            <li class="tab blue-grey darken-3"><a href="#questions2">2</a></li>
+                            <li class="tab blue-grey darken-3"><a href="#questions3">3</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-content blue-grey darken-4">
+                        <div id="questions2" class="">
+                            <ul class="collapsible blue-grey darken-4" data-collapsible="accordion">
+                                <li>
+                                    <div class="collapsible-header blue-grey darken-4"><i class="material-icons">filter_drama</i>Do we need to have the entire idea fully working?</div>
+                                    <div class="collapsible-body blue-grey darken-2 white-text"><span>The entire idea need not be fully implemented however, the submission should be functional so that it can be reviewed by the judges.</span></div>
+                                </li>
+                                <li>
+                                    <div class="collapsible-header blue-grey darken-4"><i class="material-icons">place</i>Will I be provived Food?</div>
+                                    <div class="collapsible-body blue-grey darken-2 white-text"><span>Yes, food and beverages will be provived at the event at no extra cost.</span></div>
+                                </li>
+                                <li>
+                                    <div class="collapsible-header blue-grey darken-4"><i class="material-icons">whatshot</i>Do I have to bring my laptop?</div>
+                                    <div class="collapsible-body blue-grey darken-2 white-text"><span>Yes, you are expected to bring you laptop and charger along with any softwares or dependencies you will be needing.</span></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="questions3" class="blue-grey darken-4">
+
+                            <ul class="collapsible blue-grey darken-4" data-collapsible="accordion">
+                                <li>
+                                    <div class="collapsible-header blue-grey darken-4"><i class="material-icons">filter_drama</i>Do I have to arrange for internet?</div>
+                                    <div class="collapsible-body blue-grey darken-2 white-text"><span>Internet will be provided at the event, but we recommend you carry a dongle for faster internet.</span></div>
+                                </li>
+                                <li>
+                                    <div class="collapsible-header blue-grey darken-4"><i class="material-icons">place</i>Do I have to stay the night?</div>
+                                    <div class="collapsible-body blue-grey darken-2 white-text"><span>We recommend you stay the night giving you more time to work on your project.We will not force you to stay the night, if you choose to stay there will be food, beverages and bean bags provided.</span></div>
+                                </li>
+                                <li>
+                                    <div class="collapsible-header blue-grey darken-4"><i class="material-icons">whatshot</i>Who Own's the IP of the solutions?</div>
+                                    <div class="collapsible-body blue-grey darken-2 white-text"><span>The developer/developers of the web/mobile application will have all rights and own the IP of the product. However, all code needs to be in public domain (open source) so that it can be evaluated by the judges.</span></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="questions1" class="blue-grey darken-4">
+                            <ul class="collapsible blue-grey darken-4" data-collapsible="accordion">
+                                <li>
+                                    <div class="collapsible-header blue-grey darken-4"><i class="material-icons">filter_drama</i>How can participate in this event?</div>
+                                    <div class="collapsible-body blue-grey darken-2 white-text"><span>Anyone in School or recently graduated and has interest in computer science can participate.</span></div>
+                                </li>
+                                <li>
+                                    <div class="collapsible-header blue-grey darken-4"><i class="material-icons">place</i>What languages/softwares can I use?</div>
+                                    <div class="collapsible-body blue-grey darken-2 white-text"><span>Any language, technology stack, or library can be used to create your solutions, except MIT App Inventor.</span></div>
+                                </li>
+                                <li>
+                                    <div class="collapsible-header blue-grey darken-4"><i class="material-icons">filter_drama</i>Do you need to pay for this event?</div>
+                                    <div class="collapsible-body blue-grey darken-2 white-text"><span>Yes, there is a ₹300 registration fee per team. This fee is donated to charity</span></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="divider white"></div>
             <div class="row"></div>
             <section id="venue">
                 <div class="row">
@@ -285,22 +406,25 @@
                     </div>
                 </div>
             </section>
+
             <div class="divider white"></div>
             <section id="sponsor">
                 <div class="row">
                     <div class="col s12">
-                        <h3 class="center-align">Event Sponsors</h1>
+                        <h3 class="center-align">Event Sponsors</h3>
                     </div>
                 </div>
                 <div class="row valign-wrapper">
-                    <div class="col s4 offset-s4"><a href="https://www.hackerearth.com/"><img class="responsive-img"  src="images/sponsors/HElogo.png"></a></div>
+                    <div class="col s4 offset-s4">
+                        <a href="https://www.hackerearth.com/"><img class="responsive-img"  src="images/sponsors/HElogo.png"></a>
+                    </div>
                 </div>
                 <div class="row valign-wrapper">
                     <div class="col s4">
-                      <a href="http://get.tech"><img class="responsive-img" src="images/sponsors/dotTech.png"></a>  
+                        <a href="http://get.tech"><img class="responsive-img" src="images/sponsors/dotTech.png"></a>
                     </div>
                     <div class="col s3">
-                     <a href="https://watchlive.school/school/login"><img class="responsive-img" src="images/sponsors/watchlive.png"></a>   
+                        <a href="https://watchlive.school/school/login"><img class="responsive-img" src="images/sponsors/watchlive.png"></a>
                     </div>
                     <div class="col s4 offset-s1">
                         <a href="http://hackveda.in"><img class="responsive-img" src="images/sponsors/hackveda.png"></a>
@@ -308,57 +432,35 @@
                 </div>
             </section>
         </div>
-       
-        <footer class="page-footer grey darken-4">
+    </section>
+    <footer class="page-footer grey darken-4">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12 ">
+                    <h5 class="white-text">Contact Us</h5>
+                    <p class="grey-text text-lighten-4">Email us at <a href="mailto:oakcodefest@gmail.com">oakcodefest@gmail.com</a></p>
+                    <p class="grey-text text-lighten-4">Call us at <a href="tel:9148723368">9148723368</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
             <div class="container">
                 <div class="row">
-                    <div class="col l6 s12 ">
-                        <h5 class="white-text">Contact Us</h5>
-                        <p class="grey-text text-lighten-4">Email us at <a href="mailto:oakcodefest@gmail.com">oakcodefest@gmail.com</a></p>
-                        <p class="grey-text text-lighten-4">Call us at <a href="tel:9148723368">9148723368</a></p>
+                    &copy 2017 Oakridge Codefest
+                    <br>
+                    <a href="terms.html">Terms and conditions</a>
+                    <div class="col s4 offset-s8">
+                        <> by <a href="">BK-Modding</a>, <a href="#"> HyperCosmac</a>,
+                            <a href="#"> CryogenicPlanet</a>,
+                            <a href="#"> Nexus</a>, and
+                            <a href="#"> Gaurang</a>
                     </div>
                 </div>
             </div>
-            <div class="footer-copyright">
-                <div class="container">
-                    <div class="row">
-                        &copy 2017 Oakridge Codefest
-                        <div class="col s4 offset-s8">
-                            <> by <a href="">BK-Modding</a>, <a href="#"> HyperCosmac</a>,
-                                <a href="#"> CryogenicPlanet</a>,
-                                <a href="#"> Nexus</a>, and
-                                <a href="#"> Gaurang</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <script type="text/javascript">
-            $(document).ready(function() {
-                $('.parallax').parallax();
-                $('.collapsible').collapsible();
-                $(".button-collapse").sideNav();
-                $('a[href^="#"]').on('click', function(e) {
-                    e.preventDefault();
-
-                    var target = this.hash;
-                    var $target = $(target);
-
-                    $('html, body').stop().animate({
-                        'scrollTop': $target.offset().top
-                    }, 900, 'swing', function() {
-                        window.location.hash = target;
-                    });
-                });
-            });
-            let timerId = setTimeout(function tick() {
-                if (document.getElementById("fp").className == "card-panel blue-grey darken-2 pulse center-align hoverable")
-                    document.getElementById("fp").className = "card-panel teal pulse center-align hoverable";
-                else if (document.getElementById("fp").className == "card-panel teal pulse center-align hoverable")
-                    document.getElementById("fp").className = "card-panel blue-grey darken-2 pulse center-align hoverable";
-                timerId = setTimeout(tick, 500); // (*)
-            }, 1000);
-        </script>
+        </div>
+    </footer>
+    <script type="text/javascript" src="js/website.js">
+    </script>
 </body>
 
 </html>

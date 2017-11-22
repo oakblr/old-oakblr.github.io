@@ -13,8 +13,8 @@
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <link rel = "stylesheet" type = "text/css" href = "css/custom.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
 
 </head>
 
@@ -40,9 +40,10 @@
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <nav class="transparent z-depth-0">
         <div class="nav-wrapper">
-            <a href="index.html" class="brand-logo left"><img class = "responsive-img" width = 155px src = "images/oakridge-logo-white.png"/></a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <a href="index.html" class="brand-logo left hide-on-med-and-down"><img class = "responsive-img" width = 135px src = "images/oakridge-logo-white.png"/></a>
+            <a href="index.html" class="brand-logo center hide-on-large-only"><img class = "responsive-img" width = 135px src = "images/oakridge-logo-white.png"/></a>
+            <a href="#" data-activates="mobile-menu" class="left button-collapse"><i class="material-icons">menu</i></a>
+            <ul id="wide-menu" class="right hide-on-med-and-down">
                 <li><a href="#theme" class="waves-effect hoverable large right ">Themes</a></li>
                 <li><a href="#prizes" class="waves-effect hoverable large right ">Prizes</a></li>
                 <li><a href="#sponsor" class="waves-effect hoverable large right">Sponsor</a></li>
@@ -67,32 +68,30 @@
                     </script>
                 </li>
             </ul>
-            <ul class="side-nav black" id="mobile-demo">
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="#theme" class="waves-effect large right ">Themes</a></li>
-                    <li><a href="#prizes" class="waves-effect large">Prizes</a></li>
-                    <li><a href="#sponsor" class="waves-effect large">Sponsor</a></li>
-                    <li><a href="#faq" class="waves-effect hoverable large right">FAQ</a></li>
-                    <li><a class="typeform-share link" href="https://oakridgecodefest.typeform.com/to/YLU5qH" data-mode="drawer_right" style="color:#ffffff;font-size:20px;" data-hide-headers=true data-hide-footer=true target="_blank">Register Now </a>
-                        <script>
-                            (function() {
-                                var qs, js, q, s, d = document,
-                                    gi = d.getElementById,
-                                    ce = d.createElement,
-                                    gt = d.getElementsByTagName,
-                                    id = "typef_orm_share",
-                                    b = "https://embed.typeform.com/";
-                                if (!gi.call(d, id)) {
-                                    js = ce.call(d, "script");
-                                    js.id = id;
-                                    js.src = b + "embed.js";
-                                    q = gt.call(d, "script")[0];
-                                    q.parentNode.insertBefore(js, q)
-                                }
-                            })()
-                        </script>
-                    </li>
-                </ul>
+            <ul class="side-nav blue-grey darken-4"  id="mobile-menu">
+                <li><a href="#theme" class="waves-effect large white-text">Themes</a></li>
+                <li><a href="#prizes" class="waves-effect large white-text">Prizes</a></li>
+                <li><a href="#sponsor" class="waves-effect large white-text">Sponsor</a></li>
+                <li><a href="#faq" class="waves-effect large white-text">FAQ</a></li>
+                <li><a class="typeform-share link" href="https://oakridgecodefest.typeform.com/to/YLU5qH" data-mode="drawer_right" style="color:#ffffff;font-size:20px;" data-hide-headers=true data-hide-footer=true target="_blank">Register Now </a>
+                    <script>
+                        (function() {
+                            var qs, js, q, s, d = document,
+                                gi = d.getElementById,
+                                ce = d.createElement,
+                                gt = d.getElementsByTagName,
+                                id = "typef_orm_share",
+                                b = "https://embed.typeform.com/";
+                            if (!gi.call(d, id)) {
+                                js = ce.call(d, "script");
+                                js.id = id;
+                                js.src = b + "embed.js";
+                                q = gt.call(d, "script")[0];
+                                q.parentNode.insertBefore(js, q)
+                            }
+                        })()
+                    </script>
+                </li>
             </ul>
         </div>
     </nav>

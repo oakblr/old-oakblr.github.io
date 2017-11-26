@@ -16,7 +16,7 @@
    e.preventDefault();
 
    var target = this.hash;
-   if (target != "#questions1" && target != "#questions2" && target != "#questions3") {
+   if (target != "#questions1" && target != "#questions2" && target != "#questions3" && target != "#dates" && target != "#terms") {
     var $target = $(target);
 
     $('html, body').stop().animate({

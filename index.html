@@ -13,8 +13,10 @@
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <link rel = "stylesheet" type = "text/css" href = "css/custom.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -40,14 +42,15 @@
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <nav class="transparent z-depth-0">
         <div class="nav-wrapper">
-            <a href="index.html" class="brand-logo left"><img class = "responsive-img" width = 155px src = "images/oakridge-logo-white.png"/></a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <a href="index.html" class="brand-logo left hide-on-med-and-down"><img class = "responsive-img" width = 135px src = "images/oakridge-logo-white.png"/></a>
+            <a href="index.html" class="brand-logo center hide-on-large-only"><img class = "responsive-img" width = 135px src = "images/oakridge-logo-white.png"/></a>
+            <a href="#" data-activates="mobile-menu" class="left button-collapse"><i class="material-icons">menu</i></a>
+            <ul id="wide-menu" class="right hide-on-med-and-down">
                 <li><a href="#theme" class="waves-effect hoverable large right ">Themes</a></li>
                 <li><a href="#prizes" class="waves-effect hoverable large right ">Prizes</a></li>
                 <li><a href="#sponsor" class="waves-effect hoverable large right">Sponsor</a></li>
                 <li><a href="#faq" class="waves-effect hoverable large right">FAQ</a></li>
-                <li><a class="typeform-share link" href="https://oakridgecodefest.typeform.com/to/YLU5qH" data-mode="drawer_right" style="color:#ffffff;font-size:20px;" data-hide-headers=true data-hide-footer=true target="_blank">Register Now </a>
+                <li><a class="typeform-share disabled link" href="https://oakridgecodefest.typeform.com/to/YLU5qH" data-mode="drawer_right" style="color:#ffffff;font-size:20px;" data-hide-headers=true data-hide-footer=true target="_blank">Register Now </a>
                     <script>
                         (function() {
                             var qs, js, q, s, d = document,
@@ -67,32 +70,30 @@
                     </script>
                 </li>
             </ul>
-            <ul class="side-nav black" id="mobile-demo">
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="#theme" class="waves-effect large right ">Themes</a></li>
-                    <li><a href="#prizes" class="waves-effect large">Prizes</a></li>
-                    <li><a href="#sponsor" class="waves-effect large">Sponsor</a></li>
-                    <li><a href="#faq" class="waves-effect hoverable large right">FAQ</a></li>
-                    <li><a class="typeform-share link" href="https://oakridgecodefest.typeform.com/to/YLU5qH" data-mode="drawer_right" style="color:#ffffff;font-size:20px;" data-hide-headers=true data-hide-footer=true target="_blank">Register Now </a>
-                        <script>
-                            (function() {
-                                var qs, js, q, s, d = document,
-                                    gi = d.getElementById,
-                                    ce = d.createElement,
-                                    gt = d.getElementsByTagName,
-                                    id = "typef_orm_share",
-                                    b = "https://embed.typeform.com/";
-                                if (!gi.call(d, id)) {
-                                    js = ce.call(d, "script");
-                                    js.id = id;
-                                    js.src = b + "embed.js";
-                                    q = gt.call(d, "script")[0];
-                                    q.parentNode.insertBefore(js, q)
-                                }
-                            })()
-                        </script>
-                    </li>
-                </ul>
+            <ul class="side-nav blue-grey darken-4" id="mobile-menu">
+                <li><a href="#theme" class="waves-effect large white-text">Themes</a></li>
+                <li><a href="#prizes" class="waves-effect large white-text">Prizes</a></li>
+                <li><a href="#sponsor" class="waves-effect large white-text">Sponsor</a></li>
+                <li><a href="#faq" class="waves-effect large white-text">FAQ</a></li>
+                <li><a class="typeform-share link" href="https://oakridgecodefest.typeform.com/to/YLU5qH" data-mode="drawer_right" style="color:#ffffff;font-size:20px;" data-hide-headers=true data-hide-footer=true target="_blank">Register Now </a>
+                    <script>
+                        (function() {
+                            var qs, js, q, s, d = document,
+                                gi = d.getElementById,
+                                ce = d.createElement,
+                                gt = d.getElementsByTagName,
+                                id = "typef_orm_share",
+                                b = "https://embed.typeform.com/";
+                            if (!gi.call(d, id)) {
+                                js = ce.call(d, "script");
+                                js.id = id;
+                                js.src = b + "embed.js";
+                                q = gt.call(d, "script")[0];
+                                q.parentNode.insertBefore(js, q)
+                            }
+                        })()
+                    </script>
+                </li>
             </ul>
         </div>
     </nav>
@@ -190,8 +191,13 @@
                     <div class="collapsible-body blue-grey darken-4">
                         <div class="row">
                             <div class="col s6">
-                                <span>Sponsored by dotTech domains, teams that host their website and/or app on the .tech domain
-                                        are eligible for this theme and will win special prizes.</span>
+                                <span>.TECH is a new domain extension that has become the de facto online address for all things technology. 
+                                With over 250K domain registrations in the past 2 years, it has seen a rapid adoption by developers, startups, 
+                                innovators, tech brands and influencers, including bigwigs like Viacom.tech, TNW.tech, CES.tech, Hollywood.tech, etc.
+                                <br>
+                                <br>
+                                Sponsored by dotTech domains, teams that host their website and/or app on the .tech domain
+                                are eligible for this theme and will win special prizes.</span>
                             </div>
                             <div class="col s3 offset"><a href="http://get.tech"><img class="responsive-img" src="images/sponsors/dotTech.png"></a></div>
                         </div>
@@ -213,8 +219,8 @@
                     <h4 class="center-align">General Prizes</h4>
                     <div id="fp" class="card-panel blue-grey darken-2 pulse center-align hoverable">
                         <span>
-                                <h4> <i class="material-icons">looks_one</i>First Place</h4>
-                                <span class="flow-text">₹30,000 Cash Prize</span>
+                            <h4> <i class="material-icons">looks_one</i>First Place</h4>
+                            <span class="flow-text">₹30,000</span>
                         </span>
                     </div>
                 </div>
@@ -223,8 +229,8 @@
                 <div class="col s6">
                     <div class="card-panel hoverable blue-grey darken-2 center-align ">
                         <span>
-                                <h4> <i class="material-icons">looks_two</i>Second Place</h4>
-                                <span class="flow-text">₹15,000 Cash Prize</span>
+                            <h4> <i class="material-icons">looks_two</i>Second Place</h4>
+                            <span class="flow-text">₹15,000</span>
                         </span>
                     </div>
                 </div>
@@ -232,7 +238,7 @@
                     <div class="card-panel hoverable blue-grey darken-2 center-align">
                         <span>
                                 <h4> <i class="material-icons">looks_3</i>Third Place</h4>
-                                <span class="flow-text">₹5,000 Cash Prize</span>
+                                <span class="flow-text">₹10,000</span>
                         </span>
                     </div>
                 </div>
@@ -267,21 +273,12 @@
                                 </div>
                             </div>
                         </li>
-                        <li>
-                            <div class="collapsible-header blue-grey darken-4" onmouseover="onhover(this);" onmouseout="onnothover(this);">
-                                <i class="material-icons">insert_emoticon</i>T-shirts and stickers
-                            </div>
-                            <div class="collapsible-body blue-grey darken-4">
-                                <p>All participants get rare stickers of the event that they can stick on their laptops/devices.
-                                    <br> All participants get free T-shirts of the event.
-                                </p>
-                            </div>
-                        </li>
                     </ul>
 
                 </div>
             </div>
         </section>
+
     </div>
     <div class="parallax-container">
         <div class="parallax"><img src="images/servers_room-wallpaper-2048x1152.jpg" alt="images/bgbackup.jpg"></div>
@@ -296,31 +293,21 @@
                     </div>
                     <div class="card-tabs blue-grey darken-4">
                         <ul class="tabs tabs-fixed-width">
-                            <li class="tab blue-grey darken-3"><a class="active" href="#questions1">1</a></li>
-                            <li class="tab blue-grey darken-3"><a href="#questions2">2</a></li>
-                            <li class="tab blue-grey darken-3"><a href="#questions3">3</a></li>
+                            <li class="tab blue-grey darken-3"><a class="active" href="#questions1">Participantion Details</a></li>
+                            <li class="tab blue-grey darken-3"><a href="#questions2">Event Details</a></li>
+                            <li class="tab blue-grey darken-3"><a href="#questions3">Idea Details</a></li>
+                            <li class="tab blue-grey darken-3"><a href="#dates">Important Dates</a></li>
                         </ul>
                     </div>
                     <div class="card-content blue-grey darken-4">
                         <div id="questions2" class="">
                             <ul class="collapsible blue-grey darken-4" data-collapsible="accordion">
-                                <li>
-                                    <div class="collapsible-header blue-grey darken-4"><i class="material-icons">filter_drama</i>Do we need to have the entire idea fully working?</div>
-                                    <div class="collapsible-body blue-grey darken-2 white-text"><span>The entire idea need not be fully implemented however, the submission should be functional so that it can be reviewed by the judges.</span></div>
-                                </li>
+
                                 <li>
                                     <div class="collapsible-header blue-grey darken-4"><i class="material-icons">place</i>Will I be provived Food?</div>
                                     <div class="collapsible-body blue-grey darken-2 white-text"><span>Yes, food and beverages will be provived at the event at no extra cost.</span></div>
                                 </li>
-                                <li>
-                                    <div class="collapsible-header blue-grey darken-4"><i class="material-icons">whatshot</i>Do I have to bring my laptop?</div>
-                                    <div class="collapsible-body blue-grey darken-2 white-text"><span>Yes, you are expected to bring you laptop and charger along with any softwares or dependencies you will be needing.</span></div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div id="questions3" class="blue-grey darken-4">
 
-                            <ul class="collapsible blue-grey darken-4" data-collapsible="accordion">
                                 <li>
                                     <div class="collapsible-header blue-grey darken-4"><i class="material-icons">filter_drama</i>Do I have to arrange for internet?</div>
                                     <div class="collapsible-body blue-grey darken-2 white-text"><span>Internet will be provided at the event, but we recommend you carry a dongle for faster internet.</span></div>
@@ -328,6 +315,19 @@
                                 <li>
                                     <div class="collapsible-header blue-grey darken-4"><i class="material-icons">place</i>Do I have to stay the night?</div>
                                     <div class="collapsible-body blue-grey darken-2 white-text"><span>We recommend you stay the night giving you more time to work on your project. However, we will not force you to stay the night. If you choose to stay there will be food, beverages and bean bags provided.</span></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="questions3" class="blue-grey darken-4">
+
+                            <ul class="collapsible blue-grey darken-4" data-collapsible="accordion">
+                                <li>
+                                    <div class="collapsible-header blue-grey darken-4"><i class="material-icons">whatshot</i>Do I have to bring my laptop?</div>
+                                    <div class="collapsible-body blue-grey darken-2 white-text"><span>Yes, you are expected to bring you laptop and charger along with any softwares or dependencies you will be needing.</span></div>
+                                </li>
+                                <li>
+                                    <div class="collapsible-header blue-grey darken-4"><i class="material-icons">filter_drama</i>Do we need to have the entire idea fully working?</div>
+                                    <div class="collapsible-body blue-grey darken-2 white-text"><span>The entire idea need not be fully implemented however, the submission should be functional so that it can be reviewed by the judges.</span></div>
                                 </li>
                                 <li>
                                     <div class="collapsible-header blue-grey darken-4"><i class="material-icons">whatshot</i>Who Owns the Intellectual Property of the solutions?</div>
@@ -350,6 +350,49 @@
                                     <div class="collapsible-body blue-grey darken-2 white-text"><span>Yes, there is a ₹300 registration fee per team. This fee is donated to charity</span></div>
                                 </li>
                             </ul>
+                        </div>
+                        <div id="dates">
+                            <div class="timeline">
+                                <div class="timeline-event">
+                                    <div class="card timeline-content">
+                                        <div class="card-content">
+                                            <span class="card-title activator grey-text text-darken-4">Registration Opens<i class="material-icons right">more_vert</i></span>
+                                            <p class="black-text">Registration for the codefest open on the 1 <sup>st</sup> of December</p>
+                                        </div>
+                                        <div class="card-reveal">
+                                            <span class="card-title grey-text text-darken-4">Registration Opens<i class="material-icons right">close</i></span>
+                                            <p class="black-text">Participants are expected to sign up for the event and submit a detailed idea on what exactly they are going to do at the event. The participants are evaluated based on this idea.</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-badge blue white-text"><i class="material-icons">assignment</i></div>
+                                </div>
+                                <div class="timeline-event">
+                                    <div class="card timeline-content">
+                                        <div class="card-content">
+                                            <span class="card-title activator grey-text text-darken-4">Registration Closes<i class="material-icons right">more_vert</i></span>
+                                            <p class="black-text">Registration closes on 5<sup>th</sup> of January</p>
+                                        </div>
+                                        <div class="card-reveal">
+                                            <span class="card-title grey-text text-darken-4">Registration Closes<i class="material-icons right">close</i></span>
+                                            <p class="black-text">Participants will not be allowed to register after this date under any cirumstances. Following clossing of registration, Participants will be evaluated based on the idea they submited</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-badge red white-text"><i class="material-icons">close</i></div>
+                                </div>
+                                <div class="timeline-event">
+                                    <div class="card timeline-content">
+                                        <div class="card-content">
+                                            <span class="card-title activator grey-text text-darken-4">Evalutaion Completed<i class="material-icons right">more_vert</i></span>
+                                            <p class="black-text">Selected Participants will be announced on the 10<sup>th</sup> January</p>
+                                        </div>
+                                        <div class="card-reveal">
+                                            <span class="card-title grey-text text-darken-4">Evalutaion Completed<i class="material-icons right">close</i></span>
+                                            <p class="black-text">List of selected participants will be put up on the website. All selected participants will be emailed special event invites which they must carry to attend the event.</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-badge green white-text"><i class="material-icons">check</i></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -395,33 +438,72 @@
             </section>
         </div>
     </section>
+    <!-- Modal Structure -->
+    <div id="terms" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <div class="row">
+                <h3 class="black-text center-align">Terms and Conditions</h3>
+            </div>
+            <div class="row">
+                <ul class="collection">
+                    <li class="collection-item black-text">No one over the age of 19 is allowed to participate. Oakridge International insists that all participants carry their official Identification (government and school identification are accepted). </li>
+                    <li class="collection-item black-text">If the identification is found to be invalid, Oakridge International reserves the right to deny admission.</li>
+                    <li class="collection-item black-text">No use of illegal substances, smoking, drinking or any such activities on the premises.</li>
+                    <li class="collection-item black-text">No littering on the premises.</li>
+                    <li class="collection-item black-text">No use of physical violence.</li>
+                    <li class="collection-item black-text">Violation of these clauses will lead to immediate disqualification.</li>
+                    <li class="collection-item black-text">The judges' decisions are final.</li>
+                    <li class="collection-item black-text">The management reserves the right to admission. The management reserves the right to make final decisions regarding disputes that may arise.</li>
+                    <li class="collection-item black-text">Oakridge International reserves all rights to the event and all decision made by Oakridge International are final.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+        </div>
+    </div>
     <footer class="page-footer grey darken-4">
         <div class="container">
             <div class="row">
-                <div class="col l6 s12 ">
+                <div class="col l6 s12">
                     <h5 class="white-text">Contact Us</h5>
                     <p class="grey-text text-lighten-4">Email us at <a href="mailto:oakcodefest@gmail.com">oakcodefest@gmail.com</a></p>
-                    <p class="grey-text text-lighten-4">Call us at <a href="tel:9148723368">9148723368</a></p>
                 </div>
             </div>
         </div>
         <div class="footer-copyright">
             <div class="container">
                 <div class="row">
-                    &copy 2017 Oakridge Codefest
-                    <br>
-                    <a href="terms.html">Terms and conditions</a>
-                    <div class="col s4 offset-s8">
+                    <div class="col l6 s12">
+                        &copy 2017 Oakridge Codefest
+                    </div>
+                    <div class="col s5">
                         <> by <a href="">BK-Modding</a>, <a href="#"> HyperCosmac</a>,
                             <a href="#"> CryogenicPlanet</a>,
                             <a href="#"> Nexus</a>, and
                             <a href="#"> Gaurang</a>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col l6 s12">
+                        <a onclick="openTerms();">Terms and conditions</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
     <script type="text/javascript" src="js/website.js">
+    </script>
+    <script>
+        $(document).ready(function() {
+            // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+            $('.modal').modal();
+        });
+
+        function openTerms() {
+            console.log("Hello")
+            $('#terms').modal('open');
+        }
     </script>
 </body>
 

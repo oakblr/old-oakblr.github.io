@@ -22,7 +22,7 @@
 
 </head>
 
-<body style="background-color: black; 
+<body style="background: url('https://cdn.discordapp.com/attachments/498912660801323051/504325815706845185/grey_goo___pattern_wallpaper_by_dexistor371-d8fjeb0.png') no-repeat center center fixed;
                  -webkit-background-size: cover;
                  -moz-background-size: cover;
                  -o-background-size: cover;
@@ -84,32 +84,29 @@
             <div class="row"></div>
             <div class="container">
                 <div class="row">
-                    <div class="center-align"> <img src="images/uncompressed.gif" class="responsive-img"></div>
+                    <div class="row">
+                        <div class="col s8 offset-s2">
+                        <!--    <div class="card-panel black z-depth-5"> -->
+                                <div class="center-align"> 
+                                    <!-- <img src="images/uncompressed.gif" class="responsive-img">--><video id="bgvid" playsinline autoplay muted>
+  <!-- 
+- Video needs to be muted, since Chrome 66+ will not autoplay video with sound.
+WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+<source src="/saber_1.webm" type="video/webm">
+<source src="/saber_1.mp4" type="video/mp4">
+
+</video></div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
         </div>
     </div>
 
-    <div id="animation-banner" class="parallax-container">
-        <div class="section no-pad-bot">
-            <div class="row"></div>
-            <div class="row"></div>
-            <div class="container">
-                <div class="center-align">
-                    <pre id="typewriter" style="overflow-x: hidden;">
-<span class="var-highlight">OakCodefest</span> 2019 = {
-type: <span class="string-highlight">'24 hour Hackathon'</span>,
-date: <span class="string-highlight">'19th-20th Jan 2019'</span>,
-location: <span class="string-highlight">'Oakridge Intl. School, Bangalore'</span>,
-themes:[<span class="string-highlight">'Insert Coin to Continue....'</span>,
-<span class="string-highlight">'Resurrecting dead memes....'</span>,
-<span class="string-highlight">'Error 404: Joke Not Found'</span>];
-                        }; </pre>                       
-                </div>
-            </div>
-        </div>
-    </div>
+
     <div class="container">
         <!--<section id="intro">
             <div class="row center-align">
@@ -139,7 +136,6 @@ themes:[<span class="string-highlight">'Insert Coin to Continue....'</span>,
 -->
 
 
-
         <section id="intro">
             <div class="row center-align">
                 <div class="col s12">
@@ -164,6 +160,29 @@ themes:[<span class="string-highlight">'Insert Coin to Continue....'</span>,
                 </div>
             </div>
         </section>
+    </div>
+
+    <div id="animation-banner" class="parallax-container">
+        <div class="section no-pad-bot">
+            <div class="row"></div>
+            <div class="row"></div>
+            <div class="container">
+                <div class="center-align">
+                    <!-- DO NOT INDENT BELOW PLS -->
+                    <pre id="typewriter" style="overflow-x: hidden;">
+<span class="var-highlight">OakCodefest</span> 2019 = {
+type: <span class="string-highlight">'24 hour Hackathon'</span>,
+date: <span class="string-highlight">'19th-20th Jan 2019'</span>,
+location: <span class="string-highlight">'Oakridge Intl. School, Bangalore'</span>,
+themes:[<span class="string-highlight">'Insert Coin to Continue....'</span>,
+<span class="string-highlight">'Resurrecting dead memes....'</span>,
+<span class="string-highlight">'Error 404: Joke Not Found'</span>];
+}; </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
         <section id="video">
             <div class="row">
                 <div class="col s8 offset-s2">
@@ -172,18 +191,6 @@ themes:[<span class="string-highlight">'Insert Coin to Continue....'</span>,
                     </div>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col s12 m12">
-                    <div class="icon-block">
-                        <h2 class="center red-text text-darken-1"><i class="material-icons">flash_on</i></h2>
-                        <h5 class="center"><a href="https://photos.app.goo.gl/d1dYMX6xvNrVfUwJ3" class="btn-large center">Photos from Codefest 2018</a></h5>
-
-                    </div>
-                </div>
-            </div>
-
-
         </section>
         <div class="row"></div>
         <section class="blue-grey darken-3 valign-wrapper">
@@ -268,7 +275,7 @@ themes:[<span class="string-highlight">'Insert Coin to Continue....'</span>,
     <!--  <div class="parallax-container">
         <div class="parallax"><img src="images/servers_room-wallpaper-2048x1152.jpg" alt="images/bgbackup.jpg"></div>
     </div> -->
-    <section class="black">
+    <section>
         <div class="container">
             <div class="row"></div>
             <section id="faq">
@@ -390,9 +397,11 @@ themes:[<span class="string-highlight">'Insert Coin to Continue....'</span>,
                 </section>
 
             </div>
-            <div class="parallax-container">
-                <div class="parallax"><img src="images/winners.jpg"></div>
-            </div>
+        </div>
+        <div class="parallax-container">
+            <div class="parallax"><img src="images/winners.jpg"></div>
+        </div>
+        <div class="container">
             <!--<div class="divider white"></div>
             <div class="row"></div>
             <section id="venue">

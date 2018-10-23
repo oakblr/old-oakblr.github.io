@@ -103,73 +103,117 @@
  ga('create', 'UA-38470922-9', 'auto');
  ga('send', 'pageview');
 
- 	function setupTypewriter(t) {
-	    var HTML = t.innerHTML;
+ function setupTypewriter(t) {
+  var HTML = t.innerHTML;
 
-	    t.innerHTML = "";
+  t.innerHTML = "";
 
-	    var cursorPosition = 0,
-	        tag = "",
-	        writingTag = false,
-	        tagOpen = false,
-	        typeSpeed = 100,
-        tempTypeSpeed = 0;
+  var cursorPosition = 0,
+   tag = "",
+   writingTag = false,
+   tagOpen = false,
+   typeSpeed = 100,
+   tempTypeSpeed = 0;
 
-	    var type = function() {
-        
-	        if (writingTag === true) {
-	            tag += HTML[cursorPosition];
-	        }
+  var type = function() {
 
-	        if (HTML[cursorPosition] === "<") {
-	            tempTypeSpeed = 0;
-	            if (tagOpen) {
-	                tagOpen = false;
-	                writingTag = true;
-	            } else {
-	                tag = "";
-	                tagOpen = true;
-	                writingTag = true;
-	                tag += HTML[cursorPosition];
-	            }
-	        }
-	        if (!writingTag && tagOpen) {
-	            tag.innerHTML += HTML[cursorPosition];
-	        }
-	        if (!writingTag && !tagOpen) {
-	            if (HTML[cursorPosition] === " ") {
-	                tempTypeSpeed = 0;
-	            }
-	            else {
-	                tempTypeSpeed = (Math.random() * typeSpeed) + 50;
-	            }
-	            t.innerHTML += HTML[cursorPosition];
-	        }
-	        if (writingTag === true && HTML[cursorPosition] === ">") {
-	            tempTypeSpeed = (Math.random() * typeSpeed) + 50;
-	            writingTag = false;
-	            if (tagOpen) {
-	                var newSpan = document.createElement("span");
-	                t.appendChild(newSpan);
-	                newSpan.innerHTML = tag;
-	                tag = newSpan.firstChild;
-	            }
-	        }
+   if (writingTag === true) {
+    tag += HTML[cursorPosition];
+   }
 
-	        cursorPosition += 1;
-	        if (cursorPosition < HTML.length - 1) {
-	            setTimeout(type, tempTypeSpeed);
-	        }
+   if (HTML[cursorPosition] === "<") {
+    tempTypeSpeed = 0;
+    if (tagOpen) {
+     tagOpen = false;
+     writingTag = true;
+    }
+    else {
+     tag = "";
+     tagOpen = true;
+     writingTag = true;
+     tag += HTML[cursorPosition];
+    }
+   }
+   if (!writingTag && tagOpen) {
+    tag.innerHTML += HTML[cursorPosition];
+   }
+   if (!writingTag && !tagOpen) {
+    if (HTML[cursorPosition] === " ") {
+     tempTypeSpeed = 0;
+    }
+    else {
+     tempTypeSpeed = (Math.random() * typeSpeed) + 50;
+    }
+    t.innerHTML += HTML[cursorPosition];
+   }
+   if (writingTag === true && HTML[cursorPosition] === ">") {
+    tempTypeSpeed = (Math.random() * typeSpeed) + 50;
+    writingTag = false;
+    if (tagOpen) {
+     var newSpan = document.createElement("span");
+     t.appendChild(newSpan);
+     newSpan.innerHTML = tag;
+     tag = newSpan.firstChild;
+    }
+   }
 
-	    };
+   cursorPosition += 1;
+   if (cursorPosition < HTML.length - 1) {
+    setTimeout(type, tempTypeSpeed);
+   }
 
-	    return {
-	        type: type
-	    };
-	}
+  };
 
-	var typer = document.getElementById('typewriter');
+  return {
+   type: type
+  };
+ }
 
-	typewriter = setupTypewriter(typewriter);
+ var typer = document.getElementById('typewriter');
 
-	typewriter.type();
+ typewriter = setupTypewriter(typewriter);
+
+
+ var options = [{
+  selector: '#typewriter',
+  offset: 50,
+  callback: function(el) {
+   Materialize.toast("Welcome to Codefest!", 3000);
+   typewriter.type();
+  }
+ }, ];
+ Materialize.scrollFire(options);
+ 
+ var vid = document.getElementById("bgvid");
+// var pauseButton = document.querySelector("#polina button");
+
+ if (window.matchMedia('(prefers-reduced-motion)').matches) {
+  vid.removeAttribute("autoplay");
+  vid.pause();
+//  pauseButton.innerHTML = "Paused";
+ }
+
+ function vidFade() {
+  vid.classList.add("stopfade");
+ }
+
+ vid.addEventListener('ended', function() {
+  // only functional if "loop" is removed 
+  vid.pause();
+  // to capture IE10
+  vidFade();
+ });
+
+
+/* pauseButton.addEventListener("click", function() {
+  vid.classList.toggle("stopfade");
+  if (vid.paused) {
+   vid.play();
+   pauseButton.innerHTML = "Pause";
+  }
+  else {
+   vid.pause();
+   pauseButton.innerHTML = "Paused";
+  }
+ }) */
+ 

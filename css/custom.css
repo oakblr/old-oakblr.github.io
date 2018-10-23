@@ -1,5 +1,5 @@
         body {
-            color: #71DDC5;
+            color: #03A7E9;
         }
 
         .collapsible-header,
@@ -12,7 +12,7 @@
 
         #clockdiv {
             font-family: sans-serif;
-            color: #71DDC5;
+            color: #03A7E9;
             display: inline-block;
             font-weight: 100;
             text-align: center;
@@ -77,9 +77,47 @@
             background: #55ACEE;
             color: white;
         }
-        
+
         .fa-instagram {
             background: #125688;
             color: white;
+        }
+
+        .var-highlight {
+            color: #C0AD60;
+        }
+
+        .string-highlight {
+            color: rgba(253, 149, 90, 0.8);
+        }
+
+        #typewriter {
+            font-size: 2em;
+            margin: 0;
+            font-family: "Courier New";
+        }
+
+        #typewriter:after {
+            content: "|";
+            -webkit-animation: blink 500ms linear infinite alternate;
+            animation: blink 500ms linear infinite alternate;
+        }
+
+        @-webkit-keyframes blink {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
         }
         

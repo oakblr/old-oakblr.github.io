@@ -1,41 +1,74 @@
  $(document).ready(function() {
-  $('.parallax').parallax();
-  $('.collapsible').collapsible();
-  /*
-  $('.button-collapse').sideNav({
-   edge: 'left', 
-   closeOnClick: true, 
-   draggable: true, 
-   onOpen: function(el) {
-    
-   }, 
-  }); */
-  $(".button-collapse").sideNav();
+  //document.getElementById('website').style.display = "none";
 
-  $('a[href^="#"]').on('click', function(e) {
-   e.preventDefault();
+  function animate() {
+   loading = true;
+   var outputbinary = document.querySelector(".output");
 
-   var target = this.hash;
-   if (target != "#questions1" && target != "#questions2" && target != "#questions3" && target != "#dates" && target != "#terms") {
-    var $target = $(target);
+   var optionsarray = [0, 1];
+   var binaryarray = [];
 
-    $('html, body').stop().animate({
-     'scrollTop': $target.offset().top - 75
-    }, 900, 'swing', function() {
-     window.location.hash = target;
-    });
-   }
+   var index = 0;
 
-  });
+   setInterval(function() {
+
+    if (binaryarray.length <= 2000) {
+     var binarynumber = optionsarray[Math.floor(Math.random() * optionsarray.length)];
+     binaryarray.push(binarynumber);
+     var str = binaryarray.join(" ");
+     outputbinary.innerText = str;
+    }
+
+   }, 10);
+  }
+  animate();
+
  });
 
- let timerId = setTimeout(function tick() {
+ $('.parallax').parallax();
+ $('.modal').modal();
+ $('.collapsible').collapsible();
+
+ /*
+ $('.button-collapse').sideNav({
+  edge: 'left', 
+  closeOnClick: true, 
+  draggable: true, 
+  onOpen: function(el) {
+   
+  }, 
+ }); */
+
+ $(".button-collapse").sideNav();
+
+ $('a[href^="#"]').on('click', function(e) {
+  e.preventDefault();
+
+  var target = this.hash;
+  if (target != "#questions1" && target != "#questions2" && target != "#questions3" && target != "#dates" && target != "#terms") {
+   var $target = $(target);
+
+   $('html, body').stop().animate({
+    'scrollTop': $target.offset().top - 75
+   }, 900, 'swing', function() {
+    window.location.hash = target;
+   });
+  }
+
+ });
+
+ function openTerms() {
+  console.log("Hello");
+  $('#terms').modal('open');
+ }
+
+ /*let timerId = setTimeout(function tick() {
   if (document.getElementById("fp").className == "card-panel blue-grey darken-2 pulse center-align hoverable")
    document.getElementById("fp").className = "card-panel teal pulse center-align hoverable";
   else if (document.getElementById("fp").className == "card-panel teal pulse center-align hoverable")
    document.getElementById("fp").className = "card-panel blue-grey darken-2 pulse center-align hoverable";
   timerId = setTimeout(tick, 500);
- }, 1000);
+ }, 1000); */
 
  function onhover(elem) {
   elem.className = elem.className.replace("darken-4", "darken-2");
@@ -169,34 +202,41 @@
   };
  }
 
- var typer = document.getElementById('typewriter');
-
- typewriter = setupTypewriter(typewriter);
 
 
- var options = [{
-  selector: '#typewriter',
-  offset: 50,
-  callback: function(el) {
-   Materialize.toast("Welcome to Codefest!", 3000);
-   typewriter.type();
-  }
- }, ];
- Materialize.scrollFire(options);
- 
  var vid = document.getElementById("bgvid");
-// var pauseButton = document.querySelector("#polina button");
+ vid.setAttribute("allow","autoplay; fullscreen");
 
- if (window.matchMedia('(prefers-reduced-motion)').matches) {
-  vid.removeAttribute("autoplay");
-  vid.pause();
-//  pauseButton.innerHTML = "Paused";
- }
 
  function vidFade() {
   vid.classList.add("stopfade");
  }
 
+ vid.addEventListener('play', function () {
+  console.log('begun playing');
+  document.getElementById("loader").style.display = 'none'
+  document.getElementsByTagName('body')[0].style = `background: url('../images/background.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover; 
+  -moz-background-size: cover; 
+  -o-background-size: cover; 
+  background-size: cover;`;
+  document.getElementById('website').style="visibility: visible;";
+  var typer = document.getElementById('typewriter');
+
+  typewriter = setupTypewriter(typewriter);
+
+
+  var options = [{
+   selector: '#typewriter',
+   offset: 50,
+   callback: function(el) {
+    Materialize.toast("Welcome to Codefest!", 3000);
+    typewriter.type();
+   }
+  }, ];
+  Materialize.scrollFire(options);
+ });
+ 
  vid.addEventListener('ended', function() {
   // only functional if "loop" is removed 
   vid.pause();
@@ -205,15 +245,15 @@
  });
 
 
-/* pauseButton.addEventListener("click", function() {
-  vid.classList.toggle("stopfade");
-  if (vid.paused) {
-   vid.play();
-   pauseButton.innerHTML = "Pause";
-  }
-  else {
-   vid.pause();
-   pauseButton.innerHTML = "Paused";
-  }
- }) */
+ /* pauseButton.addEventListener("click", function() {
+   vid.classList.toggle("stopfade");
+   if (vid.paused) {
+    vid.play();
+    pauseButton.innerHTML = "Pause";
+   }
+   else {
+    vid.pause();
+    pauseButton.innerHTML = "Paused";
+   }
+  }) */
  

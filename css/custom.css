@@ -1,5 +1,5 @@
         body {
-            color: #03A7E9;
+            color: white;
         }
 
         .collapsible-header,
@@ -38,12 +38,12 @@
         }
 
         .tabs .indicator {
-            background-color: #71DDC5 !important;
+            background-color: white !important;
         }
 
         .tab a {
-            color: #71DDC5!important;
-            background-color: #455a64!important;
+            color: white !important;
+            background-color: #263238 !important;
         }
 
         /* Style all font awesome icons */
@@ -131,7 +131,6 @@
             height: auto;
             z-index: -100;
             transform: translateX(-50%) translateY(-50%);
-            background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
             background-size: cover;
             transition: 1s opacity;
         }
@@ -177,19 +176,6 @@
             background: rgba(0, 0, 0, 0.5);
         }
 
-        a {
-            display: inline-block;
-            color: #fff;
-            text-decoration: none;
-            background: rgba(0, 0, 0, 0.5);
-            padding: .5rem;
-            transition: .6s background;
-        }
-
-        a:hover {
-            background: rgba(0, 0, 0, 0.9);
-        }
-
         @media screen and (max-width: 500px) {
             div {
                 width: 70%;
@@ -198,10 +184,40 @@
 
         @media screen and (max-device-width: 800px) {
             html {
-                background: url(https://thenewcode.com/assets/images/polina.jpg) #000 no-repeat center center fixed;
             }
             #bgvid {
                 display: none;
+            }
+        }
+
+        .loading {
+            font-family: sans-serif;
+            font-size: 128px;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            font-weight: bold;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: FadeIn 300ms linear forwards;
+            opacity: 0;
+        }
+
+        .output {
+            color: #26ff00;
+            font-family: sans-serif;
+            font-size: 16px;
+            opacity: 0.5;
+            z-index: -1;
+        }
+
+        @keyframes FadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
             }
         }
         

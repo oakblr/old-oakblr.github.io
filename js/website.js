@@ -1,8 +1,10 @@
+ var count = 0;
+ var loading = true;
  $(document).ready(function() {
   //document.getElementById('website').style.display = "none";
 
   function animate() {
-   loading = true;
+
    var outputbinary = document.querySelector(".output");
 
    var optionsarray = [0, 1];
@@ -10,8 +12,16 @@
 
    var index = 0;
 
-   setInterval(function() {
-
+   var interval = setInterval(function() {
+    if (count < 200) {
+     count += 1;
+    }
+    else {
+     begunPlaying();
+     loading = false;
+     vidFade();
+     clearInterval(interval);
+    }
     if (binaryarray.length <= 2000) {
      var binarynumber = optionsarray[Math.floor(Math.random() * optionsarray.length)];
      binaryarray.push(binarynumber);
@@ -205,38 +215,42 @@
 
 
  var vid = document.getElementById("bgvid");
- vid.setAttribute("allow","autoplay; fullscreen");
+ vid.setAttribute("allow", "autoplay; fullscreen");
 
 
  function vidFade() {
   vid.classList.add("stopfade");
  }
 
- vid.addEventListener('play', function () {
-  console.log('begun playing');
-  document.getElementById("loader").style.display = 'none'
-  document.getElementsByTagName('body')[0].style = `background: url('../images/background.jpg') no-repeat center center fixed; 
-  -webkit-background-size: cover; 
-  -moz-background-size: cover; 
-  -o-background-size: cover; 
-  background-size: cover;`;
-  document.getElementById('website').style="visibility: visible;";
-  var typer = document.getElementById('typewriter');
+ vid.addEventListener('play', begunPlaying);
 
-  typewriter = setupTypewriter(typewriter);
+ function begunPlaying() {
+  if (loading) {
+   console.log('begun playing');
+   document.getElementById("loader").style.display = 'none'
+   document.getElementsByTagName('body')[0].style = `background: url('../images/background.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover; 
+    -moz-background-size: cover; 
+    -o-background-size: cover; 
+    background-size: cover;`;
+   document.getElementById('website').style = "visibility: visible;";
+   var typer = document.getElementById('typewriter');
+
+   typewriter = setupTypewriter(typewriter);
 
 
-  var options = [{
-   selector: '#typewriter',
-   offset: 50,
-   callback: function(el) {
-    Materialize.toast("Welcome to Codefest!", 3000);
-    typewriter.type();
-   }
-  }, ];
-  Materialize.scrollFire(options);
- });
- 
+   var options = [{
+    selector: '#typewriter',
+    offset: 50,
+    callback: function(el) {
+     Materialize.toast("Welcome to Codefest!", 3000);
+     typewriter.type();
+    }
+   }, ];
+   Materialize.scrollFire(options);
+  }
+ }
+
  vid.addEventListener('ended', function() {
   // only functional if "loop" is removed 
   vid.pause();

@@ -18,9 +18,10 @@
     }
     else {
      if (loading == 1) {
-      begunPlaying();
+      begunPlaying(true);
       clearInterval(animateInterval);
       loading = 0;
+      
      }
     }
     if (binaryarray.length <= 2000) {
@@ -224,11 +225,13 @@
 
   vid.addEventListener('play', begunPlaying);
 
-  function begunPlaying() {
+  function begunPlaying(defaulted) {
    if (loading == 1) {
+    console.log(typeof defaulted);
     console.log('begun playing');
     document.getElementById("loader").style.display = 'none'
-    document.getElementsByTagName('body')[0].style = `background: url('../images/background.jpg') no-repeat center center fixed; 
+    var bgimage = typeof defaulted == 'boolean' ? 'background2' : 'background';
+    document.getElementsByTagName('body')[0].style = `background: url('../images/${bgimage}.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover; 
     -moz-background-size: cover; 
     -o-background-size: cover; 

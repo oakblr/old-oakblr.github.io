@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=0.5" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.75" />
 
     <link rel="stylesheet" type="text/css" href="css/custom.css" />
 
@@ -67,22 +67,23 @@
             <div class="nav-wrapper">
                 <a href="index.html" class="brand-logo left hide-on-med-and-down"><img class = "responsive-img" width = 135px src = "images/oakridge-logo-white.png"/></a>
                 <a href="index.html" class="brand-logo center hide-on-large-only"><img class = "responsive-img" width = 135px src = "images/oakridge-logo-white.png"/></a>
-                <!-- <a href="#" data-activates="mobile-menu" class="left button-collapse"><i class="material-icons">menu</i></a>
-            <ul id="wide-menu" class="right hide-on-med-and-down">
-                <li><a href="#theme" class="waves-effect hoverable waves-teal large right ">Themes</a></li>
-                <li><a href="#prizes" class="waves-effect hoverable waves-teal large right ">Prizes</a></li>
-                <li><a href="#sponsor" class="waves-effect hoverable  waves-teal large right">Sponsor</a></li>
-                <li><a href="#faq" class="waves-effect hoverable waves-teal large right">FAQ</a></li>
-                <!--  <li><a class="btn-flat disabled">Registration Coming Soon</a></li> -->
-                <!--      <li><a href="#livestream" class="waves-effect hoverable waves-teal large right">Live streaming</a></li>
-            </ul>
-            <ul class="side-nav blue-grey darken-4" id="mobile-menu">
-                <li><a href="#theme" class="waves-effect hoverable waves-teal large right ">Themes</a></li>
-                <li><a href="#prizes" class="waves-effect hoverable waves-teal large right ">Prizes</a></li>
-                <li><a href="#sponsor" class="waves-effect hoverable  waves-teal large right">Sponsor</a></li>
-                <li><a href="#faq" class="waves-effect hoverable waves-teal large right">FAQ</a></li>
-                <li><a href="#livestream" class="waves-effect hoverable waves-teal large right">Live streaming</a></li>
-            </ul> -->
+                <a href="#" data-activates="mobile-menu" class="left button-collapse"><i class="material-icons">menu</i></a>
+                <ul id="wide-menu" class="right hide-on-med-and-down">
+                    <li><a href="#theme" class="waves-effect hoverable waves-teal large right ">Themes</a></li>
+                    <li><a href="#prizes" class="waves-effect hoverable waves-teal large right ">Prizes</a></li>
+                    <li><a href="#sponsor" class="waves-effect hoverable  waves-teal large right">Sponsor</a></li>
+                    <li><a href="#faq" class="waves-effect hoverable waves-teal large right">FAQ</a></li>
+                    <li><a class="btn-flat disabled">Registration Coming Soon</a></li>
+                    <!--     <li><a href="#livestream" class="waves-effect hoverable waves-teal large right">Live streaming</a></li> -->
+                </ul>
+                <ul class="side-nav grey darken-4" id="mobile-menu">
+                    <li><a href="#theme" class="waves-effect hoverable waves-teal large right white-text ">Themes</a></li>
+                    <li><a href="#prizes" class="waves-effect hoverable waves-teal large right white-text">Prizes</a></li>
+                    <li><a href="#sponsor" class="waves-effect hoverable  waves-teal large right white-text">Sponsor</a></li>
+                    <li><a href="#faq" class="waves-effect hoverable waves-teal large right white-text">FAQ</a></li>
+                    <li><a class="btn-flat disabled white-text">Registration Coming Soon</a></li>
+                    <!--   <li><a href="#livestream" class="waves-effect hoverable waves-teal large right">Live streaming</a></li> -->
+                </ul>
             </div>
         </nav>
 
@@ -96,6 +97,7 @@
                             <div class="col s8 offset-s2">
                                 <!--    <div class="card-panel black z-depth-5"> -->
                                 <div class="center-align">
+
                                     <!-- <img src="images/uncompressed.gif" class="responsive-img">--><video id="bgvid" width='100%' height='100%' playsinline autoplay muted>
   <!-- 
 - Video needs to be muted, since Chrome 66+ will not autoplay video with sound.
@@ -113,6 +115,11 @@ WCAG general accessibility recommendation is that media such as background video
         </div>
 
         <div class="container">
+            <div id='phone' class="row center">
+                <div id="mob" style="margin-bottom: 20px; margin-top: 10px;">
+                    <img src="images/transparentLogo.png" style="width: 100%; height: 150%;"></img>
+                </div>
+            </div>
             <!--<section id="intro">
             <div class="row center-align">
                 <div class="col s12">
@@ -194,7 +201,7 @@ location: <span class="string-highlight">'Oakridge Intl. School, Bangalore'</spa
 themes:[<span class="string-highlight">'Insert Coin to Continue....'</span>,
 <span class="string-highlight">'Resurrecting dead memes....'</span>,
 <span class="string-highlight">'Error 404: Joke Not Found'</span>,
-<span class="string-highlight">'Themes will be announced shortly!'</span>,];
+<span class="string-highlight">'Actual themes can be found below xD'</span>,];
 }; </pre>
                     </div>
                 </div>
@@ -252,51 +259,73 @@ themes:[<span class="string-highlight">'Insert Coin to Continue....'</span>,
             <div class="row"></div>
             <!--    <div class="divider white"></div> -->
             <section id="theme">
-                <h3 class="center-align">Themes will be announced soon!</h3>
-                <!--  <h5 class="flow-text center-align">General themes</h5>
-            <ul class="collapsible popout" data-collapsible="accordion">
-                <li>
-                    <div class="collapsible-header center-align blue-grey darken-3" onmouseover="onhover(this);" onmouseout="onnothover(this);"><i class="material-icons">filter_drama</i>Internet of things</div>
-                    <div class="collapsible-body blue-grey darken-3"><span>IOT is one of the most progressive and ground breaking fields in our current time, making this an excellent theme to tackle. 
-                            We would like for participants to use physical devices on a network to
-                            innovate in fields such as but not limited to: home automation, wearables, smart vehicles, etc.</span></div>
-                </li>
-                <li>
-                    <div class="collapsible-header center-align blue-grey darken-3" onmouseover="onhover(this);" onmouseout="onnothover(this);"><i class="material-icons">book</i>Education Innovation</div>
-                    <div class="collapsible-body blue-grey darken-3"><span>Education as a theme creates a collaborative platform for students, designers, developers, and schools to innovate. 
-                            Our focus is on building solutions for today’s education related problems and implementing creative ideas and solutions in the form of prototypes through a multidisciplinary approach.</span></div>
-                </li>
-                <li>
-                    <div class="collapsible-header center-align blue-grey darken-3" onmouseover="onhover(this);" onmouseout="onnothover(this);"><i class="material-icons">nature_people</i>Environment and Sustainability</div>
-                    <div class="collapsible-body blue-grey darken-3"><span>Sustainability and the environment are great concerns that need to be addressed. 
-                            Participants are expected to come up with ideas to solve these problems, either by improving existing technologies or coming up new ones by using the skills and tools that they have at their disposal. 
-                            Topics of interest include the pollution of affected lakes, long periods of gridlocked traffic jams and smog problems in Delhi. 
-                            This isn’t a extensive list, but instead aims to provide some ideas for reference.</span></div>
-                </li>
-            </ul>
-            <h5 class="flow-text center-align">Sponsor themes</h5>
-            <ul class="collapsible popout" data-collapsible="accordion">
-                <li>
-                    <div class="collapsible-header center-align blue-grey darken-3" onmouseover="onhover(this);" onmouseout="onnothover(this);"><i class="material-icons">filter_drama</i>.TECH website innovation</div>
-                    <div class="collapsible-body blue-grey darken-3">
-                        <div class="row">
-                            <div class="col s6">
-                                <span>.TECH is a new domain extension that has become the de facto online address for all things technology. 
+                <!--  <h3 class="center-align">Themes will be announced soon!</h3> -->
+                <h5 class="flow-text center-align">General themes</h5>
+                <div class="row">
+                    <div class="col s12">
+                        <div class="card-panel grey darken-4">
+                            <span class="white-text"><p>Participants are <b>recommended</b> to use <b>two or more</b> themes for they project but expected to choose one <b>primary</b> theme.For more infomations regarding themes please email us <a href="mailto:oakcodefest@oakridge.in">oakcodefest@oakridge.in</a></p>
+          </span>
+                        </div>
+                    </div>
+                </div>
+                <ul class="collapsible popout" data-collapsible="accordion">
+                    <li>
+                        <div class="collapsible-header center-align grey darken-4" onmouseover="onhover(this);" onmouseout="onnothover(this);"><i class="material-icons">directions_transit</i>Transportation</div>
+                        <div class="collapsible-body grey darken-4"><span><p>Humans, around the world, commute millions of miles every single day. A significant fraction of our day is spent in traveling. Technology has played a very significant role in enabling more people to commute. Be it in the form discovery, aggregation or purchase, technology has redefined the way we commute. Imagine how technology can human experience even better in day to day transportation and commute. What can technology do make public and private transportation much simpler?</p>
+<p> Examples : Traffic reduction software,Autonomous Transport Solutions, etc</p></span></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header center-align grey darken-4" onmouseover="onhover(this);" onmouseout="onnothover(this);"><i class="material-icons">battery_alert</i>Energy informatics</div>
+                        <div class="collapsible-body grey darken-4"><span><p>Energy informatics is the field covering the use of information and communication technology to address energy challenges.</p>
+<p>The efficiency of our nation's energy grids, has the ability to affect the course of our lives, and the challenges we face. After all, electricity plays a huge part in everyone's world. The ability to improve our energy informatics is one that is imperative for the future of our entire work. What can technology do to make our energy informatics more efficient?</p>
+<p> Examples : Smart City solutions, Internet of Things, Micro grids, Battery Management Systems, etc</p></span></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header center-align grey darken-4" onmouseover="onhover(this);" onmouseout="onnothover(this);"><i class="material-icons">accessible</i> Human Assistance </div>
+                        <div class="collapsible-body grey darken-4"><span><p>Computer Science was made to make life easier for humans. In today's world, we have reached the peak of what we are able to achieve using computation.  Everyday tasks are becoming easier and easier. With that being said, What more can we achieve? How can we use our computer science skills to make everyday life easier for everyone?</p>
+<p>Examples : Disability Assistant Solutions,Routine Planning Algorithm, Smart Assistance,etc</p></span></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header center-align grey darken-4" onmouseover="onhover(this);" onmouseout="onnothover(this);"><i class="material-icons">backup</i>Enhance Solutions</div>
+                        <div class="collapsible-body grey darken-4"><span><p> What separates the human race from other animals, is their desire to innovate and simplify the world around them.  Our lives are full of complex problems, and through the use of programming, we can solve them. In the same vein, are the solutions we make perfect? How can we use programming to make better and more innovative solutions? </p>
+<p> Examples : Optimizing Pre-made Algorithms, Designing New User Interface,etc</p></span></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header center-align grey darken-4" onmouseover="onhover(this);" onmouseout="onnothover(this);"><i class="material-icons">videogame_asset</i>Game Development(6-8th Grade)</div>
+                        <div class="collapsible-body grey darken-4"><span><p>Video games are a great way to have fun and learn code at the same time! Use your knowledge of coding to make fun and interactive game for everyone to enjoy!</p>
+<p>For this theme, we expect participants to be unique, innovative and have some kind of story or message in it. <b>Participants need to use programming languages and not just use software like scratch or unity.</b></p></span></div>
+                    </li>
+                </ul>
+                <!--  <h5 class="flow-text center-align">Sponsor themes</h5>
+                <ul class="collapsible popout" data-collapsible="accordion">
+                    <li>
+                        <div class="collapsible-header center-align grey darken-3" onmouseover="onhover(this);" onmouseout="onnothover(this);"><i class="material-icons">filter_drama</i>.TECH website innovation</div>
+                        <div class="collapsible-body grey darken-3">
+                            <div class="row">
+                                <div class="col s6">
+                                    <span>.TECH is a new domain extension that has become the de facto online address for all things technology. 
                                 With over 250K domain registrations in the past 2 years, it has seen a rapid adoption by developers, startups, 
                                 innovators, tech brands and influencers, including bigwigs like Viacom.tech, TNW.tech, CES.tech, Hollywood.tech, etc.
                                 <br>
                                 <br>
                                 Sponsored by dotTech domains, teams that host their website and/or app on the .tech domain
                                 are eligible for this theme and will win special prizes.</span>
+                                </div>
+                                <div class="col s3 offset"><a href="http://get.tech"><img class="responsive-img" src="images/sponsors/dotTech.png"></a></div>
                             </div>
-                            <div class="col s3 offset"><a href="http://get.tech"><img class="responsive-img" src="images/sponsors/dotTech.png"></a></div>
                         </div>
-                    </div>
-                </li>
-            </ul> -->
+                    </li>
+                </ul> -->
             </section>
         </div>
-
+        <div class="container">
+            <section id="prizes">
+                <div class="row">
+                    <h1 class="center-align">Cash Prizes will be announced shortly!</h1>
+                </div>
+            </section>
+        </div>
 
         <!--  <div class="parallax-container">
         <div class="parallax"><img src="images/servers_room-wallpaper-2048x1152.jpg" alt="images/bgbackup.jpg"></div>
@@ -312,26 +341,26 @@ themes:[<span class="string-highlight">'Insert Coin to Continue....'</span>,
                         <div class="card-tabs grey darken-4">
                             <ul class="tabs tabs-fixed-width">
                                 <li class="tab grey darken-4"><a class="active" href="#questions1">Participation Details</a></li>
-                                <li class="tab blue-grey darken-4"><a href="#questions2">Event Details</a></li>
-                                <li class="tab blue-grey darken-4"><a href="#questions3">Idea Details</a></li>
-                                <!-- <li class="tab blue-grey darken-3"><a href="#dates">Important Dates</a></li> -->
+                                <li class="tab grey darken-4"><a href="#questions2">Event Details</a></li>
+                                <li class="tab grey darken-4"><a href="#questions3">Idea Details</a></li>
+                                <li class="tab grey darken-3"><a href="#dates">Important Dates</a></li>
                             </ul>
                         </div>
                         <div class="card-content grey darken-4">
                             <div id="questions2" class="">
                                 <ul class="collapsible grey darken-4" data-collapsible="accordion">
                                     <li>
-                                        <div class="collapsible-header blue-grey darken-4"><i class="material-icons">place</i>Will I be provided food?</div>
-                                        <div class="collapsible-body blue-grey darken-2 white-text"><span>Yes, food and beverages will be provided at the event at no extra cost.</span></div>
+                                        <div class="collapsible-header grey darken-4"><i class="material-icons">place</i>Will I be provided food?</div>
+                                        <div class="collapsible-body grey darken-2 white-text"><span>Yes, food and beverages will be provided at the event at no extra cost.</span></div>
                                     </li>
 
                                     <li>
-                                        <div class="collapsible-header blue-grey darken-4"><i class="material-icons">filter_drama</i>Do I have to arrange for an internet connection?</div>
-                                        <div class="collapsible-body blue-grey darken-2 white-text"><span>Internet will be provided at the event, but we recommend you carry a dongle for faster internet.</span></div>
+                                        <div class="collapsible-header grey darken-4"><i class="material-icons">filter_drama</i>Do I have to arrange for an internet connection?</div>
+                                        <div class="collapsible-body grey darken-2 white-text"><span>Internet will be provided at the event, but we recommend you carry a hotspot or dongle for faster internet.</span></div>
                                     </li>
                                     <li>
-                                        <div class="collapsible-header blue-grey darken-4"><i class="material-icons">place</i>Do I have to stay the night?</div>
-                                        <div class="collapsible-body blue-grey darken-2 white-text"><span>We recommend that you stay during the night as it gives you more time to work on your project. However, we will not force you to stay the night. If you choose to stay, there will be food, beverages, and bean bags provided.</span></div>
+                                        <div class="collapsible-header grey darken-4"><i class="material-icons">place</i>Do I have to stay the night?</div>
+                                        <div class="collapsible-body grey darken-2 white-text"><span>We recommend that you stay during the night as it gives you more time to work on your project. However, it is not required to stay the night. If you choose to stay, there will be food, beverages, and bean bags provided.</span></div>
                                     </li>
                                 </ul>
                             </div>
@@ -339,83 +368,83 @@ themes:[<span class="string-highlight">'Insert Coin to Continue....'</span>,
 
                                 <ul class="collapsible grey darken-4" data-collapsible="accordion">
                                     <li>
-                                        <div class="collapsible-header blue-grey darken-4"><i class="material-icons">place</i>What languages/software can I use?</div>
-                                        <div class="collapsible-body blue-grey darken-2 white-text"><span>Any language, technology stack, or library can be used to create your solutions, except MIT App Inventor and the like.</span></div>
+                                        <div class="collapsible-header grey darken-4"><i class="material-icons">place</i>What languages/software can I use?</div>
+                                        <div class="collapsible-body grey darken-2 white-text"><span>Any language, technology stack, or library can be used to create your solutions, except MIT App Inventor and the like.</span></div>
                                     </li>
                                     <li>
-                                        <div class="collapsible-header blue-grey darken-4"><i class="material-icons">filter_drama</i>Do we need to have the idea fully working?</div>
-                                        <div class="collapsible-body blue-grey darken-2 white-text"><span>The entire idea need not be implemented, however, the submission should be functional so that it can be reviewed by the judges.</span></div>
+                                        <div class="collapsible-header grey darken-4"><i class="material-icons">filter_drama</i>Do we need to have the idea fully working?</div>
+                                        <div class="collapsible-body grey darken-2 white-text"><span>The entire idea need not be implemented, however, the submission should be functional so that it can be reviewed by the judges.</span></div>
                                     </li>
                                     <li>
-                                        <div class="collapsible-header blue-grey darken-4"><i class="material-icons">whatshot</i>Who will own the IP (Intellectual Property) rights to the solution?</div>
-                                        <div class="collapsible-body blue-grey darken-2 white-text"><span>The developer/developers of the web/mobile application will have all rights and own the IP of the product. However, all code needs to be in the public domain (open source) so that it can be evaluated by the judges.</span></div>
+                                        <div class="collapsible-header grey darken-4"><i class="material-icons">whatshot</i>Who will own the IP (Intellectual Property) rights to the solution?</div>
+                                        <div class="collapsible-body grey darken-2 white-text"><span>The developer/developers of the web/mobile application will have all rights and own the IP of the product. However, all code needs to be in the public domain (open source) so that it can be evaluated by the judges.</span></div>
                                     </li>
                                 </ul>
                             </div>
                             <div id="questions1" class="grey darken-4">
                                 <ul class="collapsible grey darken-4" data-collapsible="accordion">
                                     <li>
-                                        <div class="collapsible-header blue-grey darken-4"><i class="material-icons">filter_drama</i>Who can participate in this event?</div>
-                                        <div class="collapsible-body blue-grey darken-2 white-text"><span>Anyone who is in school and is interested in technology can participate.</span></div>
+                                        <div class="collapsible-header grey darken-4"><i class="material-icons">filter_drama</i>Who can participate in this event?</div>
+                                        <div class="collapsible-body grey darken-2 white-text"><span>Anyone who is in school and is interested in technology can participate.</span></div>
                                     </li>
                                     <li>
-                                        <div class="collapsible-header blue-grey darken-4"><i class="material-icons">whatshot</i>Do I have to bring my laptop?</div>
-                                        <div class="collapsible-body blue-grey darken-2 white-text"><span>Yes, you are expected to bring you laptop and charger along with any softwares or dependencies you will be needing.</span></div>
+                                        <div class="collapsible-header grey darken-4"><i class="material-icons">whatshot</i>Do I have to bring my laptop?</div>
+                                        <div class="collapsible-body grey darken-2 white-text"><span>Yes, you are expected to bring you laptop and charger along with any software or dependencies you will be needing.</span></div>
                                     </li>
                                     <li>
-                                        <div class="collapsible-header blue-grey darken-4"><i class="material-icons">filter_drama</i>Do you need to pay for this event?</div>
-                                        <div class="collapsible-body blue-grey darken-2 white-text"><span>Yes, there is a ₹200 registration fee per person. This fee will be donated to charity.</span></div>
+                                        <div class="collapsible-header grey darken-4"><i class="material-icons">filter_drama</i>Do you need to pay for this event?</div>
+                                        <div class="collapsible-body grey darken-2 white-text"><span>Yes, there is a ₹200 registration fee per person. This fee will be donated to charity.</span></div>
                                     </li>
                                 </ul>
                             </div>
-                            <!-- <div id="dates">
-                            <div class="timeline">
-                                <div class="timeline-event">
-                                    <div class="card timeline-content">
-                                        <div class="card-content">
-                                            <span class="card-title activator grey-text text-darken-4">Registration Opens<i class="material-icons right">more_vert</i></span>
-                                            <p class="black-text">Registration for the codefest opens on the 1 <sup>st</sup> of December</p>
+                            <div id="dates">
+                                <div class="timeline">
+                                    <div class="timeline-event">
+                                        <div class="card timeline-content">
+                                            <div class="card-content">
+                                                <span class="card-title activator grey-text text-darken-4">Registration Opens<i class="material-icons right">more_vert</i></span>
+                                                <p class="black-text">Registration for the codefest opens on the 19 <sup>th</sup> of November</p>
+                                            </div>
+                                            <div class="card-reveal">
+                                                <span class="card-title grey-text text-darken-4">Registration Opens<i class="material-icons right">close</i></span>
+                                                <p class="black-text">Participants are expected to sign up for the event and submit a detailed idea on what exactly they are going to do at the event. The participants will be evaluated based on this idea.</p>
+                                            </div>
                                         </div>
-                                        <div class="card-reveal">
-                                            <span class="card-title grey-text text-darken-4">Registration Opens<i class="material-icons right">close</i></span>
-                                            <p class="black-text">Participants are expected to sign up for the event and submit a detailed idea on what exactly they are going to do at the event. The participants will be evaluated based on this idea.</p>
-                                        </div>
+                                        <div class="timeline-badge blue white-text"><i class="material-icons">assignment</i></div>
                                     </div>
-                                    <div class="timeline-badge blue white-text"><i class="material-icons">assignment</i></div>
-                                </div>
-                                <div class="timeline-event">
-                                    <div class="card timeline-content">
-                                        <div class="card-content">
-                                            <span class="card-title activator grey-text text-darken-4">Registration Closes<i class="material-icons right">more_vert</i></span>
-                                            <p class="black-text">Registration closes on 17<sup>th</sup> of January</p>
+                                    <div class="timeline-event">
+                                        <div class="card timeline-content">
+                                            <div class="card-content">
+                                                <span class="card-title activator grey-text text-darken-4">Registration Closes<i class="material-icons right">more_vert</i></span>
+                                                <p class="black-text">Registration closes on 4<sup>th</sup> of January</p>
+                                            </div>
+                                            <div class="card-reveal">
+                                                <span class="card-title grey-text text-darken-4">Registration Closes<i class="material-icons right">close</i></span>
+                                                <p class="black-text">Participants will not be allowed to register after this date under any cirumstances. After registration closes, participants will be evaluated based on the idea they submitted.</p>
+                                            </div>
                                         </div>
-                                        <div class="card-reveal">
-                                            <span class="card-title grey-text text-darken-4">Registration Closes<i class="material-icons right">close</i></span>
-                                            <p class="black-text">Participants will not be allowed to register after this date under any cirumstances. After registration closes, participants will be evaluated based on the idea they submitted.</p>
-                                        </div>
+                                        <div class="timeline-badge red white-text"><i class="material-icons">close</i></div>
                                     </div>
-                                    <div class="timeline-badge red white-text"><i class="material-icons">close</i></div>
-                                </div>
-                                <div class="timeline-event">
-                                    <div class="card timeline-content">
-                                        <div class="card-content">
-                                            <span class="card-title activator grey-text text-darken-4">Evaluation Completed<i class="material-icons right">more_vert</i></span>
-                                            <p class="black-text">Selected Participants will be announced on the 18<sup>th</sup> January</p>
+                                    <div class="timeline-event">
+                                        <div class="card timeline-content">
+                                            <div class="card-content">
+                                                <span class="card-title activator grey-text text-darken-4">Evaluation Completed<i class="material-icons right">more_vert</i></span>
+                                                <p class="black-text">Selected Participants will be announced on the 10<sup>th</sup> January</p>
+                                            </div>
+                                            <div class="card-reveal">
+                                                <span class="card-title grey-text text-darken-4">Evaluation Completed<i class="material-icons right">close</i></span>
+                                                <p class="black-text">The list of selected participants will be put up on the website. All selected participants will be emailed special event invites which they must carry to attend the event.</p>
+                                            </div>
                                         </div>
-                                        <div class="card-reveal">
-                                            <span class="card-title grey-text text-darken-4">Evaluation Completed<i class="material-icons right">close</i></span>
-                                            <p class="black-text">The list of selected participants will be put up on the website. All selected participants will be emailed special event invites which they must carry to attend the event.</p>
-                                        </div>
+                                        <div class="timeline-badge green white-text"><i class="material-icons">check</i></div>
                                     </div>
-                                    <div class="timeline-badge green white-text"><i class="material-icons">check</i></div>
                                 </div>
                             </div>
-                        </div> -->
                         </div>
                     </div>
                 </section>
                 <div class="container">
-                    <section id="prizes">
+                    <section id="Codefest-18">
                         <div class="row">
                             <h1 class="center-align">Winners of Codefest 2018</h1>
                         </div>
@@ -423,6 +452,7 @@ themes:[<span class="string-highlight">'Insert Coin to Continue....'</span>,
                 </div>
             </div>
             <div class="parallax-container">
+
                 <div class="parallax"><img src="images/winners.jpg"></div>
             </div>
             <div class="container">
@@ -505,6 +535,16 @@ themes:[<span class="string-highlight">'Insert Coin to Continue....'</span>,
                         <h5 class="white-text">Contact Us</h5>
                         <p class="grey-text text-lighten-4">Email us at <a href="mailto:oakcodefest@oakridge.in">oakcodefest@oakridge.in</a></p>
                     </div>
+                    <div class="col l3 s12">
+                        <h5 class="white-text">Codefest Core-Team</h5>
+                        <p class="grey-text text-lighten-4">Rahul Tarak</p>
+                        <p class="grey-text text-lighten-4">Rithvik Mahindra</p>
+                    </div>
+                    <div class="col l3 s12">
+                        <p class="grey-text text-lighten-4">Baalateja Kataru</p>
+                        <p class="grey-text text-lighten-4">Gaurang Bharti</p>
+                        <p class="grey-text text-lighten-4">Yeshwant Kethineni</p>
+                    </div>
                 </div>
             </div>
             <div class="footer-copyright">
@@ -516,8 +556,9 @@ themes:[<span class="string-highlight">'Insert Coin to Continue....'</span>,
                         <div class="col s5">
                             <> by <a href="">BK-Modding</a>,
                                 <a href="#"> CryogenicPlanet</a>,
-                                <a href="#"> Nexus</a>, and
-                                <a href="#"> Gaurang</a>
+                                <a href="#"> Nexus</a>
+                                <a href="#"> GbHacker</a>, and
+                                <a href="#"> Yeshy</a
                         </div>
                     </div>
                     <div class="row">

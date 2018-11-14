@@ -1,3 +1,6 @@
+      html, body {
+  overflow-x: hidden;
+}
         body {
             color: white;
         }
@@ -92,7 +95,7 @@
         }
 
         #typewriter {
-            font-size: 2em;
+            font-size: 14px;
             margin: 0;
             font-family: "Courier New";
         }
@@ -176,12 +179,6 @@
             background: rgba(0, 0, 0, 0.5);
         }
 
-        @media screen and (max-width: 500px) {
-            div {
-                width: 70%;
-            }
-        }
-
         @media screen and (max-device-width: 800px) {
             html {
             }
@@ -192,7 +189,7 @@
 
         .loading {
             font-family: sans-serif;
-            font-size: 128px;
+            font-size: 20vw;
             text-transform: uppercase;
             letter-spacing: 2.5px;
             font-weight: bold;

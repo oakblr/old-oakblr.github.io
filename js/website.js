@@ -84,12 +84,12 @@
 
   /*
   $('.button-collapse').sideNav({
-   edge: 'left', 
-   closeOnClick: true, 
-   draggable: true, 
+   edge: 'left',
+   closeOnClick: true,
+   draggable: true,
    onOpen: function(el) {
-    
-   }, 
+
+   },
   }); */
 
   $(".button-collapse").sideNav();
@@ -290,11 +290,12 @@
 
     document.getElementById("loader").style.display = 'none'
 
-    document.getElementsByTagName('body')[0].style = `background: url('../images/${bgimage}.jpg') no-repeat center center; 
+    /*document.getElementsByTagName('body')[0].style = `background: url('../images/${bgimage}.jpg') no-repeat center center;
     -webkit-background-size: cover;
-    -moz-background-size: cover; 
-    -o-background-size: cover; 
-    background-size: cover;`;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;`;*/
+    document.getElementsByTagName('body')[0].style = "background-color:rgba(0,0,0,0)"
     document.getElementById('website').style = "visibility: visible; width: 100%;";
     window.removeEventListener('scroll', noscroll);
     var typer = document.getElementById('typewriter');
@@ -316,7 +317,7 @@
   }
 
   vid.addEventListener('ended', function() {
-   // only functional if "loop" is removed 
+   // only functional if "loop" is removed
    vid.pause();
    // to capture IE10
    vidFade();
@@ -335,4 +336,3 @@
     pauseButton.innerHTML = "Paused";
    }
   }) */
- 

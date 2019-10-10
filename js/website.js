@@ -278,13 +278,13 @@
      console.log('begun playing');
     }
     else if (source == 'phone') {
-     bgimage = 'mobileBackground';
+     bgimage = '2020mobilebg';
      phoneLogo.style.display = 'block';
      Materialize.toast("Dear mobile user, for the best experience please use the website on a laptop or desktop", 5000);
 
     }
     else {
-     bgimage = 'background2'
+     bgimage = '2020mobilebg'
      console.log('Autoplay failed')
     }
 

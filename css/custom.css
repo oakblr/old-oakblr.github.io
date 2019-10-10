@@ -218,3 +218,13 @@
                 opacity: 1;
             }
         }
+
+
+        @font-face {
+            font-family: Futura;
+            src: url(../fonts/futura/futur.tff);
+        }
+
+        .futura{
+          font-family: Futura;
+        }

@@ -171,31 +171,38 @@ WCAG general accessibility recommendation is that media such as background video
             <div class="row"></div>
 
             <section id="intro">
-                <!-- <div class="row center-align">
-                    <div class="col s12">
-                        <div id="clockdiv">
-                            <div>
-                                <span class="days"></span>
-                                <div class="smalltext">Days</div>
-                            </div>
-                            <div>
-                                <span class="hours"></span>
-                                <div class="smalltext">Hours</div>
-                            </div>
-                            <div>
-                                <span class="minutes"></span>
-                                <div class="smalltext">Minutes</div>
-                            </div>
-                            <div>
-                                <span class="seconds"></span>
-                                <div class="smalltext">Seconds</div>
+              <style>
+                .light-blue{
+                  color: #fff !important;
+                  background-color: #003255 !important;
+                }
+              </style>
+                <center>
+                  <img src="images/coming soon white.png" width="75%"/>
+                  <div class="container">
+                    <div class="row">
+                        <div class="col s12 center-align">
+                            <div id="clockdiv">
+                                <div>
+                                    <span class="days light-blue darken-4"></span>
+                                    <div class="smalltext">Days</div>
+                                </div>
+                                <div>
+                                    <span class="hours light-blue darken-4"></span>
+                                    <div class="smalltext">Hours</div>
+                                </div>
+                                <div>
+                                    <span class="minutes light-blue darken-4"></span>
+                                    <div class="smalltext">Minutes</div>
+                                </div>
+                                <div>
+                                    <span class="seconds light-blue darken-4">00</span>
+                                    <div class="smalltext">Seconds</div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div> -->
-                <!-- <h2 class="center-align" style="color: #03A7E9;">Codefest 2020 coming soon</h4> -->
-                <center>
-                  <img src="images/coming soon white.png" width="700px"/>
+                  </div>
                 </center>
             </section>
         </div>
@@ -657,6 +664,62 @@ themes:[<span class="string-highlight">'Insert Coin to Continue....'</span>,
     <script type="text/javascript">
      console.log(document.getElementById("bgvid"))
     </script>
+
+
+    <script>
+    function getTimeRemaining(endtime) {
+        var t = Date.parse(endtime) - Date.parse(new Date());
+        var seconds = Math.floor((t / 1000) % 60);
+        var minutes = Math.floor((t / 1000 / 60) % 60);
+        var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+        var days = Math.floor(t / (1000 * 60 * 60 * 24));
+        return {
+            'total': t,
+            'days': days,
+            'hours': hours,
+            'minutes': minutes,
+            'seconds': seconds
+        };
+    }
+
+    function initializeClock(id, endtime) {
+        var clock = document.getElementById(id);
+        var daysSpan = clock.querySelector('.days');
+        var hoursSpan = clock.querySelector('.hours');
+        var minutesSpan = clock.querySelector('.minutes');
+        var secondsSpan = clock.querySelector('.seconds');
+
+        function updateClock() {
+            var t = getTimeRemaining(endtime);
+
+            daysSpan.innerHTML = t.days;
+            hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+            minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+            secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+            if (t.total <= 0) {
+                clearInterval(timeinterval);
+            }
+        }
+
+        updateClock();
+        var timeinterval = setInterval(updateClock, 1000);
+    }
+    setTimeout(function () {
+      $('#bigbtn1')[0].classList.remove("pulse")
+      $('#bigbtn2')[0].classList.remove("pulse")
+      $('#noticeicon')[0].classList.remove("pulse")
+    }, 5000);
+    var deadline = 'January 18 2020 08:00:00 GMT+0530';
+    initializeClock('clockdiv', deadline);
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.tap-target');
+        var instances = M.TapTarget.init(elems, options);
+      });
+    </script>
+    
 </body>
 
 </html>

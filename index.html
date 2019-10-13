@@ -184,19 +184,19 @@ WCAG general accessibility recommendation is that media such as background video
                         <div class="col s12 center-align">
                             <div id="clockdiv">
                                 <div>
-                                    <span class="days light-blue darken-4"></span>
+                                    <span class="days light-blue darken-4" style="background-image:url('images/codefest glitch.png');background-position:100px 300px"></span>
                                     <div class="smalltext">Days</div>
                                 </div>
                                 <div>
-                                    <span class="hours light-blue darken-4"></span>
+                                    <span class="hours light-blue darken-4" style="background-image:url('images/codefest glitch.png');background-position:200px 300px"></span>
                                     <div class="smalltext">Hours</div>
                                 </div>
                                 <div>
-                                    <span class="minutes light-blue darken-4"></span>
+                                    <span class="minutes light-blue darken-4" style="background-image:url('images/codefest glitch.png');background-position:300px 300px"></span>
                                     <div class="smalltext">Minutes</div>
                                 </div>
                                 <div>
-                                    <span class="seconds light-blue darken-4">00</span>
+                                    <span class="seconds light-blue darken-4" style="background-image:url('images/codefest glitch.png');background-position:400px 300px">00</span>
                                     <div class="smalltext">Seconds</div>
                                 </div>
                             </div>
@@ -219,10 +219,7 @@ WCAG general accessibility recommendation is that media such as background video
 type: <span class="string-highlight">'24 hour Hackathon'</span>,
 date: <span class="string-highlight">'18th-19th Jan 2020'</span>,
 location: <span class="string-highlight">'Oakridge Intl. School, Bangalore'</span>,
-themes:[<span class="string-highlight">'Insert Coin to Continue....'</span>,
-<span class="string-highlight">'Resurrecting dead memes....'</span>,
-<span class="string-highlight">'Error 404: Joke Not Found'</span>,
-<span class="string-highlight">'Codefest 2020 themes will be announced soon...'</span>,];
+themes:[<span class="comment-highlight">/* TODO: Insert themes when announced */</span>]
 }; </pre>
                     </div>
                 </div>
@@ -237,7 +234,8 @@ themes:[<span class="string-highlight">'Insert Coin to Continue....'</span>,
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <!-- OLD PHOTOS DIV HIDDEN -->
+                <!-- <div class="row">
                     <div class="col s12 m12">
                         <div class="icon-block">
                             <h2 class="center red-text text-darken-1"><i class="material-icons">flash_on</i></h2>
@@ -245,8 +243,36 @@ themes:[<span class="string-highlight">'Insert Coin to Continue....'</span>,
 
                         </div>
                     </div>
-                </div>
+                </div> -->
             </section>
+            <section class="grey darken-4">
+              <div class="row" style="padding-top:10px">
+                <div class="col s12" style="padding-top:20px;margin-bottom:0;padding-bottom:-10px">
+                    <center>
+                      <h1>Photos</h1>
+                    </center>
+                </div>
+              </div>
+              <div class="row" style="padding:0px 25px;padding-bottom:15px">
+                <div class="col s6" id="photos-2018-container">
+                  <center>
+                    <h1><a href="https://photos.app.goo.gl/d1dYMX6xvNrVfUwJ3">2018</a></h1>
+                  </center>
+                  <div id="photos-2018">
+
+                  </div>
+                </div>
+                <div class="col s6" id="photos-2019-container">
+                  <center>
+                    <h1><a href="https://photos.app.goo.gl/gGYJ8jutArw5ewnJ7">2019</a></h1>
+                  </center>
+                  <div id="photos-2019">
+
+                  </div>
+                </div>
+              </div>
+            </section>
+            <div class="row"></div>
             <section class="grey darken-4 valign-wrapper" style="font-family: Segoe UI; font-weight: light; !important;">
                 <div class="row">
                     <div class="col s12 m4">
@@ -279,7 +305,8 @@ themes:[<span class="string-highlight">'Insert Coin to Continue....'</span>,
             </section>
             <div class="row"></div>
             <!--    <div class="divider white"></div> -->
-            <section id="theme">
+            <section id="theme" class="hidden">
+              <!-- REMOVE HIDDEN WHEN THEMES ARE CONFIRMED AND ANNOUNCABLE -->
                 <!--  <h3 class="center-align">Themes will be announced soon!</h3> -->
                 <h5 class="flow-text center-align">General themes</h5>
                 <div class="row">
@@ -346,7 +373,7 @@ themes:[<span class="string-highlight">'Insert Coin to Continue....'</span>,
                 <div class="card grey darken-4">
                     <div class="card-content">
                         <h3 class="center-align"><b>Prizes Worth ₹2.2 Lakhs up for grabs</b>.</h3>
-                        <h4 class="center-align"><b>Stand a chance to win a trip to Stockholm</b></h4>
+                        <!-- <h4 class="center-align"><b>Stand a chance to win a trip to Stockholm</b></h4> -->
                         <h5 class="center-align">More prizes will be announced soon.</h5>
                     </div>
                 </div>
@@ -359,7 +386,7 @@ themes:[<span class="string-highlight">'Insert Coin to Continue....'</span>,
         <section>
             <div class="container">
                 <div class="row"></div>
-                <section id="faq">
+                <section id="faq" class="hidden">
                     <div class="card grey darken-4">
                         <div class="card-content">
                             <h3 class="center-align">FAQ</h3>
@@ -556,7 +583,7 @@ themes:[<span class="string-highlight">'Insert Coin to Continue....'</span>,
                     <a href="https://www.hackerearth.com/" target="_blank"><img class="responsive-img"  src="images/sponsors/HElogo.png"></a>
                 </div>
                 <div class="col s3">
-                    <a href="https://www.digitalocean.com" target="_blank"><img class="responsive-img"  src="images/sponsors/digitalOcean.png"></a>
+                    <a href="https://www.skillenza.com" target="_blank"><img class="responsive-img"  src="images/sponsors/skillenza.png"></a>
                 </div>
                 <div class="col s3">
                     <a href="https://www.ibm.com" target="_blank"><img class="responsive-img"  src="images/sponsors/ibm.png"></a>
@@ -611,13 +638,13 @@ themes:[<span class="string-highlight">'Insert Coin to Continue....'</span>,
 
                 <div class="col l3 s12">
                     <h5 class="white-text">Codefest Core-Team</h5>
-                    <p class="grey-text text-lighten-4">Rahul Tarak</p>
-                    <p class="grey-text text-lighten-4">Rithvik Mahindra</p>
+                    <p class="grey-text text-lighten-4">Kabir De Sarkar</p>
+                    <p class="grey-text text-lighten-4">Muhsin Mohamed</p>
                 </div>
                 <div class="col l3 s12">
-                    <p class="grey-text text-lighten-4">Baalateja Kataru</p>
+                    <p class="grey-text text-lighten-4">Chanakya Maddineni</p>
                     <p class="grey-text text-lighten-4">Gaurang Bharti</p>
-                    <p class="grey-text text-lighten-4">Yeshwant Kethineni</p>
+                    <p class="grey-text text-lighten-4">Aarush Mehrotra</p>
 
                 </div>
             </div>
@@ -629,11 +656,20 @@ themes:[<span class="string-highlight">'Insert Coin to Continue....'</span>,
                         &copy 2017 Oakridge Codefest
                     </div>
                     <div class="col s5">
-                        <> by <a href="https://github.com/BK-Modding">BK-Modding</a>,
+                        <b>Developed</b> by <a href="https://github.com/BK-Modding">BK-Modding</a>,
                             <a href="https://github.com/CryogenicPlanet"> CryogenicPlanet</a>,
                             <a href="https://github.com/Nexus987"> Nexus</a>
                             <a href="https://github.com/gaurangbharti1"> GBHacker</a>, and
                             <a href="https://github.com/YeshYyyK"> Yeshy</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col l6 s12">
+                        &nbsp;
+                    </div>
+                    <div class="col s5">
+                        <b>Renovated</b> by <a href="https://github.com/BK-Modding">Teminix</a>,
+                            <a href="https://github.com/muhsin7"> Muhsin7</a>
                     </div>
                 </div>
                 <div class="row">
@@ -718,8 +754,20 @@ themes:[<span class="string-highlight">'Insert Coin to Continue....'</span>,
         var elems = document.querySelectorAll('.tap-target');
         var instances = M.TapTarget.init(elems, options);
       });
+      $('#photos-2019-container a').on('mouseover',() => {
+        $('#photos-2019').addClass("blurred")
+      })
+      $('#photos-2019-container a').on('mouseout',() => {
+        $('#photos-2019').removeClass("blurred")
+      })
+      $('#photos-2018-container a').on('mouseover',() => {
+        $('#photos-2018').addClass("blurred")
+      })
+      $('#photos-2018-container a').on('mouseout',() => {
+        $('#photos-2018').removeClass("blurred")
+      })
     </script>
-    
+
 </body>
 
 </html>

@@ -93,7 +93,9 @@
         .string-highlight {
             color: rgba(253, 149, 90, 0.8);
         }
-
+        .comment-highlight {
+          color:lightgrey
+        }
         #typewriter {
             font-size: 2vw;
             margin: 0;
@@ -228,3 +230,104 @@
         .futura{
           font-family: Futura;
         }
+        .hidden {
+          display:none
+        }
+
+
+
+
+
+
+
+
+
+
+/* extra stuff, sorry for making random section */
+
+#photos-2018 {
+  /* clip:rect(0px,100px,100px,0px) */
+  position:absolute;
+  top:0px;
+  left:0px;
+  padding:inherit;
+  z-index: 0;
+  height:100%;
+  opacity: 0;
+  width:100%;
+  box-sizing: content-box;
+  background-position: center 600px;
+  background-size:650px;
+  background-image: url("../images/codefest1.jpg");
+}
+#photos-2018-container:hover #photos-2018 {
+  opacity: 1;
+}
+#photos-2018-container:hover a {
+  color:white
+}
+#photos-2019-container {
+  position: relative;
+  padding:0;
+  overflow: hidden;
+}
+#photos-2018-container {
+  overflow: hidden;
+}
+#photos-2019,#photos-2018 {
+  transition: 0.3s
+}
+
+#photos-2019 {
+  /* clip:rect(0px,100px,100px,0px) */
+  padding:inherit;
+  position:absolute;
+  opacity: 0;
+  top:0px;
+  left:3%;
+  z-index: 0;
+  height:100%;
+  width:100%;
+  box-sizing: content-box;
+  background-position: center 770px;
+  background-size:cover;
+  background-image: url("../images/codefest2logo.png");
+}
+#photos-2019-container:hover #photos-2019 {
+  opacity: 1
+}
+#photos-2019-container:hover center h1 a {
+  color:white;
+}
+#photos-2019-container:hover center h1 a:hover,#photos-2018-container:hover center h1 a:hover {
+  text-decoration: underline;
+  transform:scale(1.1)
+}
+#photos-2018-container {
+  position: relative;
+  padding:0;
+}
+#photos-2018-container center,#photos-2019-container center {
+  z-index: 3;
+  position: relative;
+  /* padding-top:20px; */
+  height: 100%
+}
+#photos-2018-container center h1 a,#photos-2019-container center h1 a {
+  /* vertical-align: center; */
+  transition: 0.4s
+}
+#photos-2018-container center h1 ,#photos-2019-container center h1  {
+  height: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+#photos-2018-container ,#photos-2019-container  {
+  border-radius: 15px !important;
+  height:120px;
+}
+.blurred {
+  filter: blur(5px);
+  transform:scale(1.3);
+}

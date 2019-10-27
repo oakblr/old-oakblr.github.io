@@ -136,6 +136,8 @@
             height: auto;
             background-size: cover;
             /* width: 100%; */
+            /* background-color:darkblue; */
+            background-image:url('../images/codefest_logo_dragon.png');
             z-index: -100;
             transform: translateX(-50%) translateY(-50%);
             transition: 1s opacity;

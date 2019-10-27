@@ -292,6 +292,7 @@
   width:100%;
   box-sizing: content-box;
   background-position: center 50%;
+  border-radius:15px !important;
   background-size:cover;
   background-image: url("../images/codefest2logo.png");
 }

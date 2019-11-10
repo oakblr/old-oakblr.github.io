@@ -113,8 +113,8 @@
 WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
 <!-- <source src="/saber_1.webm" type="video/webm">
 <source src="/saber_1.mp4" type="video/mp4"> -->
-<source src="Codefest2020Logo.webm" type="video/webm">
-<source src="Codefest2020Logo.mp4" type="video/mp4">
+                                      <source src="Codefest2020Logo.webm" type="video/webm">
+                                      <source src="Codefest2020Logo.mp4" type="video/mp4">
 </video></div>
                         </div>
                     </div>
@@ -593,7 +593,16 @@ themes:[
             </div>
             <div class="row">
               <center>
-                  <a href="https://www.teamhgs.com"><img  height="300px" src="images/sponsors/hgs-white.png" /></a>
+                  <a href="https://www.teamhgs.com"><img  id="HGSLogo" height="300px" src="images/sponsors/hgs-white.png" /></a>
+              </center>
+            </div>
+            <div class="row hidden">
+              <!-- muh_hidden_anchor : remove hidden class to test, put it back once done-->
+              <center>
+                <video autoplay height="400px" controls id="HGSVid" muted>
+                  <source src="Codefest2020Logo.mp4" type="video/mp4">
+                  <source src="Codefest2020Logo.webm" type="video/mp4">
+                </video>
               </center>
             </div>
             <div class="row hidden">
@@ -777,19 +786,31 @@ themes:[
         updateClock();
         var timeinterval = setInterval(updateClock, 1000);
     }
-    setTimeout(function () {
-      $('#bigbtn1')[0].classList.remove("pulse")
-      $('#bigbtn2')[0].classList.remove("pulse")
-      $('#noticeicon')[0].classList.remove("pulse")
-    }, 5000);
+    // setTimeout(function () {
+    //   $('#bigbtn1')[0].classList.remove("pulse")
+    //   $('#bigbtn2')[0].classList.remove("pulse")
+    //   $('#noticeicon')[0].classList.remove("pulse")
+    // }, 5000);
     var deadline = 'January 18 2020 08:00:00 GMT+0530';
     initializeClock('clockdiv', deadline);
 
+    // muh_uncomment_anchor
+    // UNCOMMENT FOR TESTING, AND THEN COMMENT AFTER DONE BECAUSE THEY HAVEN'T SENT VIDEO YET
+    /*$("#HGSLogo").parent().parent().on("mouseover.customEvent",(event) => {
+      $("#HGSLogo").animate({height:"100px"}, 500)
+      $('#HGSVid').hide()
+      $("#HGSVid").parent().parent().removeClass('hidden');
+      $("#HGSVid").slideDown()
+      $("#hiddenButton").click()
+      $("#HGSVid")[0].play();
+      $("#HGSLogo").parent().parent().unbind("mouseover.customEvent")
+    })*/
 
-    document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.tap-target');
-        var instances = M.TapTarget.init(elems, options);
-      });
+
+    // document.addEventListener('DOMContentLoaded', function() {
+    //     var elems = document.querySelectorAll('.tap-target');
+    //     var instances = M.TapTarget.init(elems, options);
+    //   });
       $('#photos-2019-container a').on('mouseover',() => {
         $('#photos-2019').addClass("blurred")
       })

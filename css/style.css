@@ -89,3 +89,26 @@
     left: 0;
   }
 }
+
+.prize{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.container .card:not(.prize){
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+}
+
+.questions{
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+}
+
+.questions h5, h4, h3, h1{
+  font-weight: bold;
+}
+
+.collapsible-header{
+  font-weight: bold !important;
+}

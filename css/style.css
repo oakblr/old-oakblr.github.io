@@ -129,11 +129,10 @@ path{
   fill: #dd2a7b !important;
 }
 
-#HGSLogo{
-  /* width: 110%; */
-  height: 260px;
-}
 #CiscoLogo{
-  /* width: 75%; */
-  height: 280px;
+  /* height: 75%; */
+}
+
+#HGSLogo{
+  padding-top, padding-bottom: 32px;
 }

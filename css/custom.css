@@ -97,7 +97,7 @@
           color:lightgrey
         }
         #typewriter {
-            font-size: 2vw;
+            /* font-size: 2vw; */
             margin: 0;
             font-family: "Courier New";
         }

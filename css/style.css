@@ -91,14 +91,14 @@
 }
 
 .prize{
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: -10px;
+  margin-right: -10px;
 }
 
-.container .card:not(.prize){
+/* .container .card:not(.prize){
   padding-left: 40px !important;
   padding-right: 40px !important;
-}
+} */
 
 .questions{
   padding-left: 40px !important;
@@ -111,4 +111,21 @@
 
 .collapsible-header{
   font-weight: bold !important;
+}
+
+path{
+  fill: white !important;
+  transition: .5s ease;
+}
+
+.fb:hover #fb{
+  fill: #3b5998 !important;
+}
+
+.twit:hover #twit{
+  fill: #00acee !important;
+}
+
+.insta:hover #insta{
+  fill: #dd2a7b !important;
 }

@@ -90,9 +90,8 @@
   }
 }
 
-.prize{
-  margin-left: -10px;
-  margin-right: -10px;
+.prize h3{
+  font-weight: normal !important;
 }
 
 /* .container .card:not(.prize){
@@ -128,4 +127,13 @@ path{
 
 .insta:hover #insta{
   fill: #dd2a7b !important;
+}
+
+#HGSLogo{
+  /* width: 110%; */
+  height: 260px;
+}
+#CiscoLogo{
+  /* width: 75%; */
+  height: 280px;
 }

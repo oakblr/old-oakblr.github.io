@@ -6,6 +6,12 @@
         overflow-x: hidden;
         background-color: rgb(0, 0, 0);
     }
+    .white-right-divider {
+      border-right:white 4px solid !important;
+    }
+    .no-bottom-margin {
+      margin-bottom:0 !important;
+    }
 </style>
 
 <head>
@@ -187,6 +193,9 @@ WCAG general accessibility recommendation is that media such as background video
                 .light-blue{
                   color: #fff !important;
                   background-color: #003255 !important;
+                }
+                #HGSVid {
+                  display:block
                 }
               </style>
                 <center>
@@ -547,14 +556,39 @@ themes:[
                 <h4 class="center-align">Title sponsors</h4>
               </div>
             </div>
-            <div class="row">
+            <div class="row" id="titleSponsorContainer">
               <center>
                 <!-- <div class="container"> -->
-                  <a href="https://www.teamhgs.com" class = "col s6 valign-wrapper"><img class="responsive-img" id="HGSLogo" src="images/sponsors/hgs-white.png"/></a>
-                  <a href="https://www.cisco.com" class = "col s6"><img class="responsive-img" id="CiscoLogo" src="images/sponsors/Cisco.png" /></a>
+                <div class="col s6 white-right-divider">
+                  <center>
+                    <a href="https://www.teamhgs.com">
+                      <img class="responsive-img" id="HGSLogo" src="images/sponsors/hgs-white.png"/>
+                    </a>
+                    <div class="hidden">
+                      <video height="300px" controls id="HGSVid" class="hidden">
+                        <source src="DIGICX.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                </div>
+                <div class="col s6">
+                  <center>
+                    <a href="https://www.cisco.com"><img class="responsive-img"  src="images/sponsors/Cisco.png" /></a>
+                  </center>
+                </div>
                 <!-- </div> -->
               </center>
             </div>
+            <!-- <div class="row">
+              <div class="col s6">
+                <center>
+                  <video autoplay height="200px" controls id="HGSVid" muted>
+                    <source src="Codefest2020Logo.mp4" type="video/mp4">
+                    <source src="Codefest2020Logo.webm" type="video/mp4">
+                  </video>
+                </center>
+              </div>
+              <a href="https://www.cisco.com" class = "col s6"><img class="responsive-img" id="CiscoLogo" src="images/sponsors/Cisco.png" /></a>
+            </div> -->
             <!-- <div class="row hidden">
               <center>
                 <video autoplay height="400px" controls id="HGSVid" muted>
@@ -829,15 +863,18 @@ themes:[
     // console.log("%c   uwu  ","font-size:250px;background-color:black;color:white;font-weight:bold;")
     // muh_uncomment_anchor
     // UNCOMMENT FOR TESTING, AND THEN COMMENT AFTER DONE BECAUSE THEY HAVEN'T SENT VIDEO YET
-    /*$("#HGSLogo").parent().parent().on("mouseover.customEvent",(event) => {
-      $("#HGSLogo").animate({height:"100px"}, 500)
+    $("#titleSponsorContainer").on("mouseover.customEvent",(event) => {
+      setTimeout(koolHGSAnimation,1000)
+      $("#titleSponsorContainer").unbind("mouseover.customEvent")
+    })
+    function koolHGSAnimation(){
+      $("#HGSLogo").animate({height:"400px"})
       $('#HGSVid').hide()
-      $("#HGSVid").parent().parent().removeClass('hidden');
+      $("#HGSVid").parent().removeClass('hidden');
       $("#HGSVid").slideDown()
-      $("#hiddenButton").click()
-      $("#HGSVid")[0].play();
-      $("#HGSLogo").parent().parent().unbind("mouseover.customEvent")
-    })*/
+      $('#HGSVid')[0].currentTime = 2
+      $("#titleSponsorContainer").unbind("mouseover.customEvent")
+    }
 
 
     // document.addEventListener('DOMContentLoaded', function() {

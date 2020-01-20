@@ -171,8 +171,8 @@
    var timeinterval = setInterval(updateClock, 1000);
   }
 
-  var deadline = 'January 20 2019 09:00:00 GMT+0530';
-  initializeClock('clockdiv', deadline);
+  // var deadline = 'January 20 2019 09:00:00 GMT+0530';
+  // initializeClock('clockdiv', deadline);
 
 
   (function(i, s, o, g, r, a, m) {

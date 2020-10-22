@@ -1,0 +1,336 @@
+      html, body {
+  overflow-x: hidden;
+}
+        body {
+            color: white;
+        }
+
+        .collapsible-header,
+        .collapsible-body,
+        .collapsible,
+        ul.collapsible>li {
+            border: 0!important;
+            box-shadow: none!important;
+        }
+
+        #clockdiv {
+            font-family: sans-serif;
+            color: #03A7E9;
+            display: inline-block;
+            font-weight: 100;
+            text-align: center;
+            font-size: 50px;
+        }
+
+        #clockdiv>div {
+            padding: 10px;
+            border-radius: 3px;
+            display: inline-block;
+        }
+
+        #clockdiv div>span {
+            padding: 15px;
+            border-radius: 3px;
+            background: #263238;
+            display: inline-block;
+        }
+
+        .smalltext {
+            padding-top: 5px;
+            font-size: 16px;
+        }
+
+        .tabs .indicator {
+            background-color: white !important;
+        }
+
+        .tab a {
+            color: white !important;
+            background-color: #263238 !important;
+        }
+
+        /* Style all font awesome icons */
+
+        .fa {
+            padding: 10px;
+            font-size: 30px;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        /* Add a hover effect if you want */
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        /* Set a specific color for each brand */
+
+        /* Facebook */
+
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        /* Twitter */
+
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+
+        .fa-instagram {
+            background: #125688;
+            color: white;
+        }
+
+        .var-highlight {
+            color: #C0AD60;
+        }
+
+        .string-highlight {
+            color: rgba(253, 149, 90, 0.8);
+        }
+        .comment-highlight {
+          color:lightgrey
+        }
+        #typewriter {
+            /* font-size: 2vw; */
+            margin: 0;
+            font-family: "Courier New";
+        }
+
+        #typewriter:after {
+            content: "|";
+            -webkit-animation: blink 500ms linear infinite alternate;
+            animation: blink 500ms linear infinite alternate;
+        }
+
+        @-webkit-keyframes blink {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #bgvid {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: 100%;
+            height: auto;
+            background-size: cover;
+            /* width: 100%; */
+            /* background-color:darkblue; */
+            background-image:url('../images/codefest_logo_dragon.png');
+            z-index: -100;
+            transform: translateX(-50%) translateY(-50%);
+            transition: 1s opacity;
+        }
+
+        .stopfade {
+            opacity: .5;
+        }
+
+        #polina {
+            font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+            font-weight: 100;
+            background: rgba(0, 0, 0, 0.3);
+            color: white;
+            padding: 2rem;
+            width: 33%;
+            margin: 2rem;
+            float: right;
+            font-size: 1.2rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            margin-top: 0;
+            letter-spacing: .3rem;
+        }
+
+        #polina button {
+            display: block;
+            width: 80%;
+            padding: .4rem;
+            border: none;
+            margin: 1rem auto;
+            font-size: 1.3rem;
+            background: rgba(255, 255, 255, 0.23);
+            color: #fff;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: .3s background;
+        }
+
+        #polina button:hover {
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        @media screen and (max-device-width: 800px) {
+            html {
+            }
+            #bgvid {
+                display: none;
+            }
+        }
+
+        .loading {
+            font-family: sans-serif;
+            font-size: 20vw;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            font-weight: bold;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: FadeIn 300ms linear forwards;
+            opacity: 0;
+        }
+
+        .output {
+            color: #26ff00;
+            font-family: sans-serif;
+            font-size: 16px;
+            opacity: 0.5;
+            z-index: -1;
+        }
+
+        @keyframes FadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+
+        @font-face {
+            font-family: Futura;
+            src: url(../fonts/futura/futur.tff);
+        }
+
+        .futura{
+          font-family: Futura;
+        }
+        .hidden {
+          display:none
+        }
+
+
+
+
+
+
+
+
+
+
+/* extra stuff, sorry for making random section */
+
+#photos-2018 {
+  /* clip:rect(0px,100px,100px,0px) */
+  position:absolute;
+  top:0px;
+  left:0px;
+  padding:inherit;
+  z-index: 0;
+  height:100%;
+  opacity: 0;
+  width:100%;
+  box-sizing: content-box;
+  background-position: center 600px;
+  background-size:650px;
+  background-image: url("../images/codefest1.jpg");
+}
+#photos-2018-container:hover #photos-2018 {
+  opacity: 1;
+}
+#photos-2018-container:hover a {
+  color:white
+}
+#photos-2019-container {
+  position: relative;
+  padding:0;
+  overflow: hidden;
+}
+#photos-2018-container {
+  overflow: hidden;
+}
+#photos-2019,#photos-2018 {
+  transition: 0.3s
+}
+
+#photos-2019 {
+  /* clip:rect(0px,100px,100px,0px) */
+  padding:inherit;
+  position:absolute;
+  opacity: 0;
+  top:0px;
+  left:3%;
+  z-index: 0;
+  height:100%;
+  width:100%;
+  box-sizing: content-box;
+  background-position: center 50%;
+  border-radius:15px !important;
+  background-size:cover;
+  background-image: url("../images/codefest2logo.png");
+}
+#photos-2019-container:hover #photos-2019 {
+  opacity: 1
+}
+#photos-2019-container:hover center h1 a {
+  color:white;
+}
+#photos-2019-container:hover center h1 a:hover,#photos-2018-container:hover center h1 a:hover {
+  text-decoration: underline;
+  transform:scale(1.1)
+}
+#photos-2018-container {
+  position: relative;
+  padding:0;
+}
+#photos-2018-container center,#photos-2019-container center {
+  z-index: 3;
+  position: relative;
+  /* padding-top:20px; */
+  height: 100%
+}
+#photos-2018-container center h1 a,#photos-2019-container center h1 a {
+  /* vertical-align: center; */
+  transition: 0.4s
+}
+#photos-2018-container center h1 ,#photos-2019-container center h1  {
+  height: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+#photos-2018-container ,#photos-2019-container  {
+  border-radius: 15px !important;
+  height:120px;
+}
+.blurred {
+  filter: blur(5px);
+  transform:scale(1.3);
+}

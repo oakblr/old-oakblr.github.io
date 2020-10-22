@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+    html,
+    body {
+        overflow-x: hidden;
+        background-color: rgb(0, 0, 0);
+    }
+    .white-right-divider {
+      border-right:white 4px solid !important;
+    }
+    .no-bottom-margin {
+      margin-bottom:0 !important;
+    }
+</style>
+
+<head>
+    <link rel="icon" type="image/png" href="images/kali_logo-rounded.png" sizes="16x16"/>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106611677-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-106611677-2');
+    </script>
+    <meta charset="utf-8">
+    <title>Oakridge Codefest</title>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body style="background-color: black;">
+    <div id="fb-root"></div>
+    <!-- Facebook stuff -->
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
+    <div id="loader">
+        <div class="row">
+            <div class="col s8 offset-s2">
+                <div class="white-text output"></div>
+                <div class="loading black-text" id="text">
+                    <div class="center-align">2021 CODE FEST</div> <br>
+                    <div class="center-align"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="website" style="visibility: hidden;">
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+
+        <nav class="transparent z-depth-0">
+            <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo left hide-on-med-and-down"><img class = "responsive-img" width = 135px src = "images/nord-oak-white.png"/></a>
+                <a href="index.html" class="brand-logo center hide-on-large-only"><img class = "responsive-img" width = 135px src = "images/nord-oak-white.png"/></a>
+                <a href="#" data-activates="mobile-menu" class="left button-collapse"><i class="material-icons">menu</i></a>
+                <ul id="wide-menu" class="right hide-on-med-and-down">
+                    <li><a href="#theme" class="waves-effect hoverable waves-teal large right ">Themes</a></li>
+                    <li><a href="#prizes" class="waves-effect hoverable waves-teal large right ">Prizes</a></li>
+                    <li><a href="#sponsor" class="waves-effect hoverable  waves-teal large right">Sponsor</a></li>
+                    <li><a href="#faq" class="waves-effect hoverable waves-teal large right">FAQ</a></li>
+                    <li><a class="register-btn btn disabled" href="" style="color: #404040; !important">Registrations not open</a></li>
+                    <!--     <li><a href="#livestream" class="waves-effect hoverable waves-teal large right">Live streaming</a></li> -->
+                </ul>
+                <ul class="side-nav grey darken-4" id="mobile-menu">
+                    <li><a href="#theme" class="waves-effect hoverable waves-teal large  white-text ">Themes</a></li>
+                    <li><a href="#prizes" class="waves-effect hoverable waves-teal large  white-text">Prizes</a></li>
+                    <li><a href="#sponsor" class="waves-effect hoverable  waves-teal large  white-text">Sponsor</a></li>
+                    <li><a href="#faq" class="waves-effect hoverable waves-teal large  white-text">FAQ</a></li>
+                    <li><a class="register-btn btn pulse disabled" href=" " style="color: #404040; !important" target="_blank">Registtrations closed</a></li>
+                    <!--   <li><a href="#livestream" class="waves-effect hoverable waves-teal large right">Live streaming</a></li> -->
+                </ul>
+            </div>
+        </nav>
+        <div class="container hide-on-large-only show-on-medium-and-down">
+
+                  <br />
+                  <br />
+                  <br />
+                  <center>
+                    <a class="register-btn btn-large pulse disabled " href=" " style="color: #fff; !important" target="_blank">Registtrations closed</a>
+                  </center>
+          </div>
+        <div id="index-banner" class="parallax-container hide-on-med-and-down">
+            <div class="section no-pad-bot">
+
+                <div class="row hide-on-med-and-down"></div>
+                <div class="row hide-on-med-and-down"></div>
+                <div class="container hide-on-med-and-down">
+                    <div class="row">
+                        <div class="col s8 offset-s2">
+                            <!--    <div class="card-panel black z-depth-5"> -->
+                            <div class="center-align">
+
+                                <!-- <img src="images/uncompressed.gif" class="responsive-img">-->
+                                <video id="bgvid" width="100%" height="100%" playsinline autoplay muted>
+  <!--
+- Video needs to be muted, since Chrome 66+ will not autoplay video with sound.
+WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+<!-- <source src="/saber_1.webm" type="video/webm">
+<source src="/saber_1.mp4" type="video/mp4"> -->
+                                      <source src="Codefest2020Logo.webm" type="video/webm">
+                                      <source src="Codefest2020Logo.mp4" type="video/mp4">
+</video></div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="container">
+            <div id='phone' class="row center">
+                <div id="mob">
+                  <br /><br />
+                    <img src="images/codefest_logo_dragon.png" style="width: 100%; height: 150%;"></img>
+                </div>
+            </div>
+            <!--<section id="intro">
+            <div class="row center-align">
+                <div class="col s12">
+                    <a class="typeform-share button" href="https://oakridgecodefest.typeform.com/to/YLU5qH" data-mode="drawer_right" style="display:inline-block;text-decoration:none;background-color:#263238;color:white;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:32px;line-height:80px;text-align:center;margin:0;height:80px;padding:0px 53px;border-radius:13px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;"
+                        data-hide-headers=true data-hide-footer=true target="_blank">Register Now!</a>
+                    <script>
+                        (function() {
+                            var qs, js, q, s, d = document,
+                                gi = d.getElementById,
+                                ce = d.createElement,
+                                gt = d.getElementsByTagName,
+                                id = "typef_orm_share",
+                                b = "https://embed.typeform.com/";
+                            if (!gi.call(d, id)) {
+                                js = ce.call(d, "script");
+                                js.id = id;
+                                js.src = b + "embed.js";
+                                q = gt.call(d, "script")[0];
+                                q.parentNode.insertBefore(js, q)
+                            }
+                        })()
+                    </script>
+                </div>
+            </div>
+
+-->
+
+            <div class="hide-on-med-and-down">
+              <div class="row"></div>
+              <div class="row"></div>
+              <div class="row"></div>
+              <div class="row"></div>
+              <div class="row"></div>
+              <div class="row"></div>
+              <div class="row"></div>
+              <div class="row"></div>
+              <div class="row"></div>
+              <div class="row"></div>
+              <div class="row"></div>
+              <div class="row"></div>
+            </div>
+
+            <section id="intro">
+              <style>
+                .light-blue{
+                  color: #fff !important;
+                  background-color: #003255 !important;
+                }
+                #HGSVid {
+                  display:block
+                }
+              </style>
+                <center>
+                  <!-- <img src="images/coming soon white.png" width="75%"/> -->
+                  <div class="container">
+                    <div class="row">
+                        <div class="col s12 center-align">
+                            <div id="clockdiv">
+                                <div>
+                                    <span class="days light-blue darken-4" style="background-image:url('images/codefest glitch darkened.png');background-position:100px 100px"></span>
+                                    <div class="smalltext">Days</div>
+                                </div>
+                                <div>
+                                    <span class="hours light-blue darken-4" style="background-image:url('images/codefest glitch darkened.png');background-position:200px 100px"></span>
+                                    <div class="smalltext">Hours</div>
+                                </div>
+                                <div>
+                                    <span class="minutes light-blue darken-4" style="background-image:url('images/codefest glitch darkened.png');background-position:300px 100px"></span>
+                                    <div class="smalltext">Minutes</div>
+                                </div>
+                                <div>
+                                    <span class="seconds light-blue darken-4" style="background-image:url('images/codefest glitch darkened.png');background-position:400px 100px"></span>
+                                    <div class="smalltext">Seconds</div>
+                                </div>
+                            </div>
+                            <h5><i>Codefest 2020 has ended.</i></h5>
+                        </div>
+                    </div>
+                  </div>
+                </center>
+            </section>
+        </div>
+
+        <div id="animation-banner" class="parallax-container" style="color: #03A7E9; width: 100%;">
+            <div class="section no-pad-bot">
+                <div class="row"></div>
+                <div class="row"></div>
+                <div class="container">
+                    <div class="center-align">
+                        <!-- DO NOT INDENT BELOW PLS -->
+                        <pre id="typewriter" style="overflow-x: hidden;" class="flow-text">
+<span class="var-highlight">OakCodefest</span> 2020 = {
+
+type: <span class="string-highlight">'24 hour Hackathon'</span>,
+date: <span class="string-highlight">'18th-19th Jan 2020'</span>,
+location: <span class="string-highlight">'Oakridge Intl. School, Bangalore'</span>,
+themes:[
+  <span class="string-highlight">'Transportation'</span>,
+  <span class="string-highlight">'Internet of things'</span>,
+  <span class="string-highlight">'Data analytics'</span>,
+  <span class="string-highlight">'Security'</span>,
+  <span class="string-highlight">'Game dev'</span>
+]
+};
+</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+          <br />
+          <br />
+          <br />
+            <section id="video">
+                <div class="row">
+                    <div class="col s8 offset-s2">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/EMpHOXm7sAg" frameborder="0" allow="autoplay" allow="encrypted-media" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <!-- OLD PHOTOS DIV HIDDEN -->
+                <!-- <div class="row">
+                    <div class="col s12 m12">
+                        <div class="icon-block">
+                            <h2 class="center red-text text-darken-1"><i class="material-icons">flash_on</i></h2>
+                            <h5 class="center"><a href="https://photos.app.goo.gl/d1dYMX6xvNrVfUwJ3" class="btn-large center" style="background-color:  #03A7E9;">Photos from Codefest 2018</a></h5>
+
+                        </div>
+                    </div>
+                </div> -->
+            </section>
+
+            <div class="row"></div>
+            <section class="grey darken-4 valign-wrapper" style="font-family: Segoe UI; font-weight: light; !important;">
+                <div class="row questions">
+                    <div class="col s12 m4">
+                        <div class="icon-block">
+                            <h2 class="center-align"><i class="material-icons medium">flash_on</i></h2>
+                            <h4 class="center-align">What is a Codefest?</h4>
+
+                            <p class="center-align">A codefest is a platform that provides the opportunity for aspiring developers to showcase their unique talents to both each other and veterans of the industry. Our codefest is Bangalore's only overnight school hackathon and
+                                we plan on making it as fulfilling and rewarding an experience as possible.</p>
+                        </div>
+                    </div>
+                    <div class="col s12 m4">
+                        <div class="icon-block">
+                            <h2 class="center-align"><i class="material-icons medium">group</i></h2>
+                            <h4 class="center-align">Themes</h4>
+
+                            <p class="center-align">With a multitude of impactful themes, the participants will be tackling current technical problems with innovative improvements and solutions.</p>
+                        </div>
+                    </div>
+
+                    <div class="col s12 m4">
+                        <div class="icon-block">
+                            <h2 class="center-align"><i class="material-icons medium">settings</i></h2>
+                            <h4 class="center-align">Rewards</h4>
+
+                            <p class="center-align">Placement in the top three will guarantee a large monetary reward, and additionally, sponsor themes have their own rewards, which include a large assortment of products and services of equal value.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="row"></div>
+            <!--    <div class="divider white"></div> -->
+            <section id="theme" class="">
+              <!-- REMOVE HIDDEN WHEN THEMES ARE CONFIRMED AND ANNOUNCABLE -->
+                <!--  <h3 class="center-align">Themes will be announced soon!</h3> -->
+                <!-- <h3 class="flow-text center-align">General themes</h3> -->
+                <h3 class="center-align">General themes</h3>
+                <div class="row">
+                    <div class="col s12">
+                        <div class="card-panel grey darken-4">
+                            <span class="white-text" style="font-size: 150%;"><p>Teams are <b>expected</b> to use at least <b>one primary</b> theme for their project but are <b>recommended</b> to choose two or more themes. For more infomation regarding themes please email us at <a href="mailto:oakcodefest@oakridge.in">oakcodefest@oakridge.in</a></p></span>
+                        </div>
+                    </div>
+                </div>
+                <ul class="collapsible popout" data-collapsible="accordion">
+
+                  <!-- HERE -->
+                    <li>
+                        <div class="collapsible-header center-align grey darken-4" onmouseover="onhover(this);" onmouseout="onnothover(this);"><i class="material-icons">directions_transit</i>Transportation</div>
+                        <div class="collapsible-body grey darken-4"><span><p>Humans, around the world, commute millions of miles every single day. A significant fraction of our day is spent in traveling. Technology has played a very significant role in enabling more people to commute. Be it in the form discovery, aggregation or purchase, technology has redefined the way we commute. Imagine how technology can human experience even better in day to day transportation and commute. What can technology do make public and private transportation much simpler?</p>
+<p> Examples : Traffic Reduction Software and Autonomous Transport Solutions</p></span></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header center-align grey darken-4" onmouseover="onhover(this);" onmouseout="onnothover(this);"><i class="material-icons">settings_input_antenna</i>Internet of things</div>
+                        <div class="collapsible-body grey darken-4"><span><p>The world grows more connected each day. From the spark of the internet revolution till now, opportunities lay endless. From Google home, amazon echo, to drone home deliveries, monitoring and much more. This era is the peak time for IOT. Let's see what you can bring to the table</p>
+<p> Examples : Electricity monitoring, smart door, light monitoring</p></span></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header center-align grey darken-4" onmouseover="onhover(this);" onmouseout="onnothover(this);"><i class="material-icons">show_chart</i> Data analytics </div>
+                        <div class="collapsible-body grey darken-4"><span><p>As humans develop more and more digital solutions, arises the need for analysis of complex data. Such data can be interpreted well by Artificial Intelligence. From predicting stocks to weather, this field has immense potential. The application of Data Analytics rises by the second as companies adopt machine learning and deep learning powered technologies. Show us what you can do with big data</p>
+</span></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header center-align grey darken-4" onmouseover="onhover(this);" onmouseout="onnothover(this);"><i class="material-icons">security</i>Security</div>
+                        <div class="collapsible-body grey darken-4"><span><p> Cybercrime is an offence that is practiced around the globe across nations. Hackers can find their way in via brute force, SQL injection, hash tables, cross site scripting and more. In order to combat such crime, HTTPS, SSL, asymmetric/public private key-pairs, hashing and so on has been created. </p>
+</span></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header center-align grey darken-4" onmouseover="onhover(this);" onmouseout="onnothover(this);"><i class="material-icons">videogame_asset</i>Game Development(6-8th Grade)</div>
+                        <div class="collapsible-body grey darken-4"><span><p>Video games are a great way to have fun and learn code at the same time!</p>
+                          <p>Use your knowledge of coding to make fun and interactive game for everyone to enjoy!</p>
+<p>For this theme, we expect participants to be creative and innovative and have some kind of unique idea or message in it. <b>Participants need to use programming languages and drag and drop/WYSIWYG applications such as Scratch and MIT App Inventor are strictly not allowed.</b></p></span></div>
+                    </li>
+                </ul>
+                <!--  <h5 class="flow-text center-align">Sponsor themes</h5>
+                <ul class="collapsible popout" data-collapsible="accordion">
+                    <li>
+                        <div class="collapsible-header center-align grey darken-3" onmouseover="onhover(this);" onmouseout="onnothover(this);"><i class="material-icons">filter_drama</i>.TECH website innovation</div>
+                        <div class="collapsible-body grey darken-3">
+                            <div class="row">
+                                <div class="col s6">
+                                    <span>.TECH is a new domain extension that has become the de facto online address for all things technology.
+                                With over 250K domain registrations in the past 2 years, it has seen a rapid adoption by developers, startups,
+                                innovators, tech brands and influencers, including bigwigs like Viacom.tech, TNW.tech, CES.tech, Hollywood.tech, etc.
+                                <br>
+                                <br>
+                                Sponsored by dotTech domains, teams that host their website and/or app on the .tech domain
+                                are eligible for this theme and will win special prizes.</span>
+                                </div>
+                                <div class="col s3 offset"><a href="http://get.tech"><img class="responsive-img" src="images/sponsors/dotTech.png"></a></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul> -->
+            </section>
+        </div>
+        <div class="container">
+            <section id="prizes">
+                <div class="card grey darken-4">
+                    <div class="card-content">
+                        <h2 class="center-align"><b>Prizes Worth ₹2.2 Lakhs up for grabs</b>.</h2>
+                        <!-- <h4 class="center-align"><b>Stand a chance to win a trip to Stockholm</b></h4> -->
+                        <!--
+                        ┏━━━┓ ︱︱︱︱ ┏━━━┓
+                        ┃┏━┓┃ ︱︱︱︱ ┃┏━┓┃
+                        ┃┃︱┃┃ ┏┓┏┓┏┓ ┃┃︱┃┃
+                        ┃┃︱┃┃ ┃┗┛┗┛┃ ┃┃︱┃┃
+                        ┃┗━┛┃  ┗┓┏┓┏┛ ┃┗━┛┃|
+                        ┗━━━┛ ︱┗┛┗┛︱ ┗━━━┛
+
+                        noice
+                       -->
+                       <div class="card grey darken-3 prize">
+                         <div class="card-content">
+                           <center>
+                             <h3>Win cash prizes up to <b>&#8377;60,000</b></h3>
+                           </center>
+                         </div>
+                       </div>
+
+
+                       <div class="card grey darken-3 prize">
+                         <div class="card-content">
+                           <center>
+                             <h3>Get a chance to <b>intern</b> for a <b>multi-national organisation</b></h3>
+                           </center>
+                         </div>
+                       </div>
+
+                       <div class="card grey darken-3 prize">
+                         <div class="card-content">
+                           <center>
+                             <h3>Pitch your idea to <b>investors</b> for incubation and funding</h3>
+                           </center>
+                         </div>
+                       </div>
+
+                        <!-- <h5 class="center-align">More prizes will be announced soon.</h5> -->
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!--  <div class="parallax-container">
+        <div class="parallax"><img src="images/servers_room-wallpaper-2048x1152.jpg" alt="images/bgbackup.jpg"></div>
+    </div> -->
+        <section>
+            <div class="container">
+                <div class="row"></div>
+                <section id="faq" class="">
+                    <div class="card grey darken-4">
+                        <div class="card-content">
+                            <h3 class="center-align">FAQ</h3>
+                        </div>
+                        <div class="card-tabs grey darken-4">
+                            <ul class="tabs tabs-fixed-width">
+                                <li class="tab grey darken-4"><a class="active" href="#questions1">Participation Details</a></li>
+                                <li class="tab grey darken-4"><a href="#questions2">Event Details</a></li>
+                                <li class="tab grey darken-4"><a href="#accommodation_faq">accommodation</a></li>
+                                <li class="tab grey darken-4"><a href="#questions3">Idea Details</a></li>
+                                <li class="tab grey darken-3"><a href="#dates">Important Dates</a></li>
+                            </ul>
+                        </div>
+                        <div class="card-content grey darken-4">
+                            <div id="questions2" class="">
+                                <ul class="collapsible grey darken-4" data-collapsible="accordion">
+                                    <li>
+                                        <div class="collapsible-header grey darken-4"><i class="material-icons">free_breakfast</i>Will I be provided food?</div>
+                                        <div class="collapsible-body grey darken-2 white-text"><span>Yes, meals, snacks and beverages will be provided at the event at no extra cost.</span></div>
+                                    </li>
+
+                                    <li>
+                                        <div class="collapsible-header grey darken-4"><i class="material-icons">wifi</i>Do I have to arrange for an internet connection?</div>
+                                        <div class="collapsible-body grey darken-2 white-text"><span>Internet will be provided at the event, but we recommend you carry a hotspot or dongle for faster and consistent internet.</span></div>
+                                    </li>
+                                    <li>
+                                        <div class="collapsible-header grey darken-4"><i class="material-icons">place</i>Do I have to stay the night?</div>
+                                        <div class="collapsible-body grey darken-2 white-text"><span>We recommend that you stay during the night as it gives you more time to work on your project. However, it is not required to stay the night. If you choose to stay, there will be food, beverages, and bean bags provided. For more information on accommodation, go to the "accommodation" tab under the FAQ heading.</span></div>
+                                    </li>
+                                    <li>
+                                        <div class="collapsible-header grey darken-4"><i class="material-icons">access_time</i>What are the timings for the event?</div>
+                                        <div class="collapsible-body grey darken-2 white-text"><span>The event is from 9:30 AM on 18th Jan 2020 (Saturday) to 3:30-4:00 PM on 19th Jan 2020 (Sunday)</span></div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="accommodation_faq" class="">
+                                <ul class="collapsible grey darken-4" data-collapsible="accordion">
+                                    <li>
+                                        <div class="collapsible-header grey darken-4"><i class="material-icons">place</i>Is accommodation only provided for students? Where is the accommodation?</div>
+                                        <div class="collapsible-body grey darken-2 white-text"><span>accommodation is only for participating students and only during the event, not before or after. The accommodation is at the venue school where there will be beds to sleep and areas to work, rest and game. </span></div>
+                                    </li>
+
+                                    <li>
+                                        <div class="collapsible-header grey darken-4"><i class="material-icons">place</i>Is accommodation provided for accompanying parents as well?</div>
+                                        <div class="collapsible-body grey darken-2 white-text"><span>Accompanying parents cannot be at the school due to security reasons but can come watch the opening and closing ceremony. </span></div>
+                                    </li>
+                                    <li>
+                                        <div class="collapsible-header grey darken-4"><i class="material-icons">place</i>Do I have to stay the night?</div>
+                                        <div class="collapsible-body grey darken-2 white-text"><span>We recommend that you stay during the night as it gives you more time to work on your project. However, it is not required to stay the night. If you choose to stay, there will be food, beverages, and bean bags provided.</span></div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="questions3" class="grey darken-4">
+
+                                <ul class="collapsible grey darken-4" data-collapsible="accordion">
+                                    <li>
+                                        <div class="collapsible-header grey darken-4"><i class="material-icons">language</i>What languages/software can I use?</div>
+                                        <div class="collapsible-body grey darken-2 white-text"><span>Any language, technology stack, or library can be used to create your solutions, except drag and drop softwares like MIT App Inventor.</span></div>
+                                    </li>
+                                    <li>
+                                        <div class="collapsible-header grey darken-4"><i class="material-icons">lightbulb_outline</i>Do we need to have the idea/solution fully working?</div>
+                                        <div class="collapsible-body grey darken-2 white-text"><span>The entire idea need not be implemented, however, the submission should be functional so that it can be reviewed by the judges.</span></div>
+                                    </li>
+                                    <li>
+                                        <div class="collapsible-header grey darken-4"><i class="material-icons">lightbulb_outline</i>Who will own the IP (Intellectual Property) rights to the solution?</div>
+                                        <div class="collapsible-body grey darken-2 white-text"><span>The developer/developers of the web/mobile application will have all rights and own the IP of the product. However, all code needs to be in the public domain (open source) so that it can be evaluated by the judges.</span></div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="questions1" class="grey darken-4">
+                                <ul class="collapsible grey darken-4" data-collapsible="accordion">
+                                    <li>
+                                        <div class="collapsible-header grey darken-4"><i class="material-icons">people</i>Who can participate in this event?</div>
+                                        <div class="collapsible-body grey darken-2 white-text"><span>Anyone who is in school and is interested in technology can participate.</span></div>
+                                    </li>
+                                    <li>
+                                        <div class="collapsible-header grey darken-4"><i class="material-icons">laptop</i>Do I have to bring my laptop?</div>
+                                        <div class="collapsible-body grey darken-2 white-text"><span>Yes, you are expected to bring you laptop and charger along with any software or dependencies you will be needing.</span></div>
+                                    </li>
+                                    <li>
+                                        <div class="collapsible-header grey darken-4"><i class="material-icons">monetization_on</i>Do you need to pay for this event?</div>
+                                        <div class="collapsible-body grey darken-2 white-text"><span>Yes, there is a ₹400 registration fee per person that MUST be paid on the first day of the event.</span></div>
+                                    </li>
+                                    <li>
+                                        <div class="collapsible-header grey darken-4"><i class="material-icons">monetization_on</i>What does my registration fee go towards?</div>
+                                        <div class="collapsible-body grey darken-2 white-text"><span>The ₹400 will cover your food and accommodation for the 24 hours. It will also contributed to the proceeds that would be donated to charity and would make you eligible for the free goodies provided by our sponsors.</span></div>
+                                    </li>
+                                    <li>
+                                        <div class="collapsible-header grey darken-4"><i class="material-icons">date_range</i>When would I recieve confirmation that I have been selected?</div>
+                                        <div class="collapsible-body grey darken-2 white-text"><span>The students select the themes on HackerEarth. We will confirm the teams which have been shortlisted by the 9th of January 2020.</span></div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="dates">
+                                <div class="timeline">
+                                    <div class="timeline-event">
+                                        <div class="card timeline-content">
+                                            <div class="card-content">
+                                                <span class="card-title activator grey-text text-darken-4">Registration Opens<i class="material-icons right">more_vert</i></span>
+                                                <p class="black-text">Registration for the codefest opens on the 26<sup>th</sup> of November</p>
+                                            </div>
+                                            <div class="card-reveal">
+                                                <span class="card-title grey-text text-darken-4">Registration Opens<i class="material-icons right">close</i></span>
+                                                <p class="black-text">Participants are expected to sign up for the event and submit a detailed idea on what exactly they are going to do at the event. The participants will be evaluated based on this idea.</p>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-badge blue white-text"><i class="material-icons">assignment</i></div>
+                                    </div>
+                                    <div class="timeline-event">
+                                        <div class="card timeline-content">
+                                            <div class="card-content">
+                                                <span class="card-title activator grey-text text-darken-4">Registration Closes<i class="material-icons right">more_vert</i></span>
+                                                <p class="black-text">Registration closes on 6<sup>th</sup> of January</p>
+                                            </div>
+                                            <div class="card-reveal">
+                                                <span class="card-title grey-text text-darken-4">Registration Closes<i class="material-icons right">close</i></span>
+                                                <p class="black-text">Participants will not be allowed to register after this date under any cirumstances. After registration closes, participants will be evaluated based on the idea they submitted.</p>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-badge red white-text"><i class="material-icons">close</i></div>
+                                    </div>
+                                    <div class="timeline-event">
+                                        <div class="card timeline-content">
+                                            <div class="card-content">
+                                                <span class="card-title activator grey-text text-darken-4">Evaluation Completed<i class="material-icons right">more_vert</i></span>
+                                                <p class="black-text">Selected Participants will be announced on the 9<sup>th</sup> January</p>
+                                            </div>
+                                            <div class="card-reveal">
+                                                <span class="card-title grey-text text-darken-4">Evaluation Completed<i class="material-icons right">close</i></span>
+                                                <p class="black-text">The list of selected participants will be put up on the website. All selected participants will be emailed special event invites which they must carry to attend the event.</p>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-badge green white-text"><i class="material-icons">check</i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="sponsor">
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <h3 class="center-align">2020 Sponsors</h3>
+                </div>
+            </div>
+            <div class="row">
+              <div class="col s12">
+                <h4 class="center-align">Title sponsors</h4>
+              </div>
+            </div>
+            <div class="row" id="titleSponsorContainer">
+              <center>
+                <!-- <div class="container"> -->
+                <div class="col s6 white-right-divider">
+                  <center>
+                    <a href="https://www.teamhgs.com" target="_blank">
+                      <img class="responsive-img" id="HGSLogo" src="images/sponsors/hgs-white.png"/>
+                    </a>
+                    <div class="hidden">
+                      <video height="300px" controls id="HGSVid" class="hidden">
+                        <source src="DIGICX.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                </div>
+                <div class="col s6">
+                  <center>
+                    <a href="https://www.cisco.com" target="_blank"><img class="responsive-img"  src="images/sponsors/Cisco.png" /></a>
+                  </center>
+                </div>
+                <!-- </div> -->
+              </center>
+            </div>
+            <!-- <div class="row">
+              <div class="col s6">
+                <center>
+                  <video autoplay height="200px" controls id="HGSVid" muted>
+                    <source src="Codefest2020Logo.mp4" type="video/mp4">
+                    <source src="Codefest2020Logo.webm" type="video/mp4">
+                  </video>
+                </center>
+              </div>
+              <a href="https://www.cisco.com" class = "col s6"><img class="responsive-img" id="CiscoLogo" src="images/sponsors/Cisco.png" /></a>
+            </div> -->
+            <!-- <div class="row hidden">
+              <center>
+                <video autoplay height="400px" controls id="HGSVid" muted>
+                  <source src="Codefest2020Logo.mp4" type="video/mp4">
+                  <source src="Codefest2020Logo.webm" type="video/mp4">
+                </video>
+              </center>
+            </div> -->
+            <div class="row ">
+              <div class="col s12">
+                <h4 class="center-align">Financial sponsors</h4>
+              </div>
+            </div>
+            <div class="row ">
+              <center>
+                <div class="col s12">
+                  <a href="https://www.traveltolearn.co.in/" target="_blank"><img class="responsive-img" id="travel-to-learn" src="images/sponsors/Travel to learn white text.png"></a>
+                </div>
+              </center>
+            </div>
+            <div class="row">
+              <div class="col s12">
+                <h4 class="center-align">Knowledge partner</h4>
+              </div>
+            </div>
+            <div class="row valign-wrapper center-align">
+              <div class="col s3"></div>
+              <div class="col s6">
+                    <a href="https://www.ibm.com" target="_blank"><img class="responsive-img"  src="images/sponsors/ibm.png"></a>
+                </div>
+                <div class="col s3"></div>
+            </div>
+            <div class="row ">
+              <div class="col s12">
+                <h4 class="center-align">Platform partners</h4>
+              </div>
+            </div>
+            <div class="row valign-wrapper center-align">
+                <div class="col s1"></div>
+                <div class="col s5">
+                    <a href="https://www.hackerearth.com/" target="_blank"><img class="responsive-img"  src="images/sponsors/HElogo.png"></a>
+                </div>
+                <div class="col s5">
+                    <a href="https://www.skillenza.com" target="_blank"><img class="responsive-img"  src="images/sponsors/skillenza.png"></a>
+                </div>
+                <div class="col s1"></div>
+            </div>
+            <div class="row">
+              <div class="col s6">
+                <h4 class="center-align">Learning Platform Partner</h4>
+              </div>
+              <div class="col s6">
+                <h4 class="center-align">Sustainability Partner</h4>
+              </div>
+            </div>
+            <div class="row">
+              <!-- <div class="col s1"></div> -->
+              <div class="col s6">
+                <a href="https://progate.com/" target="_blank"><img class="responsive-img"  src="images/sponsors/progate.png"></a>
+              </div>
+              <div class="col s6">
+                <a href=" http://www.y4pt.org/" target="_blank"><img class="responsive-img"  src="images/sponsors/y4pt.png"></a>
+              </div>
+              <!-- <div class="col s1"></div> -->
+            </div>
+            </section>
+
+                              <div class="container">
+                                <section class="grey darken-4">
+                                  <div class="row" style="padding-top:10px;padding-bottom:-150px;">
+                                    <div class="col s12" style="padding-top:20px;margin-bottom:0">
+                                        <center>
+                                          <div style="font-size: 60px;"><b>Photo archive</b></div>
+                                        </center>
+                                    </div>
+                                  </div>
+                                  <div class="row" style="padding:0px 25px;padding-bottom:15px">
+                                    <div class="col s6" id="photos-2018-container">
+                                      <center>
+                                        <h1><a href="https://photos.app.goo.gl/d1dYMX6xvNrVfUwJ3">2018</a></h1>
+                                      </center>
+                                      <div id="photos-2018">
+
+                                      </div>
+                                    </div>
+                                    <div class="col s6" id="photos-2019-container">
+                                      <center>
+                                        <h1><a href="https://photos.app.goo.gl/gGYJ8jutArw5ewnJ7">2019</a></h1>
+                                      </center>
+                                      <div id="photos-2019">
+
+                                      </div>
+                                    </div>
+                                  </div>
+                                </section>
+                              </div>
+                <div class="container">
+                    <section id="Codefest-18">
+                        <div class="row">
+                            <h1 class="center-align">Winners of Codefest 2018</h1>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="parallax-container">
+                <div class="parallax"><img src="images/winners.jpg"></div>
+            </div>
+            <br>
+            <br>
+            <div class="container">
+                <section id="Codefest-19">
+                    <div class="row">
+                        <h1 class="center-align">Winners of Codefest 2019</h1>
+                    </div>
+                </section>
+            </div>
+            <div class="parallax-container">
+                <div class="parallax"><img src="images/winners2019.jpg"></div>
+            </div>
+
+            <div class="container">
+                <!--<div class="divider white"></div>
+            <div class="row"></div>
+            <section id="venue">
+                <div class="row">
+                    <div class="col s6">
+                        <div class="video-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.31333819796!2d77.74977931521092!3d12.887562220202788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae0d539b9bf9ef%3A0x8173c2437f9bc14d!2sOakridge+International+School!5e0!3m2!1sen!2sin!4v1503659601937"
+                                width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+                    </div>
+                    <div class="col s6">
+                        <h4>Venue:</h4>
+                        <p class="flow-text">The Oakridge Codefest will be held at the Oakridge International Bangalore Campus.</p>
+                    </div>
+                </div>
+            </section> -->
+
+
+                <!-- <div class="divider white"></div> -->
+
+    </div>
+    </section>
+
+
+
+
+    <!-- Modal Structure -->
+    <div id="terms" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <div class="row">
+                <h3 class="black-text center-align">Terms and Conditions</h3>
+            </div>
+            <div class="row">
+                <ul class="collection">
+                    <li class="collection-item black-text">No one over the age of 19 is allowed to participate. Oakridge International insists that all participants carry their official Identification (government and school identification are accepted). </li>
+                    <li class="collection-item black-text">If the identification is found to be invalid, Oakridge International reserves the right to deny admission.</li>
+                    <li class="collection-item black-text">No use of illegal substances, smoking, drinking or any such activities on the premises.</li>
+                    <li class="collection-item black-text">No littering on the premises.</li>
+                    <li class="collection-item black-text">No use of physical violence.</li>
+                    <li class="collection-item black-text">Violation of these clauses will lead to immediate disqualification.</li>
+                    <li class="collection-item black-text">The judges' decisions are final.</li>
+                    <li class="collection-item black-text">The management reserves the right to admission. The management reserves the right to make final decisions regarding disputes that may arise.</li>
+                    <li class="collection-item black-text">Oakridge International reserves all rights to the event and all decision made by Oakridge International are final.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+        </div>
+    </div>
+    <footer class="page-footer grey darken-4">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text"><b>Contact Us</b></h5>
+                    <p class="grey-text text-lighten-4">Email us at <a href="mailto:oakcodefest@oakridge.in">oakcodefest@oakridge.in</a></p>
+                </div>
+
+                <div class="col l3 s12">
+                    <h5 class="white-text"><b>Codefest Core-Team</b></h5>
+                    <p class="grey-text text-lighten-4">Kabir De Sarkar</p>
+                    <p class="grey-text text-lighten-4">Muhsin Mohamed</p>
+                </div>
+                <div class="col l3 s12">
+                    <p class="grey-text text-lighten-4">Chanakya Maddineni</p>
+                    <p class="grey-text text-lighten-4">Gaurang Bharti</p>
+                    <p class="grey-text text-lighten-4">Aarush Mehrotra</p>
+                    <p class="grey-text text-lighten-4">Abhishek Menon</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        &copy 2020 Oakridge Codefest
+                    </div>
+                    <div class="col s5">
+                        <b>Developed</b> by <a href="https://github.com/BK-Modding">BK-Modding</a>,
+                            <a href="https://github.com/CryogenicPlanet"> CryogenicPlanet</a>,
+                            <a href="https://github.com/Nexus987"> Nexus</a>
+                            <a href="https://github.com/gaurangbharti1"> GBHacker</a>, and
+                            <a href="https://github.com/YeshYyyK"> Yeshy</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col l6 s12">
+                        &nbsp;
+                    </div>
+                    <div class="col s5">
+                        <b>Renovated</b> by <a href="https://github.com/BK-Modding">Teminix</a>,
+                            <a href="https://github.com/muhsin7"> Muhsin7</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col l6 s12">
+                        <a onclick="openTerms();">Terms and conditions</a>
+                    </div>
+                    <div class="col s6 offset-s6">
+                        <div class="col s2"><a href="https://www.facebook.com/oakcf/"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                          <path id="fb"fill="#fff" d="M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6A4,4 0 0,1 14,2H17Z" />
+                      </svg></a></div>
+                                              <div class="col s2" <a href="https://twitter.com/oakcodefest"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                          <path id="twit"fill="#fff" d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" />
+                      </svg></a>
+                                              </div>
+                                              <div class="col s2"> <a href="https://www.instagram.com/oakcodefest/"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                          <path id="insta"fill="#fff" d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
+                      </svg></a></div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <script type="text/javascript" src="js/website.js"></script>
+    <script type="text/javascript">
+     console.log(document.getElementById("bgvid"))
+    </script>
+
+
+    <script>
+    function getTimeRemaining(endtime) {
+         var t = Date.parse(endtime) - Date.parse(new Date());
+         var seconds = Math.floor((t / 1000) % 60);
+         var minutes = Math.floor((t / 1000 / 60) % 60);
+         var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+         var days = Math.floor(t / (1000 * 60 * 60 * 24));
+         return {
+             'total': t,
+             'days': days,
+             'hours': hours,
+             'minutes': minutes,
+             'seconds': seconds
+         };
+     }
+
+     function initializeClock(id, endtime) {
+         var clock = document.getElementById(id);
+         var daysSpan = clock.querySelector('.days');
+         var hoursSpan = clock.querySelector('.hours');
+         var minutesSpan = clock.querySelector('.minutes');
+         var secondsSpan = clock.querySelector('.seconds');
+
+         function updateClock() {
+             var t = getTimeRemaining(endtime);
+
+             daysSpan.innerHTML = t.days;
+             hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+             minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+             secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+             if (t.total <= 0) {
+                 clearInterval(timeinterval);
+             }
+         }
+
+         updateClock();
+         var timeinterval = setInterval(updateClock, 1000);
+     }
+     // setTimeout(function () {
+     //   $('#bigbtn1')[0].classList.remove("pulse")
+     //   $('#bigbtn2')[0].classList.remove("pulse")
+     //   $('#noticeicon')[0].classList.remove("pulse")
+     // }, 5000);
+     var deadline = 'January 23 2021 11:30:00 GMT+0530';
+     initializeClock('clockdiv', deadline);
+     // console.log("%c   uwu  ","font-size:250px;background-color:black;color:white;font-weight:bold;")
+    // muh_uncomment_anchor
+    // UNCOMMENT FOR TESTING, AND THEN COMMENT AFTER DONE BECAUSE THEY HAVEN'T SENT VIDEO YET
+    $("#titleSponsorContainer").on("mouseover.customEvent",(event) => {
+      setTimeout(koolHGSAnimation,1000)
+      $("#titleSponsorContainer").unbind("mouseover.customEvent")
+    })
+    function koolHGSAnimation(){
+      $("#HGSLogo").animate({height:"400px"})
+      $('#HGSVid').hide()
+      $("#HGSVid").parent().removeClass('hidden');
+      $("#HGSVid").slideDown()
+      $('#HGSVid')[0].currentTime = 2
+      $("#titleSponsorContainer").unbind("mouseover.customEvent")
+    }
+
+
+    // document.addEventListener('DOMContentLoaded', function() {
+    //     var elems = document.querySelectorAll('.tap-target');
+    //     var instances = M.TapTarget.init(elems, options);
+    //   });
+      $('#photos-2019-container a').on('mouseover',() => {
+        $('#photos-2019').addClass("blurred")
+      })
+      $('#photos-2019-container a').on('mouseout',() => {
+        $('#photos-2019').removeClass("blurred")
+      })
+      $('#photos-2018-container a').on('mouseover',() => {
+        $('#photos-2018').addClass("blurred")
+      })
+      $('#photos-2018-container a').on('mouseout',() => {
+        $('#photos-2018').removeClass("blurred")
+      })
+
+      $("#fb").on("hover", function(){
+        this.attr("fill", "#3b5998")
+      })
+
+      $("#twit").on("hover", function(){
+        this.attr("fill", "#00acee")
+      })
+
+      $("#fb").on("hover", function(){
+        this.attr("fill", "#dd2a7b")
+      })
+
+      setTimeout(function(){
+        $(".register-btn").removeClass("pulse")
+      }, 5000);
+
+      $(".register-btn").on("mouseover", function(){
+        $(".register-btn").addClass("pulse")
+      })
+
+      $(".register-btn").on("mouseout", function(){
+        $(".register-btn").removeClass("pulse")
+      })
+    </script>
+
+</body>
+
+</html>

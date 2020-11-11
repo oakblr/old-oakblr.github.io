@@ -137,3 +137,10 @@ path{
   padding-top: 10%;
   padding-bottom: 10%;
 }
+
+#typewriter{
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  border-color: #FFFFFF;
+  font-weight: bold;
+}

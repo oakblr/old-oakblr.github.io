@@ -307,7 +307,7 @@
      selector: '#typewriter',
      offset: 50,
      callback: function(el) {
-      Materialize.toast("Welcome to Codefest'20!", 3000);
+      Materialize.toast("Welcome to Codefest'21!", 3000);
       typewriter.type();
      }
     }, ];

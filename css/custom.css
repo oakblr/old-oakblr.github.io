@@ -236,15 +236,17 @@
           display:none
         }
 
+
         .theme-card-list {
           display: flex;
           padding: 3rem;
           overflow-x: hidden;
         }
+
         .theme-card {
-          height: 350px;
+          height: 455px;
           width: 400px;
-          min-width: 250px;
+          min-width: 300px;
           padding: 1.5rem;
           border-radius: 16px;
           background: #424242;
@@ -258,15 +260,32 @@
           position: relative;
         }
         .theme-card:focus-within~.card, .theme-card:hover~.theme-card {
-            transform: translateX(130px);
+          transform: translateX(130px);
         }
         .theme-card:hover {
-            transform: translateY(-1rem);
+          transform: translateY(-1rem);
         }
         .theme-card:not(:first-child) {
-            margin-left: -130px;
+          margin-left: -130px;
         }
 
+        .theme-card-title {
+          display: flex;
+          align-items: center;
+          font-size: 22.5px;
+          margin-bottom: 15px;
+        }
+        .theme-card-content {
+          font-size: 15px;
+          margin-bottom: auto;
+        }
+        .theme-card-examples {
+          font-size: 15px;
+        }
+
+        .md-48 {
+          font-size: 40px !important;
+        }
 
 
 

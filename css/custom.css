@@ -137,7 +137,7 @@
             background-size: cover;
             /* width: 100%; */
             /* background-color:darkblue; */
-            background-image:url('../images/codefest_logo_dragon.png');
+            background-image:url('../images/2021_bg.png');
             z-index: -100;
             transform: translateX(-50%) translateY(-50%);
             transition: 1s opacity;

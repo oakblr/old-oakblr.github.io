@@ -239,14 +239,13 @@
 
         .theme-card-list {
           display: flex;
-          padding: 3rem;
-          overflow-x: hidden;
+          padding: 1rem;
           justify-content: center;
         }
 
         .theme-card {
           height: 455px;
-          width: 500px;
+          width: 485px;
           min-width: 330px;
           padding: 1.5rem;
           border-radius: 16px;

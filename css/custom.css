@@ -233,8 +233,57 @@
           font-family: Futura;
         }
         .hidden {
-          display:none
+          display: none;
         }
+        .theme-card-list {
+            display: flex;
+            padding: 1rem;
+            justify-content: center;
+          }
+
+          .theme-card {
+            height: 455px;
+            width: 485px;
+            min-width: 330px;
+            padding: 1.5rem;
+            border-radius: 16px;
+            background: #424242;
+            box-shadow: -1rem 0 3rem #000;
+            display: flex;
+            flex-direction: column;
+            transition: .2s;
+            margin: 0;
+            scroll-snap-align: start;
+            clear: both;
+            position: relative;
+          }
+          .theme-card:focus-within~.card, .theme-card:hover~.theme-card {
+            transform: translateX(130px);
+          }
+          .theme-card:hover {
+            transform: translateY(-1rem);
+          }
+          .theme-card:not(:first-child) {
+            margin-left: -130px;
+          }
+
+          .theme-card-title {
+            display: flex;
+            align-items: center;
+            font-size: 22.5px;
+            margin-bottom: 15px;
+          }
+          .theme-card-content {
+            font-size: 15px;
+            margin-bottom: auto;
+          }
+          .theme-card-examples {
+            font-size: 15px;
+          }
+
+          .md-48 {
+            font-size: 40px !important;
+          }
 
 
 

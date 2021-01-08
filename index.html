@@ -654,10 +654,10 @@ themes:[
                         <source src="DIGICX.mp4" type="video/mp4">
                       </video>
                     </div>
+                  </center>
                 </div>
 
                 <!-- </div> -->
-              </center>
             </div>
             <!-- <div class="row">
               <div class="col s6">
@@ -702,6 +702,22 @@ themes:[
                 </div>
                 <div class="col s3"></div>
             </div> -->
+            <div class="row ">
+              <div class="col s12">
+                <h4 class="center-align">Associate sponsor</h4>
+              </div>
+            </div>
+            <div class="row valign-wrapper center-align sponsor-container">
+                <div class="col s4 offset-s4">
+                    <a href="https://www.volvo.com/" target="_blank"><img class="responsive-img sponsor-logo" style="height:500px" src="images/sponsors/Volvo_iron_mark_CMYK_EPS/Volvo_iron_mark_CMYK.png"></a>
+                    <div class="hidden">
+                      <video height="300px" muted controls id="" class="sponsor-video">
+                        <source src="Volvo Trucks - The Purpose Film.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                </div>
+
+            </div>
             <div class="row ">
               <div class="col s12">
                 <h4 class="center-align">In-kind partners</h4>
@@ -754,19 +770,27 @@ themes:[
                                     </div>
                                   </div>
                                   <div class="row" style="padding:0px 25px;padding-bottom:15px">
-                                    <div class="col s6" id="photos-2018-container">
+                                    <div class="col s4 photo-archive-image-container add-blur" id="photos-2018-container">
                                       <center>
                                         <h1><a href="https://photos.app.goo.gl/d1dYMX6xvNrVfUwJ3">2018</a></h1>
                                       </center>
-                                      <div id="photos-2018">
+                                      <div id="photos-2018" class="photo-archive-image">
 
                                       </div>
                                     </div>
-                                    <div class="col s6" id="photos-2019-container">
+                                    <div class="col s4 photo-archive-image-container add-blur" id="photos-2019-container">
                                       <center>
                                         <h1><a href="https://photos.app.goo.gl/gGYJ8jutArw5ewnJ7">2019</a></h1>
                                       </center>
-                                      <div id="photos-2019">
+                                      <div id="photos-2019" class='photo-archive-image'>
+
+                                      </div>
+                                    </div>
+                                    <div class="col s4 photo-archive-image-container add-blur" id="photos-2019-container">
+                                      <center>
+                                        <h1><a href="https://photos.app.goo.gl/RsQdaypjbmtdctnt8">2020</a></h1>
+                                      </center>
+                                      <div id="photos-2020" class='photo-archive-image'>
 
                                       </div>
                                     </div>
@@ -967,17 +991,26 @@ themes:[
      // console.log("%c   uwu  ","font-size:250px;background-color:black;color:white;font-weight:bold;")
     // muh_uncomment_anchor
     // UNCOMMENT FOR TESTING, AND THEN COMMENT AFTER DONE BECAUSE THEY HAVEN'T SENT VIDEO YET
-    $("#titleSponsorContainer").on("mouseover.customEvent",(event) => {
-      setTimeout(koolHGSAnimation,1000)
-      $("#titleSponsorContainer").unbind("mouseover.customEvent")
+    // $("#titleSponsorContainer").on("mouseover.customEvent",(event) => {
+    //   setTimeout(koolHGSAnimation,1000)
+    //   $("#titleSponsorContainer").unbind("mouseover.customEvent")
+    // })
+    $('.sponsor-container').on('mouseover',function(){
+      sponsorContainer = $(this);
+      sponsorLogo = sponsorContainer.find('.sponsor-logo');
+      sponsorVideo = sponsorContainer.find('.sponsor-video');
+      // console.log([sponsorContainer,sponsorLogo,sponsorVideo])
+      sponsorAnimation(sponsorContainer,sponsorLogo,sponsorVideo)
+      sponsorContainer.unbind('mouseover')
     })
-    function koolHGSAnimation(){
-      $("#HGSLogo").animate({height:"400px"})
-      $('#HGSVid').hide()
-      $("#HGSVid").parent().removeClass('hidden');
-      $("#HGSVid").slideDown()
-      $('#HGSVid')[0].currentTime = 2
-      $("#titleSponsorContainer").unbind("mouseover.customEvent")
+    function sponsorAnimation(sponsorContainer,sponsorLogo,sponsorVideo){
+      sponsorLogo.animate({height:"400px"})
+      sponsorVideo.hide()
+      sponsorVideo.parent().removeClass('hidden');
+      sponsorVideo.slideDown()
+      sponsorVideo[0].currentTime = 2
+      sponsorVideo[0].play()
+      // $("#titleSponsorContainer").unbind("mouseover.customEvent")
     }
 
 
@@ -985,17 +1018,25 @@ themes:[
     //     var elems = document.querySelectorAll('.tap-target');
     //     var instances = M.TapTarget.init(elems, options);
     //   });
-      $('#photos-2019-container a').on('mouseover',() => {
-        $('#photos-2019').addClass("blurred")
+      // $('#photos-2019-container a').on('mouseover',() => {
+      //   $('#photos-2019').addClass("blurred")
+      // })
+      // $('#photos-2019-container a').on('mouseout',() => {
+      //   $('#photos-2019').removeClass("blurred")
+      // })
+      // $('#photos-2018-container a').on('mouseover',() => {
+      //   $('#photos-2018').addClass("blurred")
+      // })
+      // $('#photos-2018-container a').on('mouseout',() => {
+      //   $('#photos-2018').removeClass("blurred")
+      // })
+      $('.add-blur a').on('mouseover',function(){
+        elem = $(this).parents()[2];
+        $(elem).find('.photo-archive-image').addClass('blurred')
       })
-      $('#photos-2019-container a').on('mouseout',() => {
-        $('#photos-2019').removeClass("blurred")
-      })
-      $('#photos-2018-container a').on('mouseover',() => {
-        $('#photos-2018').addClass("blurred")
-      })
-      $('#photos-2018-container a').on('mouseout',() => {
-        $('#photos-2018').removeClass("blurred")
+      $('.add-blur a').on('mouseout',function(){
+        elem = $(this).parents()[2];
+        $(elem).find('.photo-archive-image').removeClass('blurred')
       })
 
       $("#fb").on("hover", function(){

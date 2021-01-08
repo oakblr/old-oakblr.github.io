@@ -995,14 +995,14 @@ themes:[
     //   setTimeout(koolHGSAnimation,1000)
     //   $("#titleSponsorContainer").unbind("mouseover.customEvent")
     // })
-    $('.sponsor-container').on('mouseover',function(){
-      sponsorContainer = $(this);
-      sponsorLogo = sponsorContainer.find('.sponsor-logo');
-      sponsorVideo = sponsorContainer.find('.sponsor-video');
-      // console.log([sponsorContainer,sponsorLogo,sponsorVideo])
-      sponsorAnimation(sponsorContainer,sponsorLogo,sponsorVideo)
-      sponsorContainer.unbind('mouseover')
-    })
+    // $('.sponsor-container').on('mouseover',function(){
+    //   sponsorContainer = $(this);
+    //   sponsorLogo = sponsorContainer.find('.sponsor-logo');
+    //   sponsorVideo = sponsorContainer.find('.sponsor-video');
+    //   // console.log([sponsorContainer,sponsorLogo,sponsorVideo])
+    //   sponsorAnimation(sponsorContainer,sponsorLogo,sponsorVideo)
+    //   sponsorContainer.unbind('mouseover')
+    // })
     function sponsorAnimation(sponsorContainer,sponsorLogo,sponsorVideo){
       sponsorLogo.animate({height:"400px"})
       sponsorVideo.hide()

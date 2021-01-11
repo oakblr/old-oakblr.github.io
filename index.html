@@ -709,10 +709,10 @@ themes:[
             </div>
             <div class="row valign-wrapper center-align sponsor-container">
                 <div class="col s4 offset-s4">
-                    <a href="https://www.volvo.com/" target="_blank"><img class="responsive-img sponsor-logo" style="height:500px" src="images/sponsors/Volvo_iron_mark_CMYK_EPS/Volvo_iron_mark_CMYK.png"></a>
+                    <a href="https://www.volvo.com/" target="_blank"><img class="responsive-img sponsor-logo"  src="images/sponsors/Volvo_iron_mark_CMYK_EPS/Volvo_iron_mark_CMYK.png"></a>
                     <div class="hidden">
                       <video height="300px" muted controls id="" class="sponsor-video">
-                        <source src="Volvo Trucks - The Purpose Film.mp4" type="video/mp4">
+                        <source src="Volvo trucks processed.mp4" type="video/mp4">
                       </video>
                     </div>
                 </div>
@@ -995,16 +995,16 @@ themes:[
     //   setTimeout(koolHGSAnimation,1000)
     //   $("#titleSponsorContainer").unbind("mouseover.customEvent")
     // })
-    // $('.sponsor-container').on('mouseover',function(){
-    //   sponsorContainer = $(this);
-    //   sponsorLogo = sponsorContainer.find('.sponsor-logo');
-    //   sponsorVideo = sponsorContainer.find('.sponsor-video');
-    //   // console.log([sponsorContainer,sponsorLogo,sponsorVideo])
-    //   sponsorAnimation(sponsorContainer,sponsorLogo,sponsorVideo)
-    //   sponsorContainer.unbind('mouseover')
-    // })
+    $('.sponsor-container').on('mouseover',function(){
+      sponsorContainer = $(this);
+      sponsorLogo = sponsorContainer.find('.sponsor-logo');
+      sponsorVideo = sponsorContainer.find('.sponsor-video');
+      // console.log([sponsorContainer,sponsorLogo,sponsorVideo])
+      sponsorAnimation(sponsorContainer,sponsorLogo,sponsorVideo)
+      sponsorContainer.unbind('mouseover')
+    })
     function sponsorAnimation(sponsorContainer,sponsorLogo,sponsorVideo){
-      sponsorLogo.animate({height:"400px"})
+      // sponsorLogo.animate({height:"400px"})
       sponsorVideo.hide()
       sponsorVideo.parent().removeClass('hidden');
       sponsorVideo.slideDown()

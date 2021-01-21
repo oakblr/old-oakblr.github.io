@@ -138,6 +138,11 @@ path{
   padding-bottom: 10%;
 }
 
+#registrations-closed {
+  background-color: lightgrey !important;
+  color:darkgrey !important;
+}
+
 #typewriter{
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10px;

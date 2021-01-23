@@ -296,7 +296,41 @@
 
 /* extra stuff, sorry for making random section */
 
+.light-blue{
+  color: #fff !important;
+  background-color: #003255 !important;
+}
+#HGSVid {
+  display:block
+}
+.black-trans {
+  background-color:rgba(0,0,0,0.3)
+}
+.shrunk-section {
+  height:100px !important;
+}
+.no-bold {
+  font-weight:normal !important;
+}
+.upper-case {
+  text-transform:uppercase !important;
+}
+.normal-case {
+  text-transform:none !important;
+}
+.smooth-anchor {
+  transition:0.2s ease-in;
+  text-decoration: underline;
+  text-decoration-color:rgba(0,0,0,0);
+}
+.smooth-anchor:hover {
+  text-decoration-color:initial;
+  text-decoration: underline !important;
+}
 
+
+
+/* Image archive animations */
 .photo-archive-image {
   transition: 0.3s;
   padding:inherit;

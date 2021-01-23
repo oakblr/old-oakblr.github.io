@@ -111,7 +111,7 @@
                     <a class="register-btn btn-large pulse " href="https://oakcodefest2021.devpost.com/" style="color: #fff; !important" target="_blank">Register today!</a>
                   </center>
           </div>
-        <div id="index-banner" class="parallax-container hide-on-med-and-down">
+        <div id="index-banner" class="parallax-container hide-on-med-and-down shrunk-section">
             <div class="section no-pad-bot">
 
                 <div class="row hide-on-med-and-down"></div>
@@ -177,18 +177,18 @@ WCAG general accessibility recommendation is that media such as background video
 -->
 
             <div class="hide-on-med-and-down">
+              <!-- <div class="row"></div>
+              <div class="row"></div>
+              <div class="row"></div>
+              <div class="row"></div> -->
+              <!-- <div class="row"></div>
               <div class="row"></div>
               <div class="row"></div>
               <div class="row"></div>
               <div class="row"></div>
               <div class="row"></div>
               <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
+              <div class="row"></div> -->
             </div>
 
             <section id="intro">
@@ -200,10 +200,21 @@ WCAG general accessibility recommendation is that media such as background video
                 #HGSVid {
                   display:block
                 }
+                .black-trans {
+                  background-color:rgba(0,0,0,0.3)
+                }
+                .shrunk-section {
+                  height:100px !important;
+                }
               </style>
                 <center>
                   <!-- <img src="images/coming soon white.png" width="75%"/> -->
-                  <div class="container">
+                  <div class="container black-trans">
+                    <div class="row">
+                      <div class="col s12 center-align">
+                        <h1 style="font-weight: normal; font-style:italic; !important">Codefest ends in </h1>
+                      </div>
+                    </div>
                     <div class="row">
                         <div class="col s12 center-align">
                             <div id="clockdiv">
@@ -226,10 +237,9 @@ WCAG general accessibility recommendation is that media such as background video
                             </div>
                             <h5><i>Codefest 2021</i></h5>
                             <h5><i>23rd-24th January 2021</i></h5>
-
-                            <div>
+                            <!-- <div>
                               <img src='images\coming soon white.png' height="50px"/>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                   </div>
@@ -1018,7 +1028,7 @@ themes:[
      //   $('#bigbtn2')[0].classList.remove("pulse")
      //   $('#noticeicon')[0].classList.remove("pulse")
      // }, 5000);
-     var deadline = 'January 23 2021 11:30:00 GMT+0530';
+     var deadline = 'January 24 2021 11:00:00 GMT+0530';
      initializeClock('clockdiv', deadline);
      // console.log("%c   uwu  ","font-size:250px;background-color:black;color:white;font-weight:bold;")
     // muh_uncomment_anchor

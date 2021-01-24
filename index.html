@@ -111,7 +111,7 @@
                     <a class="register-btn btn-large pulse " href="https://oakcodefest2021.devpost.com/" style="color: #fff; !important" target="_blank">Register today!</a>
                   </center>
           </div>
-        <div id="index-banner" class="parallax-container hide-on-med-and-down shrunk-section">
+        <div id="index-banner" class="parallax-container hide-on-med-and-down">
             <div class="section no-pad-bot">
 
                 <div class="row hide-on-med-and-down"></div>
@@ -177,29 +177,33 @@ WCAG general accessibility recommendation is that media such as background video
 -->
 
             <div class="hide-on-med-and-down">
-              <!-- <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div> -->
-              <!-- <div class="row"></div>
               <div class="row"></div>
               <div class="row"></div>
               <div class="row"></div>
               <div class="row"></div>
               <div class="row"></div>
               <div class="row"></div>
-              <div class="row"></div> -->
+              <div class="row"></div>
+              <div class="row"></div>
+              <div class="row"></div>
+              <div class="row"></div>
+              <div class="row"></div>
+              <div class="row"></div>
             </div>
 
             <section id="intro">
+              <style>
+                .light-blue{
+                  color: #fff !important;
+                  background-color: #003255 !important;
+                }
+                #HGSVid {
+                  display:block
+                }
+              </style>
                 <center>
                   <!-- <img src="images/coming soon white.png" width="75%"/> -->
-                  <div class="container black-trans">
-                    <div class="row">
-                      <div class="col s12 center-align">
-                        <h1 style="font-weight: normal; font-style:italic; !important">Codefest ends in </h1>
-                      </div>
-                    </div>
+                  <div class="container">
                     <div class="row">
                         <div class="col s12 center-align">
                             <div id="clockdiv">
@@ -220,17 +224,13 @@ WCAG general accessibility recommendation is that media such as background video
                                     <div class="smalltext">Seconds</div>
                                 </div>
                             </div>
-                            <h5><i>Codefest 2021</i></h5>
-                            <h5><i>23rd-24th January 2021</i></h5>
-                            <!-- <div>
+                            <h5><i>Codefest 2022</i></h5>
+                            <h5><i>22nd-23rd January 2022</i></h5>
+
+                            <div>
                               <img src='images\coming soon white.png' height="50px"/>
-                            </div> -->
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                      <div class="col s12">
-                        <h3 class='no-bold upper-case'>Click <a class="smooth-anchor" href="https://docs.google.com/presentation/d/10e-Ac6rO33QRxuVGYUvl9iOM5MmOTJ9okC6pqXkN4Hk/edit?usp=sharing" target="_blank">here</a> to view the event rules</h3>
-                      </div>
                     </div>
                   </div>
                 </center>
@@ -245,20 +245,21 @@ WCAG general accessibility recommendation is that media such as background video
                     <div class="center-align">
                         <!-- DO NOT INDENT BELOW PLS -->
                         <pre id="typewriter" style="overflow-x: hidden;" class="flow-text">
-<span class="var-highlight">OakCodefest</span> 2021 = {
+<span class="var-highlight">OakCodefest</span> 2022 = {
 type: <span class="string-highlight">'24 hour Virtual Hackathon'</span>,
-date: <span class="string-highlight">'23rd-24th Jan 2021'</span>,
-location: <span class="string-highlight">'Online'</span>,
+date: <span class="string-highlight">'22nd-23rd Jan 2022'</span>,
+location: <span class="string-highlight">'Online(or not perhaps?)'</span>,
 themes:[
-  <span class="string-highlight">'Data analytics'</span>,
-  <span class="string-highlight">'Transportation'</span>,
-  <span class="string-highlight">'Healthcare'</span>,
-  <span class="string-highlight">'Education'</span>,
-  <span class="string-highlight">'Environmental sustainability'</span>,
-  <span class="string-highlight">'Gaming (Juniors only/grades 6-8)'</span>,
+<span class='comment-highlight'>/* Coming soon for next year */</span>
 ]
 };
 </pre>
+<!-- <span class="string-highlight">'Data analytics'</span>,
+<span class="string-highlight">'Transportation'</span>,
+<span class="string-highlight">'Healthcare'</span>,
+<span class="string-highlight">'Education'</span>,
+<span class="string-highlight">'Environmental sustainability'</span>,
+<span class="string-highlight">'Gaming (Juniors only/grades 6-8)'</span>, -->
                     </div>
                 </div>
             </div>
@@ -325,7 +326,7 @@ themes:[
               <!-- REMOVE HIDDEN WHEN THEMES ARE CONFIRMED AND ANNOUNCABLE -->
                 <!--  <h3 class="center-align">Themes will be announced soon!</h3> -->
                 <!-- <h3 class="flow-text center-align">General themes</h3> -->
-                <h3 class="center-align">General themes</h3>
+                <h3 class="center-align">General themes(2021)</h3>
                 <div class="row">
                     <div class="col s12">
                         <div class="card-panel grey darken-4">
@@ -642,7 +643,7 @@ themes:[
                 <h4 class="center-align">Title sponsor</h4>
               </div>
             </div>
-            <div class="row sponsor-container" id="">
+            <div class="row disabled" id="">
               <center>
                 <!-- <div class="container"> -->
                 <div class="col s6 offset-s3">
@@ -708,7 +709,7 @@ themes:[
                 <h4 class="center-align">Associate sponsor</h4>
               </div>
             </div>
-            <div class="row valign-wrapper center-align sponsor-container">
+            <div class="row valign-wrapper center-align">
                 <div class="col s4 offset-s4">
                     <a href="https://www.volvo.com/" target="_blank"><img class="responsive-img sponsor-logo"  src="images/sponsors/Volvo_iron_mark_CMYK_EPS/Volvo_iron_mark_CMYK.png"></a>
                     <div class="hidden">
@@ -1007,10 +1008,6 @@ themes:[
 
              if (t.total <= 0) {
                  clearInterval(timeinterval);
-                 daysSpan.innerHTML = '00';
-                 hoursSpan.innerHTML = '00';
-                 minutesSpan.innerHTML = '00';
-                 secondsSpan.innerHTML = '00';
              }
          }
 
@@ -1022,7 +1019,7 @@ themes:[
      //   $('#bigbtn2')[0].classList.remove("pulse")
      //   $('#noticeicon')[0].classList.remove("pulse")
      // }, 5000);
-     var deadline = 'January 24 2021 11:30:00 GMT+0530';
+     var deadline = 'January 22 2022 11:00:00 GMT+0530';
      initializeClock('clockdiv', deadline);
      // console.log("%c   uwu  ","font-size:250px;background-color:black;color:white;font-weight:bold;")
     // muh_uncomment_anchor
@@ -1031,7 +1028,7 @@ themes:[
     //   setTimeout(koolHGSAnimation,1000)
     //   $("#titleSponsorContainer").unbind("mouseover.customEvent")
     // })
-    $('.sponsor-container').on('mouseover',function(){
+    $('.sponsor-container:not(.disabled)').on('mouseover',function(){
       sponsorContainer = $(this);
       sponsorLogo = sponsorContainer.find('.sponsor-logo');
       sponsorVideo = sponsorContainer.find('.sponsor-video');

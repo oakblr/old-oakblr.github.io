@@ -298,6 +298,7 @@ ul.collapsible > li {
   z-index: -100;
   transform: translateX(-50%) translateY(-50%);
   transition: 1s opacity;
+  filter: brightness(70%);
 }
 
 .stopfade {

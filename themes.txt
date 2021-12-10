@@ -13,21 +13,12 @@ Environmental Sustainability:
 Nearly all of the things we consume can be traced back to the resources provided by earth we live in. Sustainability refers to creating a world that can be prosperous and habitable for future generations, and as society progresses, technology will be the at the crux of maintaining sustainability. From new and more efficient uses of energy to combating deforestation, technology's importance to sustainability has been especially pronounced in recent years. What can you do with technology to create a more sustainable world?
 
 
-Transport:
-
-Humans, around the world, commute millions of miles every single day. A significant fraction of our day is spent in traveling. Technology has played a very significant role in enabling more people to commute. Be it in the form discovery, aggregation or purchase, technology has redefined the way we commute. Imagine how technology can make human experience even better in day to day transportation and commute. What can technology do to make public and private transportation much simpler?
+STEM Simulation:
 
 
-IoT:
-
-The world grows more connected each day. From the spark of the internet revolution till now, opportunities lay endless. From Google home, amazon echo, to drone home deliveries, monitoring and much more. This era is the peak time for IOT. Let's see what you can bring to the table
-
-Data Analytics:
-
-As humans develop more and more digital solutions, arises the need for analysis of complex data. Such data can be interpreted well by Artificial Intelligence. From predicting stocks to weather, this field has immense potential. The application of Data Analytics rises by the second as companies adopt machine learning and deep learning powered technologies. Show us what you can do with big data.
 
 
-Gaming:
+Game Development:
 
 Video games are a great way to have fun and learn code at the same time! Use your knowledge of coding to make fun and interactive games for everyone to enjoy! 
 

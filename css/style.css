@@ -90,7 +90,7 @@
   }
 }
 
-.prize h3{
+.prize h3 {
   font-weight: normal !important;
 }
 
@@ -99,53 +99,56 @@
   padding-right: 40px !important;
 } */
 
-.questions{
+.questions {
   padding-left: 40px !important;
   padding-right: 40px !important;
 }
 
-.questions h5, h4, h3, h1{
+.questions h5,
+h4,
+h3,
+h1 {
   font-weight: bold;
 }
 
-.collapsible-header{
+.collapsible-header {
   font-weight: bold !important;
 }
 
-path{
+path {
   fill: white !important;
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 
-.fb:hover #fb{
+.fb:hover #fb {
   fill: #3b5998 !important;
 }
 
-.twit:hover #twit{
+.twit:hover #twit {
   fill: #00acee !important;
 }
 
-.insta:hover #insta{
+.insta:hover #insta {
   fill: #dd2a7b !important;
 }
 
-#CiscoLogo{
+#CiscoLogo {
   border-left: solid white 3px;
 }
 
-#HGSLogo{
+#HGSLogo {
   padding-top: 10%;
   padding-bottom: 10%;
 }
 
 #registrations-closed {
   background-color: lightgrey !important;
-  color:darkgrey !important;
+  color: darkgrey !important;
 }
 
-#typewriter{
+#typewriter {
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
-  border-color: #FFFFFF;
+  border-color: #ffffff;
   font-weight: bold;
 }

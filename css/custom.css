@@ -130,8 +130,8 @@
             position: fixed;
             top: 50%;
             left: 50%;
-            min-width: 100%;
-            min-height: 100%;
+            min-width: 10%;
+            min-height: 10%;
             width: 100%;
             height: auto;
             background-size: cover;

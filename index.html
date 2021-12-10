@@ -1,155 +1,162 @@
 <!DOCTYPE html>
 <html>
 <style type="text/css">
-    html,
-    body {
-        overflow-x: hidden;
-        background-color: rgb(0, 0, 0);
-    }
-    .white-right-divider {
-      border-right:white 4px solid !important;
-    }
-    .no-bottom-margin {
-      margin-bottom:0 !important;
-    }
+  html,
+  body {
+    overflow-x: hidden;
+    background-color: rgb(0, 0, 0);
+  }
+
+  .white-right-divider {
+    border-right: white 4px solid !important;
+  }
+
+  .no-bottom-margin {
+    margin-bottom: 0 !important;
+  }
 </style>
 
 <head>
-    <link rel="icon" type="image/png" href="images/2021_circle.png" sizes="16x16"/>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106611677-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+  <link rel="icon" type="image/png" href="images/2021_circle.png" sizes="16x16" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106611677-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-        gtag('config', 'UA-106611677-2');
-    </script>
-    <meta charset="utf-8">
-    <title>Oakridge Codefest</title>
+    gtag('config', 'UA-106611677-2');
+  </script>
+  <meta charset="utf-8">
+  <title>Oakridge Codefest</title>
 
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+  <link rel="stylesheet" type="text/css" href="css/custom.css" />
 
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body style="background-color: black;">
-    <div id="fb-root"></div>
-    <!-- Facebook stuff -->
-    <script>
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11';
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
+  <div id="fb-root"></div>
+  <!-- Facebook stuff -->
+  <script>
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
 
 
-    <div id="loader">
-        <div class="row">
-            <div class="col s8 offset-s2">
-                <div class="white-text output"></div>
-                <div class="loading black-text" id="text">
-                    <div class="center-align">2022 CODE FEST</div> <br>
-                    <div class="center-align"></div>
-                </div>
-            </div>
-
+  <div id="loader">
+    <div class="row">
+      <div class="col s8 offset-s2">
+        <div class="white-text output"></div>
+        <div class="loading black-text" id="text">
+          <div class="center-align">2022 CODE FEST</div> <br>
+          <div class="center-align"></div>
         </div>
+      </div>
+
     </div>
-    <div id="website" style="visibility: hidden;">
-        <!--Import jQuery before materialize.js-->
-        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script type="text/javascript" src="js/materialize.min.js"></script>
+  </div>
+  <div id="website" style="visibility: hidden;">
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
 
-        <nav class="transparent z-depth-0">
-            <div class="nav-wrapper">
-                <a href="index.html" class="brand-logo left hide-on-med-and-down"><img class = "responsive-img" width = 135px src = "images/nord-oak-white.png"/></a>
-                <a href="index.html" class="brand-logo center hide-on-large-only"><img class = "responsive-img" width = 135px src = "images/nord-oak-white.png"/></a>
-                <a href="#" data-activates="mobile-menu" class="left button-collapse"><i class="material-icons">menu</i></a>
-                <ul id="wide-menu" class="right hide-on-med-and-down">
-                    <li><a href="#theme" class="waves-effect hoverable waves-teal large right ">Themes</a></li>
-                    <li><a href="#prizes" class="" style="color: rgba(255,255,255,0.5) !important;">Prizes</a></li>
-                    <li><a href="#sponsor" class="waves-effect hoverable  waves-teal large right">Sponsor</a></li>
-                    <li><a href="#faq" class="waves-effect hoverable waves-teal large right">FAQ</a></li>
-                    <!-- <li><a class="register-btn btn pulse" href="https://oakcodefest2021.devpost.com/" style="color: #FFFFFF; !important">Register now!</a></li> -->
-                    <li><a id="registrations-closed" class="btn" style="color: lightgrey; !important">Registrations closed</a></li>
-                    <!--     <li><a href="#livestream" class="waves-effect hoverable waves-teal large right">Live streaming</a></li> -->
-                </ul>
-                <ul class="side-nav grey darken-4" id="mobile-menu">
-                    <li><a href="#theme" class="waves-effect hoverable waves-teal large  white-text ">Themes</a></li>
-                    <li><a href="#prizes" class="waves-effect hoverable waves-teal large  white-text">Prizes</a></li>
-                    <li><a href="#sponsor" class="waves-effect hoverable  waves-teal large  white-text">Sponsor</a></li>
-                    <li><a href="#faq" class="waves-effect hoverable waves-teal large  white-text">FAQ</a></li>
-                    <li><a class="register-btn btn pulse disabled" href="https://oakcodefest2021.devpost.com/" style="color: #FFFFFF; !important" target="_blank">Register today!</a></li>
-                    <!--   <li><a href="#livestream" class="waves-effect hoverable waves-teal large right">Live streaming</a></li> -->
-                </ul>
-            </div>
-        </nav>
-        <div class="container hide-on-large-only show-on-medium-and-down">
+    <nav class="transparent z-depth-0">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo left hide-on-med-and-down"><img class="responsive-img" width=135px
+            src="images/nord-oak-white.png" /></a>
+        <a href="index.html" class="brand-logo center hide-on-large-only"><img class="responsive-img" width=135px
+            src="images/nord-oak-white.png" /></a>
+        <a href="#" data-activates="mobile-menu" class="left button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="wide-menu" class="right hide-on-med-and-down">
+          <li><a href="#theme" class="waves-effect hoverable waves-teal large right ">Themes</a></li>
+          <li><a href="#prizes" class="" style="color: rgba(255,255,255,0.5) !important;">Prizes</a></li>
+          <li><a href="#sponsor" class="waves-effect hoverable  waves-teal large right">Sponsor</a></li>
+          <li><a href="#faq" class="waves-effect hoverable waves-teal large right">FAQ</a></li>
+          <!-- <li><a class="register-btn btn pulse" href="https://oakcodefest2021.devpost.com/" style="color: #FFFFFF; !important">Register now!</a></li> -->
+          <li><a id="registrations-closed" class="btn" style="color: lightgrey; !important">Registrations closed</a>
+          </li>
+          <!--     <li><a href="#livestream" class="waves-effect hoverable waves-teal large right">Live streaming</a></li> -->
+        </ul>
+        <ul class="side-nav grey darken-4" id="mobile-menu">
+          <li><a href="#theme" class="waves-effect hoverable waves-teal large  white-text ">Themes</a></li>
+          <li><a href="#prizes" class="waves-effect hoverable waves-teal large  white-text">Prizes</a></li>
+          <li><a href="#sponsor" class="waves-effect hoverable  waves-teal large  white-text">Sponsor</a></li>
+          <li><a href="#faq" class="waves-effect hoverable waves-teal large  white-text">FAQ</a></li>
+          <li><a class="register-btn btn pulse disabled" href="https://oakcodefest2021.devpost.com/"
+              style="color: #FFFFFF; !important" target="_blank">Register today!</a></li>
+          <!--   <li><a href="#livestream" class="waves-effect hoverable waves-teal large right">Live streaming</a></li> -->
+        </ul>
+      </div>
+    </nav>
+    <div class="container hide-on-large-only show-on-medium-and-down">
 
-                  <br />
-                  <br />
-                  <br />
-                  <center>
-                    <a class="register-btn btn-large pulse " href="https://oakcodefest2021.devpost.com/" style="color: #fff; !important" target="_blank">Register today!</a>
-                  </center>
-          </div>
-        <div id="index-banner" class="parallax-container hide-on-med-and-down">
-            <div class="section no-pad-bot">
+      <br />
+      <br />
+      <br />
+      <center>
+        <a class="register-btn btn-large pulse " href="https://oakcodefest2021.devpost.com/"
+          style="color: #fff; !important" target="_blank">Register today!</a>
+      </center>
+    </div>
+    <div id="index-banner" class="parallax-container hide-on-med-and-down">
+      <div class="section no-pad-bot">
 
-                <div class="row hide-on-med-and-down"></div>
-                <div class="row hide-on-med-and-down"></div>
-                <div class="container hide-on-med-and-down">
-                    <div class="row">
-                        <div class="col s12">
-                            <!--    <div class="card-panel black z-depth-5"> -->
-                            <div class="center-align">
+        <div class="row hide-on-med-and-down"></div>
+        <div class="row hide-on-med-and-down"></div>
+        <div class="container hide-on-med-and-down">
+          <div class="row">
+            <div class="col s12">
+              <!--    <div class="card-panel black z-depth-5"> -->
+              <div class="center-align">
 
-                                <!-- <img src="images/uncompressed.gif" class="responsive-img">-->
-                                <video id="bgvid" width="100%" height="100%" playsinline autoplay muted loop>
-                                  <source src="CF2022.webm" type="video/webm">
-                                  <source src="CF2022.mp4" type="video/mp4">
-                                </video>
-                              </div>
-  <!--
+                <!-- <img src="images/uncompressed.gif" class="responsive-img">-->
+                <video id="bgvid" width="100%" height="100%" playsinline autoplay muted loop>
+                  <source src="media/CF2022.webm" type="video/webm">
+                  <source src="media/CF2022.mp4" type="video/mp4">
+                </video>
+              </div>
+              <!--
 - Video needs to be muted, since Chrome 66+ will not autoplay video with sound.
 WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
-<!-- <source src="/saber_1.webm" type="video/webm">
+              <!-- <source src="/saber_1.webm" type="video/webm">
 <source src="/saber_1.mp4" type="video/mp4"> -->
 
-                        </div>
-                    </div>
-                </div>
-
-
             </div>
+          </div>
         </div>
 
-        <div class="container">
-            <div id='phone' class="row center">
-                <div id="mob">
-                  <br /><br />
-                    <img src="images/2021_bg.png" style="width: 100%; height: 150%;"></img>
-                </div>
-            </div>
-            <!--<section id="intro">
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div id='phone' class="row center">
+        <div id="mob">
+          <br /><br />
+          <img src="images/2021_bg.png" style="width: 100%; height: 150%;"></img>
+        </div>
+      </div>
+      <!--<section id="intro">
             <div class="row center-align">
                 <div class="col s12">
                     <a class="typeform-share button" href="https://oakridgecodefest.typeform.com/to/YLU5qH" data-mode="drawer_right" style="display:inline-block;text-decoration:none;background-color:#263238;color:white;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:32px;line-height:80px;text-align:center;margin:0;height:80px;padding:0px 53px;border-radius:13px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;"
@@ -176,75 +183,80 @@ WCAG general accessibility recommendation is that media such as background video
 
 -->
 
-            <div class="hide-on-med-and-down">
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-            </div>
+      <div class="hide-on-med-and-down">
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row"></div>
+      </div>
 
-            <section id="intro">
-              <style>
-                .light-blue{
-                  color: #fff !important;
-                  background-color: #003255 !important;
-                }
-                #HGSVid {
-                  display:block
-                }
-              </style>
-                <center>
-                  <!-- <img src="images/coming soon white.png" width="75%"/> -->
-                  <div class="container">
-                    <div class="row">
-                        <div class="col s12 center-align">
-                            <div id="clockdiv">
-                                <div>
-                                    <span class="days light-blue darken-4" style="background-image:url('images/codefest glitch darkened.png');background-position:100px 100px"></span>
-                                    <div class="smalltext">Days</div>
-                                </div>
-                                <div>
-                                    <span class="hours light-blue darken-4" style="background-image:url('images/codefest glitch darkened.png');background-position:200px 100px"></span>
-                                    <div class="smalltext">Hours</div>
-                                </div>
-                                <div>
-                                    <span class="minutes light-blue darken-4" style="background-image:url('images/codefest glitch darkened.png');background-position:300px 100px"></span>
-                                    <div class="smalltext">Minutes</div>
-                                </div>
-                                <div>
-                                    <span class="seconds light-blue darken-4" style="background-image:url('images/codefest glitch darkened.png');background-position:400px 100px"></span>
-                                    <div class="smalltext">Seconds</div>
-                                </div>
-                            </div>
-                            <h5><i>Codefest 2022</i></h5>
-                            <h5><i>22nd-23rd January 2022</i></h5>
+      <section id="intro">
+        <style>
+          .light-blue {
+            color: #fff !important;
+            background-color: #003255 !important;
+          }
 
-                            <div>
-                              <img src='images\coming soon white.png' height="50px"/>
-                            </div>
-                        </div>
-                    </div>
+          #HGSVid {
+            display: block
+          }
+        </style>
+        <center>
+          <!-- <img src="images/coming soon white.png" width="75%"/> -->
+          <div class="container">
+            <div class="row">
+              <div class="col s12 center-align">
+                <div id="clockdiv">
+                  <div>
+                    <span class="days light-blue darken-4"
+                      style="background-image:url('images/codefest glitch darkened.png');background-position:100px 100px"></span>
+                    <div class="smalltext">Days</div>
                   </div>
-                </center>
-            </section>
-        </div>
+                  <div>
+                    <span class="hours light-blue darken-4"
+                      style="background-image:url('images/codefest glitch darkened.png');background-position:200px 100px"></span>
+                    <div class="smalltext">Hours</div>
+                  </div>
+                  <div>
+                    <span class="minutes light-blue darken-4"
+                      style="background-image:url('images/codefest glitch darkened.png');background-position:300px 100px"></span>
+                    <div class="smalltext">Minutes</div>
+                  </div>
+                  <div>
+                    <span class="seconds light-blue darken-4"
+                      style="background-image:url('images/codefest glitch darkened.png');background-position:400px 100px"></span>
+                    <div class="smalltext">Seconds</div>
+                  </div>
+                </div>
+                <h5><i>Codefest 2022</i></h5>
+                <h5><i>22nd-23rd January 2022</i></h5>
 
-        <div id="animation-banner" class="parallax-container" style="color: #03A7E9; width: 100%;">
-            <div class="section no-pad-bot">
-                <div class="row"></div>
-                <div class="row"></div>
-                <div class="container">
-                    <div class="center-align">
-                        <!-- DO NOT INDENT BELOW PLS -->
-                        <pre id="typewriter" style="overflow-x: hidden;" class="flow-text">
+                <div>
+                  <img src='images\coming soon white.png' height="50px" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </center>
+      </section>
+    </div>
+
+    <div id="animation-banner" class="parallax-container" style="color: #03A7E9; width: 100%;">
+      <div class="section no-pad-bot">
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="container">
+          <div class="center-align">
+            <!-- DO NOT INDENT BELOW PLS -->
+            <pre id="typewriter" style="overflow-x: hidden;" class="flow-text">
 <span class="var-highlight">OakCodefest</span> 2022 = {
 type: <span class="string-highlight">'24 hour Virtual Hackathon'</span>,
 date: <span class="string-highlight">'22nd-23rd Jan 2022'</span>,
@@ -254,19 +266,19 @@ themes:[
 ]
 };
 </pre>
-<!-- <span class="string-highlight">'Data analytics'</span>,
+            <!-- <span class="string-highlight">'Data analytics'</span>,
 <span class="string-highlight">'Transportation'</span>,
 <span class="string-highlight">'Healthcare'</span>,
 <span class="string-highlight">'Education'</span>,
 <span class="string-highlight">'Environmental sustainability'</span>,
 <span class="string-highlight">'Gaming (Juniors only/grades 6-8)'</span>, -->
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-        <br>
-        <div class="container">
-            <!-- <section id="video">
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <!-- <section id="video">
                 <div class="row">
                     <div class="col s8 offset-s2">
                         <div class="video-container">
@@ -274,8 +286,8 @@ themes:[
                         </div>
                     </div>
                 </div> -->
-                <!-- OLD PHOTOS DIV HIDDEN -->
-                <!-- <div class="row">
+      <!-- OLD PHOTOS DIV HIDDEN -->
+      <!-- <div class="row">
                     <div class="col s12 m12">
                         <div class="icon-block">
                             <h2 class="center red-text text-darken-1"><i class="material-icons">flash_on</i></h2>
@@ -284,123 +296,194 @@ themes:[
                         </div>
                     </div>
                 </div> -->
-            <!-- </section> -->
+      <!-- </section> -->
 
-            <div class="row"></div>
-            <section class="grey darken-4 valign-wrapper" style=" font-weight: light; !important;">
-                <div class="row questions">
-                    <div class="col s12 m4">
-                        <div class="icon-block">
-                            <h2 class="center-align"><i class="material-icons medium">flash_on</i></h2>
-                            <h4 class="center-align">What is a Codefest?</h4>
+      <div class="row"></div>
+      <section class="grey darken-4 valign-wrapper" style=" font-weight: light; !important;">
+        <div class="row questions">
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center-align"><i class="material-icons medium">flash_on</i></h2>
+              <h4 class="center-align">What is a Codefest?</h4>
 
-                            <p class="center-align">A Codefest is a platform that provides the opportunity for aspiring developers to showcase their unique talents to both each other and veterans of the industry. Our Codefest is Bangalore's only overnight school hackathon and
-                                we plan on making it as fulfilling and rewarding an experience as possible!</p>
-                        </div>
-                    </div>
-                    <div class="col s12 m4">
-                        <div class="icon-block">
-                            <h2 class="center-align"><i class="material-icons medium">group</i></h2>
-                            <h4 class="center-align">Themes</h4>
+              <p class="center-align">A Codefest is a platform that provides the opportunity for aspiring developers to
+                showcase their unique talents to both each other and veterans of the industry. Our Codefest is
+                Bangalore's only overnight school hackathon and
+                we plan on making it as fulfilling and rewarding an experience as possible!</p>
+            </div>
+          </div>
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center-align"><i class="material-icons medium">group</i></h2>
+              <h4 class="center-align">Themes</h4>
 
-                            <p class="center-align">With a multitude of impactful themes, the participants will be tackling current technical problems with innovative improvements and solutions.</p>
-                        </div>
-                    </div>
+              <p class="center-align">With a multitude of impactful themes, the participants will be tackling current
+                technical problems with innovative improvements and solutions.</p>
+            </div>
+          </div>
 
-                    <div class="col s12 m4">
-                        <div class="icon-block">
-                            <h2 class="center-align"><i class="material-icons medium">settings</i></h2>
-                            <h4 class="center-align">Rewards</h4>
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center-align"><i class="material-icons medium">settings</i></h2>
+              <h4 class="center-align">Rewards</h4>
 
-                            <p class="center-align">Placement in the top three will guarantee a large monetary reward, and additionally, sponsor themes have their own rewards, which include a large assortment of products and services of equal value.</p>
-                        </div>
-                    </div>
+              <p class="center-align">Placement in the top three will guarantee a large monetary reward, and
+                additionally, sponsor themes have their own rewards, which include a large assortment of products and
+                services of equal value.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="row"></div>
+      <!--    <div class="divider white"></div> -->
+      <section id="theme" class="">
+        <!-- REMOVE HIDDEN WHEN THEMES ARE CONFIRMED AND ANNOUNCABLE -->
+        <!--  <h3 class="center-align">Themes will be announced soon!</h3> -->
+        <!-- <h3 class="flow-text center-align">General themes</h3> -->
+
+        <h3 class="center-align">General themes(2022)</h3>
+        <div class="row">
+          <div class="col s12">
+            <div class="card-panel grey darken-4">
+              <span class="white-text" style="font-size: 150%;">
+                <p>Teams are <b>expected</b> to use at least <b>one primary</b> theme for their project but are
+                  <b>recommended</b> to choose two or more themes. For more infomation regarding themes please email us
+                  at <a href="mailto:oakcodefest@oakridge.in">oakcodefest@oakridge.in</a></p>
+              </span>
+            </div>
+          </div>
+        </div>
+        <ul class="collapsible popout hide-on-med-and-up" data-collapsible="accordion">
+          <li>
+            <div class="collapsible-header center-align grey darken-4" onmouseover="onhover(this);"
+              onmouseout="onnothover(this);"><i class="material-icons">directions_transit</i>STEM Simulation</div>
+            <div class="collapsible-body grey darken-4"><span>
+                <p>Humans, around the world, commute millions of miles every single day. A significant fraction of our
+                  day is spent in traveling. Technology has played a very significant role in enabling more people to
+                  commute. Be it in the form discovery, aggregation or purchase, technology has redefined the way we
+                  commute. Imagine how technology can human experience even better in day to day transportation and
+                  commute. What can technology do make public and private transportation much simpler?</p>
+          </li>
+          <li>
+            <div class="collapsible-header center-align grey darken-4" onmouseover="onhover(this);"
+              onmouseout="onnothover(this);"><i class="material-icons">book</i>Education</div>
+            <div class="collapsible-body grey darken-4"><span>
+                <p>Education develops effective leaders and innovators of tomorrow. Technology has played a significant
+                  role in recent years in allowing education to have a larger reach and allowing the teaching and
+                  learning processes to occur more smoothly. Especially during the current pandemic, the internet and
+                  video call services have allowed for learning to continue even while we are restricted at home. How
+                  can you use your technological skills to improve education?</p>
+          </li>
+          <li>
+            <div class="collapsible-header center-align grey darken-4" onmouseover="onhover(this);"
+              onmouseout="onnothover(this);"><i class="material-icons">local_florist</i>Environmental sustainability
+            </div>
+            <div class="collapsible-body grey darken-4"><span>
+                <p>Nearly all of the things we consume can be traced back to the resources provided by earth we live in.
+                  Sustainability refers to creating a world that can be prosperous and habitable for future generations,
+                  and as society progresses, technology will be the at the crux of maintaining sustainability. From new
+                  and more efficient uses of energy to combating deforestation, technology's importance to
+                  sustainability has been especially pronounced in recent years. What can you do with technology to
+                  create a more sustainable world?</p>
+              </span></div>
+          </li>
+          <li>
+            <div class="collapsible-header center-align grey darken-4" onmouseover="onhover(this);"
+              onmouseout="onnothover(this);"><i class="material-icons">show_chart</i> Data analytics </div>
+            <div class="collapsible-body grey darken-4"><span>
+                <p>As humans develop more and more digital solutions, arises the need for analysis of complex data. Such
+                  data can be interpreted well by Artificial Intelligence. From predicting stocks to weather, this field
+                  has immense potential. The application of Data Analytics rises by the second as companies adopt
+                  machine learning and deep learning powered technologies. Show us what you can do with big data</p>
+              </span></div>
+          </li>
+          <li>
+            <div class="collapsible-header center-align grey darken-4" onmouseover="onhover(this);"
+              onmouseout="onnothover(this);"><i class="material-icons">local_hospital</i>Healthcare</div>
+            <div class="collapsible-body grey darken-4"><span>
+                <p> Health care is an essential service, and our ability to provide quality health care as well as
+                  store, share and analyze health information is directly tied to improved technology. Particularly with
+                  the current situation of the COVID-19 pandemic, technology has been used to create solutions to track
+                  and minimize the spread of the virus. We look forward to seeing what technological creations you will
+                  develop to contribute to this field.</p>
+              </span></div>
+          </li>
+          <li>
+            <div class="collapsible-header center-align grey darken-4" onmouseover="onhover(this);"
+              onmouseout="onnothover(this);"><i class="material-icons">videogame_asset</i>Game Development(6-8th Grade)
+            </div>
+            <div class="collapsible-body grey darken-4"><span>
+                <p>Video games are a great way to have fun and learn code at the same time!</p>
+                <p>Use your knowledge of coding to make fun and interactive game for everyone to enjoy!</p>
+                <p>For this theme, we expect participants to be creative and innovative and have some kind of unique
+                  idea or message in it. <b>Participants need to use programming languages; drag and drop/WYSIWYG
+                    applications such as Scratch and MIT App Inventor are strictly not allowed.</b></p>
+              </span></div>
+          </li>
+        </ul>
+        <div class="row hide-on-small-only">
+          <div class="col s12">
+
+            <section class="theme-card-list">
+              <article class="theme-card">
+                <div class="theme-card-title"><i class="material-icons md-48">directions_transit</i>&nbsp;&nbsp;STEM
+                  Simulation</div>
+                <div class="theme-card-content">This exciting new theme will give participants the opportunity to design
+                  a simulation based on STEM principles. The project can take multiple directions, including but not
+                  limited to data science, physics, economics, and more</div>
+                <div class="theme-card-example">Examples: Fluid simulation, circuit builder, model solar system</div>
+              </article>
+              <article class="theme-card">
+                <div class="theme-card-title"><i class="material-icons md-48">book</i>&nbsp;&nbsp;Education</div>
+                <div class="theme-card-content">Education develops effective leaders and innovators of tomorrow.
+                  Technology has played a significant role in recent years in allowing education to have a larger reach
+                  and allowing the teaching and learning processes to occur more smoothly. Especially during the current
+                  pandemic, the internet and video call services have allowed for learning to continue even while we are
+                  restricted at home. How can you use your technological skills to improve education?</div>
+                <div class="theme-card-example">Examples: Worksheet Generator and Note Taking App</div>
+              </article>
+              <article class="theme-card">
+                <div class="theme-card-title"><i
+                    class="material-icons md-48">local_florist</i>&nbsp;&nbsp;<span>Environmental Sustainability</span>
                 </div>
+                <div class="theme-card-content">Nearly all of the things we consume can be traced back to the resources
+                  provided by earth we live in. Sustainability refers to creating a world that can be prosperous and
+                  habitable for future generations, and as society progresses, technology will be the at the crux of
+                  maintaining sustainability. From new and more efficient uses of energy to combating deforestation,
+                  technology's importance to sustainability has been especially pronounced in recent years. What can you
+                  do with technology to create a more sustainable world?</div>
+                <div class="theme-card-example">Examples: Carbon Footprint Calculator and Smart Bulb</div>
+              </article>
             </section>
-            <div class="row"></div>
-            <!--    <div class="divider white"></div> -->
-            <section id="theme" class="">
-              <!-- REMOVE HIDDEN WHEN THEMES ARE CONFIRMED AND ANNOUNCABLE -->
-                <!--  <h3 class="center-align">Themes will be announced soon!</h3> -->
-                <!-- <h3 class="flow-text center-align">General themes</h3> -->
-
-                <h3 class="center-align">General themes(2022)</h3>
-                <div class="row">
-                    <div class="col s12">
-                        <div class="card-panel grey darken-4">
-                            <span class="white-text" style="font-size: 150%;"><p>Teams are <b>expected</b> to use at least <b>one primary</b> theme for their project but are <b>recommended</b> to choose two or more themes. For more infomation regarding themes please email us at <a href="mailto:oakcodefest@oakridge.in">oakcodefest@oakridge.in</a></p></span>
-                        </div>
-                    </div>
+            <section class="theme-card-list">
+              <article class="theme-card">
+                <div class="theme-card-title"><i class="material-icons md-48">local_hospital</i>&nbsp;&nbsp;Healthcare
                 </div>
-                <ul class="collapsible popout hide-on-med-and-up" data-collapsible="accordion">
-                    <li>
-                        <div class="collapsible-header center-align grey darken-4" onmouseover="onhover(this);" onmouseout="onnothover(this);"><i class="material-icons">directions_transit</i>STEM Simulation</div>
-                        <div class="collapsible-body grey darken-4"><span><p>Humans, around the world, commute millions of miles every single day. A significant fraction of our day is spent in traveling. Technology has played a very significant role in enabling more people to commute. Be it in the form discovery, aggregation or purchase, technology has redefined the way we commute. Imagine how technology can human experience even better in day to day transportation and commute. What can technology do make public and private transportation much simpler?</p>
-                    </li>
-                    <li>
-                        <div class="collapsible-header center-align grey darken-4" onmouseover="onhover(this);" onmouseout="onnothover(this);"><i class="material-icons">book</i>Education</div>
-                        <div class="collapsible-body grey darken-4"><span><p>Education develops effective leaders and innovators of tomorrow. Technology has played a significant role in recent years in allowing education to have a larger reach and allowing the teaching and learning processes to occur more smoothly. Especially during the current pandemic, the internet and video call services have allowed for learning to continue even while we are restricted at home. How can you use your technological skills to improve education?</p>
-                    </li>
-                    <li>
-                        <div class="collapsible-header center-align grey darken-4" onmouseover="onhover(this);" onmouseout="onnothover(this);"><i class="material-icons">local_florist</i>Environmental sustainability</div>
-                        <div class="collapsible-body grey darken-4"><span><p>Nearly all of the things we consume can be traced back to the resources provided by earth we live in. Sustainability refers to creating a world that can be prosperous and habitable for future generations, and as society progresses, technology will be the at the crux of maintaining sustainability. From new and more efficient uses of energy to combating deforestation, technology's importance to sustainability has been especially pronounced in recent years. What can you do with technology to create a more sustainable world?</p></span></div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header center-align grey darken-4" onmouseover="onhover(this);" onmouseout="onnothover(this);"><i class="material-icons">show_chart</i> Data analytics </div>
-                        <div class="collapsible-body grey darken-4"><span><p>As humans develop more and more digital solutions, arises the need for analysis of complex data. Such data can be interpreted well by Artificial Intelligence. From predicting stocks to weather, this field has immense potential. The application of Data Analytics rises by the second as companies adopt machine learning and deep learning powered technologies. Show us what you can do with big data</p>
-                        </span></div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header center-align grey darken-4" onmouseover="onhover(this);" onmouseout="onnothover(this);"><i class="material-icons">local_hospital</i>Healthcare</div>
-                        <div class="collapsible-body grey darken-4"><span><p> Health care is an essential service, and our ability to provide quality health care as well as store, share and analyze health information is directly tied to improved technology. Particularly with the current situation of the COVID-19 pandemic, technology has been used to create solutions to track and minimize the spread of the virus. We look forward to seeing what technological creations you will develop to contribute to this field.</p>
-                        </span></div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header center-align grey darken-4" onmouseover="onhover(this);" onmouseout="onnothover(this);"><i class="material-icons">videogame_asset</i>Game Development(6-8th Grade)</div>
-                        <div class="collapsible-body grey darken-4"><span><p>Video games are a great way to have fun and learn code at the same time!</p>
-                          <p>Use your knowledge of coding to make fun and interactive game for everyone to enjoy!</p>
-                          <p>For this theme, we expect participants to be creative and innovative and have some kind of unique idea or message in it. <b>Participants need to use programming languages; drag and drop/WYSIWYG applications such as Scratch and MIT App Inventor are strictly not allowed.</b></p></span></div>
-                    </li>
-                </ul>
-                <div class="row hide-on-small-only">
-                    <div class="col s12">
-
-                            <section class="theme-card-list">
-                              <article class="theme-card">
-                                <div class="theme-card-title"><i class="material-icons md-48">directions_transit</i>&nbsp;&nbsp;STEM Simulation</div>
-                                <div class="theme-card-content">This exciting new theme will give participants the opportunity to design a simulation based on STEM principles. The project can take multiple directions, including but not limited to data science, physics, economics, and more</div>
-                                <div class="theme-card-example">Examples: Fluid simulation, circuit builder, model solar system</div>
-                              </article>
-                              <article class="theme-card">
-                                <div class="theme-card-title"><i class="material-icons md-48">book</i>&nbsp;&nbsp;Education</div>
-                                <div class="theme-card-content">Education develops effective leaders and innovators of tomorrow. Technology has played a significant role in recent years in allowing education to have a larger reach and allowing the teaching and learning processes to occur more smoothly. Especially during the current pandemic, the internet and video call services have allowed for learning to continue even while we are restricted at home. How can you use your technological skills to improve education?</div>
-                                <div class="theme-card-example">Examples: Worksheet Generator and Note Taking App</div>
-                              </article>
-                              <article class="theme-card">
-                                <div class="theme-card-title"><i class="material-icons md-48">local_florist</i>&nbsp;&nbsp;<span>Environmental Sustainability</span></div>
-                                <div class="theme-card-content">Nearly all of the things we consume can be traced back to the resources provided by earth we live in. Sustainability refers to creating a world that can be prosperous and habitable for future generations, and as society progresses, technology will be the at the crux of maintaining sustainability. From new and more efficient uses of energy to combating deforestation, technology's importance to sustainability has been especially pronounced in recent years. What can you do with technology to create a more sustainable world?</div>
-                                <div class="theme-card-example">Examples: Carbon Footprint Calculator and Smart Bulb</div>
-                              </article>
-                            </section>
-                            <section class="theme-card-list">
-                                <article class="theme-card">
-                                  <div class="theme-card-title"><i class="material-icons md-48">local_hospital</i>&nbsp;&nbsp;Healthcare</div>
-                                  <div class="theme-card-content">Health care is an essential service, and our ability to provide quality health care as well as store, share and analyze health information is directly tied to improved technology. Particularly with the current situation of the COVID-19 pandemic, technology has been used to create solutions to track and minimize the spread of the virus. We look forward to seeing what technological creations you will develop to contribute to this field.</div>
-                                  <div class="theme-card-example">Examples: Fitness Tracker and COVID-19 Detector</div>
-                                </article>
-                                <article class="theme-card">
-                                  <div class="theme-card-title"><i class="material-icons md-48">videogame_asset</i>&nbsp;&nbsp;Game Development</div>
-                                  <div class="theme-card-content">Video games are a great way to have fun and learn code at the same time! </br></br> For this theme, we expect participants to be creative and innovative and have some kind of unique idea or message in it. Participants need to use programming languages and drag and drop/WYSIWYG applications such as Scratch and MIT App Inventor are strictly not allowed.</div>
-                                  <div class="theme-card-example"><span style="font-size: 18px;"><b>Note: Only for grades 6-8</b></span></div>
-                                </article>
-                              </section>
-
-                    </div>
+                <div class="theme-card-content">Health care is an essential service, and our ability to provide quality
+                  health care as well as store, share and analyze health information is directly tied to improved
+                  technology. Particularly with the current situation of the COVID-19 pandemic, technology has been used
+                  to create solutions to track and minimize the spread of the virus. We look forward to seeing what
+                  technological creations you will develop to contribute to this field.</div>
+                <div class="theme-card-example">Examples: Fitness Tracker and COVID-19 Detector</div>
+              </article>
+              <article class="theme-card">
+                <div class="theme-card-title"><i class="material-icons md-48">videogame_asset</i>&nbsp;&nbsp;Game
+                  Development</div>
+                <div class="theme-card-content">Video games are a great way to have fun and learn code at the same time!
+                  </br></br> For this theme, we expect participants to be creative and innovative and have some kind of
+                  unique idea or message in it. Participants need to use programming languages and drag and drop/WYSIWYG
+                  applications such as Scratch and MIT App Inventor are strictly not allowed.</div>
+                <div class="theme-card-example"><span style="font-size: 18px;"><b>Note: Only for grades 6-8</b></span>
                 </div>
+              </article>
+            </section>
+
+          </div>
+        </div>
 
 
 
-                <!--  <h5 class="flow-text center-align">Sponsor themes</h5>
+        <!--  <h5 class="flow-text center-align">Sponsor themes</h5>
                 <ul class="collapsible popout" data-collapsible="accordion">
                     <li>
                         <div class="collapsible-header center-align grey darken-3" onmouseover="onhover(this);" onmouseout="onnothover(this);"><i class="material-icons">filter_drama</i>.TECH website innovation</div>
@@ -427,65 +510,57 @@ themes:[
                 <div class="card grey darken-4">
                     <div class="card-content">
                         <h2 class="center-align"><b>Prizes Worth ₹1.6 Lakhs up for grabs</b>.</h2>
-                        <!-- <h4 class="center-align"><b>Stand a chance to win a trip to Stockholm</b></h4> -->
-                        <!--
-                        ┏━━━┓ ︱︱︱︱ ┏━━━┓
-                        ┃┏━┓┃ ︱︱︱︱ ┃┏━┓┃
-                        ┃┃︱┃┃ ┏┓┏┓┏┓ ┃┃︱┃┃
-                        ┃┃︱┃┃ ┃┗┛┗┛┃ ┃┃︱┃┃
-                        ┃┗━┛┃  ┗┓┏┓┏┛ ┃┗━┛┃|
-                        ┗━━━┛ ︱┗┛┗┛︱ ┗━━━┛
+                         <h4 class="center-align"><b>Stand a chance to win a trip to Stockholm</b></h4> -->
 
-                        noice
-                       -->
-                       <div class="card grey darken-3 prize">
-                         <div class="card-content">
-                           <center>
-                             <h3>Total cash prizes worth <b>&#8377;75,000</b></h3>
-                           </center>
-                         </div>
-                       </div>
-
-
-                       <div class="card grey darken-3 prize">
-                         <div class="card-content">
-                           <center>
-                             <h3>Exclusive participation perks from our sponsors</h3>
-                           </center>
-                         </div>
-                       </div>
-
-                        <!-- <h5 class="center-align">More prizes will be announced soon.</h5> -->
-                    </div>
-                </div>
-            </section>
+        <div class="card grey darken-3 prize">
+          <div class="card-content">
+            <center>
+              <h3>Total cash prizes worth <b>&#8377;75,000</b></h3>
+            </center>
+          </div>
         </div>
 
-        <!--  <div class="parallax-container">
+
+        <div class="card grey darken-3 prize">
+          <div class="card-content">
+            <center>
+              <h3>Exclusive participation perks from our sponsors</h3>
+            </center>
+          </div>
+        </div>
+
+        <!-- <h5 class="center-align">More prizes will be announced soon.</h5> -->
+    </div>
+  </div>
+  </section>
+  </div>
+
+  <!--  <div class="parallax-container">
         <div class="parallax"><img src="images/servers_room-wallpaper-2048x1152.jpg" alt="images/bgbackup.jpg"></div>
     </div> -->
-        <section>
-            <div class="container">
-                <div class="row"></div>
-                <section id="faq" class="">
-                    <div class="card grey darken-4">
-                        <div class="card-content">
-                            <h3 class="center-align">FAQ</h3>
-                            <center>
-                              <p class="grey-text text-lighten-4">Email us at <a href="mailto:oakcodefest@oakridge.in">oakcodefest@oakridge.in</a> for further queries</p>
-                            </center>
-                        </div>
-                        <div class="card-tabs grey darken-4">
-                            <ul class="tabs tabs-fixed-width">
-                                <li class="tab grey darken-4"><a class="active" href="#questions1">Participation Details</a></li>
-                                <!-- <li class="tab grey darken-4"><a href="#questions2">Event Details</a></li> -->
-                                <!-- <li class="tab grey darken-4"><a href="#accommodation_faq">accommodation</a></li> -->
-                                <li class="tab grey darken-4"><a href="#questions3">Idea Details</a></li>
-                                <li class="tab grey darken-3"><a href="#dates">Important Dates</a></li>
-                            </ul>
-                        </div>
-                        <div class="card-content grey darken-4">
-                            <!-- <div id="questions2" class="">
+  <section>
+    <div class="container">
+      <div class="row"></div>
+      <section id="faq" class="">
+        <div class="card grey darken-4">
+          <div class="card-content">
+            <h3 class="center-align">FAQ</h3>
+            <center>
+              <p class="grey-text text-lighten-4">Email us at <a
+                  href="mailto:oakcodefest@oakridge.in">oakcodefest@oakridge.in</a> for further queries</p>
+            </center>
+          </div>
+          <div class="card-tabs grey darken-4">
+            <ul class="tabs tabs-fixed-width">
+              <li class="tab grey darken-4"><a class="active" href="#questions1">Participation Details</a></li>
+              <!-- <li class="tab grey darken-4"><a href="#questions2">Event Details</a></li> -->
+              <!-- <li class="tab grey darken-4"><a href="#accommodation_faq">accommodation</a></li> -->
+              <li class="tab grey darken-4"><a href="#questions3">Idea Details</a></li>
+              <li class="tab grey darken-3"><a href="#dates">Important Dates</a></li>
+            </ul>
+          </div>
+          <div class="card-content grey darken-4">
+            <!-- <div id="questions2" class="">
                                 <ul class="collapsible grey darken-4" data-collapsible="accordion">
                                     <li>
                                         <div class="collapsible-header grey darken-4"><i class="material-icons">free_breakfast</i>Will I be provided food?</div>
@@ -506,7 +581,7 @@ themes:[
                                     </li>
                                 </ul>
                             </div> -->
-                            <!-- <div id="accommodation_faq" class="">
+            <!-- <div id="accommodation_faq" class="">
                                 <ul class="collapsible grey darken-4" data-collapsible="accordion">
                                     <li>
                                         <div class="collapsible-header grey darken-4"><i class="material-icons">place</i>Is accommodation only provided for students? Where is the accommodation?</div>
@@ -523,130 +598,166 @@ themes:[
                                     </li>
                                 </ul>
                             </div> -->
-                            <div id="questions3" class="grey darken-4">
+            <div id="questions3" class="grey darken-4">
 
-                                <ul class="collapsible grey darken-4" data-collapsible="accordion">
-                                    <li>
-                                        <div class="collapsible-header grey darken-4"><i class="material-icons">language</i>What languages/software can I use?</div>
-                                        <div class="collapsible-body grey darken-2 white-text"><span>Any language, technology stack, or library can be used to create your solutions, except drag and drop softwares like MIT App Inventor.</span></div>
-                                    </li>
-                                    <li>
-                                        <div class="collapsible-header grey darken-4"><i class="material-icons">lightbulb_outline</i>Do we need to have the idea/solution fully working?</div>
-                                        <div class="collapsible-body grey darken-2 white-text"><span>The entire idea need not be implemented, however, the submission should be functional so that it can be reviewed by the judges.</span></div>
-                                    </li>
-                                    <li>
-                                        <div class="collapsible-header grey darken-4"><i class="material-icons">copyright</i>Who will own the IP (Intellectual Property) rights to the solution?</div>
-                                        <div class="collapsible-body grey darken-2 white-text"><span>The developer/developers of the web/mobile application will have all rights and own the IP of the product. However, all code needs to be in the public domain (open source) so that it can be evaluated by the judges.</span></div>
-                                    </li>
-                                    <li>
-                                        <div class="collapsible-header grey darken-4"><i class="material-icons">cached</i>Can I submit previously developed projects?</div>
-                                        <div class="collapsible-body grey darken-2 white-text"><span>No, any submission made to the event must be developed within the 24 hour time limit and must fit the selected theme.</span></div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div id="questions1" class="grey darken-4">
-                                <ul class="collapsible grey darken-4" data-collapsible="accordion">
-                                    <li>
-                                        <div class="collapsible-header grey darken-4"><i class="material-icons">people</i>Who can participate in this event?</div>
-                                        <div class="collapsible-body grey darken-2 white-text"><span>Anyone who is in school between the grades 6 and 12, and is interested in technology can participate.</span></div>
-                                    </li>
-                                    <li>
-                                        <div class="collapsible-header grey darken-4"><i class="material-icons">laptop</i>What platform will Codefest be held on?</div>
-                                        <div class="collapsible-body grey darken-2 white-text"><span>The event will be hosted on zoom and miscrosoft teams.</span></div>
-                                    </li>
-                                    <!-- <li>
+              <ul class="collapsible grey darken-4" data-collapsible="accordion">
+                <li>
+                  <div class="collapsible-header grey darken-4"><i class="material-icons">language</i>What
+                    languages/software can I use?</div>
+                  <div class="collapsible-body grey darken-2 white-text"><span>Any language, technology stack, or
+                      library can be used to create your solutions, except drag and drop softwares like MIT App
+                      Inventor.</span></div>
+                </li>
+                <li>
+                  <div class="collapsible-header grey darken-4"><i class="material-icons">lightbulb_outline</i>Do we
+                    need to have the idea/solution fully working?</div>
+                  <div class="collapsible-body grey darken-2 white-text"><span>The entire idea need not be implemented,
+                      however, the submission should be functional so that it can be reviewed by the judges.</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="collapsible-header grey darken-4"><i class="material-icons">copyright</i>Who will own the
+                    IP (Intellectual Property) rights to the solution?</div>
+                  <div class="collapsible-body grey darken-2 white-text"><span>The developer/developers of the
+                      web/mobile application will have all rights and own the IP of the product. However, all code needs
+                      to be in the public domain (open source) so that it can be evaluated by the judges.</span></div>
+                </li>
+                <li>
+                  <div class="collapsible-header grey darken-4"><i class="material-icons">cached</i>Can I submit
+                    previously developed projects?</div>
+                  <div class="collapsible-body grey darken-2 white-text"><span>No, any submission made to the event must
+                      be developed within the 24 hour time limit and must fit the selected theme.</span></div>
+                </li>
+              </ul>
+            </div>
+            <div id="questions1" class="grey darken-4">
+              <ul class="collapsible grey darken-4" data-collapsible="accordion">
+                <li>
+                  <div class="collapsible-header grey darken-4"><i class="material-icons">people</i>Who can participate
+                    in this event?</div>
+                  <div class="collapsible-body grey darken-2 white-text"><span>Anyone who is in school between the
+                      grades 6 and 12, and is interested in technology can participate.</span></div>
+                </li>
+                <li>
+                  <div class="collapsible-header grey darken-4"><i class="material-icons">laptop</i>What platform will
+                    Codefest be held on?</div>
+                  <div class="collapsible-body grey darken-2 white-text"><span>The event will be hosted on zoom and
+                      miscrosoft teams.</span></div>
+                </li>
+                <!-- <li>
                                         <div class="collapsible-header grey darken-4"><i class="material-icons">monetization_on</i>Do you need to pay for this event?</div>
                                         <div class="collapsible-body grey darken-2 white-text"><span>Yes, there is a ₹400 registration fee per person that MUST be paid on the first day of the event.</span></div>
                                     </li> -->
-                                    <li>
-                                        <div class="collapsible-header grey darken-4"><i class="material-icons">monetization_on</i>What does my registration fee go towards?</div>
-                                        <div class="collapsible-body grey darken-2 white-text"><span>The ₹300 will cover your access to the virtual venue and other other platoforms where we will communicate with participants. It will also contributed to the proceeds that would be donated to charity and would make you eligible for the free goodies provided by our sponsors.</span></div>
-                                    </li>
-                                    <li>
-                                        <div class="collapsible-header grey darken-4"><i class="material-icons">date_range</i>When would I recieve confirmation that I have been selected?</div>
-                                        <div class="collapsible-body grey darken-2 white-text"><span>The students select the themes on the extended registration form that they will receieve after registering on <a href="https://oakcodefest2021.devpost.com/" targe="_blank">devpost</a>. We will confirm the teams which have been shortlisted around 3 weeks prior to Codefest.</span></div>
-                                    </li>
+                <li>
+                  <div class="collapsible-header grey darken-4"><i class="material-icons">monetization_on</i>What does
+                    my registration fee go towards?</div>
+                  <div class="collapsible-body grey darken-2 white-text"><span>The ₹300 will cover your access to the
+                      virtual venue and other other platoforms where we will communicate with participants. It will also
+                      contributed to the proceeds that would be donated to charity and would make you eligible for the
+                      free goodies provided by our sponsors.</span></div>
+                </li>
+                <li>
+                  <div class="collapsible-header grey darken-4"><i class="material-icons">date_range</i>When would I
+                    recieve confirmation that I have been selected?</div>
+                  <div class="collapsible-body grey darken-2 white-text"><span>The students select the themes on the
+                      extended registration form that they will receieve after registering on <a
+                        href="https://oakcodefest2021.devpost.com/" targe="_blank">devpost</a>. We will confirm the
+                      teams which have been shortlisted around 3 weeks prior to Codefest.</span></div>
+                </li>
 
-                                </ul>
-                            </div>
-                            <div id="dates">
-                                <div class="timeline">
-                                    <div class="timeline-event">
-                                        <div class="card timeline-content">
-                                            <div class="card-content">
-                                                <span class="card-title activator grey-text text-darken-4">Registration Opens<i class="material-icons right">more_vert</i></span>
-                                                <p class="black-text">Registration for the codefest opens on the 19<sup>th</sup> of December</p>
-                                            </div>
-                                            <div class="card-reveal">
-                                                <span class="card-title grey-text text-darken-4">Registration Opens<i class="material-icons right">close</i></span>
-                                                <p class="black-text">Participants are expected to sign up for the event and submit a detailed idea on what exactly they are going to do at the event. The participants will be evaluated based on this idea.</p>
-                                            </div>
-                                        </div>
-                                        <div class="timeline-badge blue white-text"><i class="material-icons">assignment</i></div>
-                                    </div>
-                                    <div class="timeline-event">
-                                        <div class="card timeline-content">
-                                            <div class="card-content">
-                                                <span class="card-title activator grey-text text-darken-4">Registration Closes<i class="material-icons right">more_vert</i></span>
-                                                <p class="black-text">Registrations close in mid. January</p>
-                                            </div>
-                                            <div class="card-reveal">
-                                                <span class="card-title grey-text text-darken-4">Registration Closes<i class="material-icons right">close</i></span>
-                                                <p class="black-text">Participants will not be allowed to register after this date under any cirumstances. After registration closes, participants will be evaluated based on the idea they submitted.</p>
-                                            </div>
-                                        </div>
-                                        <div class="timeline-badge red white-text"><i class="material-icons">close</i></div>
-                                    </div>
-                                    <div class="timeline-event">
-                                        <div class="card timeline-content">
-                                            <div class="card-content">
-                                                <span class="card-title activator grey-text text-darken-4">Evaluation Completed<i class="material-icons right">more_vert</i></span>
-                                                <p class="black-text">Selected Participants will be notified shortly after registering.</p>
-                                            </div>
-                                            <div class="card-reveal">
-                                                <span class="card-title grey-text text-darken-4">Evaluation Completed<i class="material-icons right">close</i></span>
-                                                <p class="black-text">The list of selected participants will be put up on the website. All selected participants will be emailed special event invite links.</p>
-                                            </div>
-                                        </div>
-                                        <div class="timeline-badge green white-text"><i class="material-icons">check</i></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+              </ul>
+            </div>
+            <div id="dates">
+              <div class="timeline">
+                <div class="timeline-event">
+                  <div class="card timeline-content">
+                    <div class="card-content">
+                      <span class="card-title activator grey-text text-darken-4">Registration Opens<i
+                          class="material-icons right">more_vert</i></span>
+                      <p class="black-text">Registration for the codefest opens on the 19<sup>th</sup> of December</p>
                     </div>
-                </section>
-
-                <section id="sponsor">
-            </div>
-            <div class="row">
-                <div class="col s12">
-                    <h3 class="center-align">Sponsors</h3>
+                    <div class="card-reveal">
+                      <span class="card-title grey-text text-darken-4">Registration Opens<i
+                          class="material-icons right">close</i></span>
+                      <p class="black-text">Participants are expected to sign up for the event and submit a detailed
+                        idea on what exactly they are going to do at the event. The participants will be evaluated based
+                        on this idea.</p>
+                    </div>
+                  </div>
+                  <div class="timeline-badge blue white-text"><i class="material-icons">assignment</i></div>
                 </div>
+                <div class="timeline-event">
+                  <div class="card timeline-content">
+                    <div class="card-content">
+                      <span class="card-title activator grey-text text-darken-4">Registration Closes<i
+                          class="material-icons right">more_vert</i></span>
+                      <p class="black-text">Registrations close in mid. January</p>
+                    </div>
+                    <div class="card-reveal">
+                      <span class="card-title grey-text text-darken-4">Registration Closes<i
+                          class="material-icons right">close</i></span>
+                      <p class="black-text">Participants will not be allowed to register after this date under any
+                        cirumstances. After registration closes, participants will be evaluated based on the idea they
+                        submitted.</p>
+                    </div>
+                  </div>
+                  <div class="timeline-badge red white-text"><i class="material-icons">close</i></div>
+                </div>
+                <div class="timeline-event">
+                  <div class="card timeline-content">
+                    <div class="card-content">
+                      <span class="card-title activator grey-text text-darken-4">Evaluation Completed<i
+                          class="material-icons right">more_vert</i></span>
+                      <p class="black-text">Selected Participants will be notified shortly after registering.</p>
+                    </div>
+                    <div class="card-reveal">
+                      <span class="card-title grey-text text-darken-4">Evaluation Completed<i
+                          class="material-icons right">close</i></span>
+                      <p class="black-text">The list of selected participants will be put up on the website. All
+                        selected participants will be emailed special event invite links.</p>
+                    </div>
+                  </div>
+                  <div class="timeline-badge green white-text"><i class="material-icons">check</i></div>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sponsor">
+    </div>
+    <div class="row">
+      <div class="col s12">
+        <h3 class="center-align">Sponsors</h3>
+      </div>
+    </div>
+    <!--
             <div class="row">
               <div class="col s6 offset-s3">
                 <h4 class="center-align">Title sponsor</h4>
               </div>
             </div>
-            <div class="row disabled" id="">
-              <center>
-                <!-- <div class="container"> -->
-                <div class="col s6 offset-s3">
-                  <center>
-                    <a href="https://www.teamhgs.com" target="_blank">
-                      <img class="responsive-img sponsor-logo" id="HGSLogo" src="images/sponsors/hgs-white.png"/>
-                    </a>
-                    <div class="hidden">
-                      <video height="300px" class="sponsor-video" autoplay muted controls id="">
-                        <source src="media/sponsors/HGS Listen 2.0.mp4" type="video/mp4">
-                      </video>
-                    </div>
-                  </center>
-                </div>
-
-                <!-- </div> -->
+            -->
+    <div class="row disabled" id="">
+      <center>
+        <!-- <div class="container"> -->
+        <div class="col s6 offset-s3">
+          <center>
+            <a href="https://www.teamhgs.com" target="_blank">
+              <img class="responsive-img sponsor-logo" id="HGSLogo" src="images/sponsors/hgs-white.png" />
+            </a>
+            <div class="hidden">
+              <video height="300px" class="sponsor-video" autoplay muted controls id="">
+                <source src="media/sponsors/HGS Listen 2.0.mp4" type="video/mp4">
+              </video>
             </div>
-            <!-- <div class="row">
+          </center>
+        </div>
+
+        <!-- </div> -->
+    </div>
+    <!-- <div class="row">
               <div class="col s6">
                 <center>
                   <video autoplay height="200px" controls id="HGSVid" muted>
@@ -657,7 +768,7 @@ themes:[
               </div>
               <a href="https://www.cisco.com" class = "col s6"><img class="responsive-img" id="CiscoLogo" src="images/sponsors/Cisco.png" /></a>
             </div> -->
-            <!-- <div class="row hidden">
+    <!-- <div class="row hidden">
               <center>
                 <video autoplay height="400px" controls id="HGSVid" muted>
                   <source src="Codefest2020Logo.mp4" type="video/mp4">
@@ -665,7 +776,7 @@ themes:[
                 </video>
               </center>
             </div> -->
-            <!-- <div class="row ">
+    <!-- <div class="row ">
               <div class="col s12">
                 <h4 class="center-align">Financial sponsors</h4>
               </div>
@@ -689,26 +800,33 @@ themes:[
                 </div>
                 <div class="col s3"></div>
             </div> -->
+    <!--
             <div class="row ">
               <div class="col s12">
                 <h4 class="center-align">Associate sponsor</h4>
               </div>
             </div>
+            -->
+    <!--
             <div class="row valign-wrapper center-align">
                 <div class="col s4 offset-s4">
                     <a href="https://www.volvo.com/" target="_blank"><img class="responsive-img sponsor-logo"  src="images/sponsors/Volvo_iron_mark_CMYK_EPS/Volvo_iron_mark_CMYK.png"></a>
                     <div class="hidden">
                       <video height="300px" muted controls id="" class="sponsor-video">
-                        <source src="media/sponsors/Volvo trucks processed.mp4" type="video/mp4">
+                        <source src="Volvo trucks processed.mp4" type="video/mp4">
                       </video>
                     </div>
                 </div>
             </div>
+            -->
+    <!--
             <div class="row ">
               <div class="col s12">
                 <h4 class="center-align">Financial sponsor</h4>
               </div>
             </div>
+            -->
+    <!--
             <div class="row valign-wrapper center-align">
               <div class="col s3">
 
@@ -720,128 +838,110 @@ themes:[
 
               </div>
             </div>
-            <div class="row ">
-              <div class="col s12">
-                <h4 class="center-align">In-kind partners</h4>
-              </div class="col s5">
-                <a href="https://balsamiq.com/" target="_blank"><img class="responsive-img"  src="images/sponsors/balsamiq.png"></a>
-            </div>
-            <div class="row valign-wrapper center-align">
-                <div class="col s2"></div>
-                <div class="col s4">
-                  <a href="http://modfy.video/" target="_blank"><img class="responsive-img"  src="images/sponsors/MODFY logo with title.png"></a>
-                </div>
-                <div class="col s4">
-                    <a href="https://repl.it/" target="_blank"><img class="responsive-img"  src="images/sponsors/repl-light.svg"></a>
-                </div>
-                <div class="col s2"></div>
-            </div>
-            <div class="row valign-wrapper center-align">
-                <div class="col s1"></div>
-                <div class="col s5">
-                    <a href="https://balsamiq.com/" target="_blank"><img class="responsive-img"  src="images/sponsors/balsamiq.png"></a>
-                </div>
-                <div class="col s4">
-                    <a href="https://www.wolfram.com/language/" target="_blank"><img class="responsive-img"  src="images/sponsors/wolfram.png"><img class="" src="" alt="" /></a>
-                </div>
-                <div class="col s1"></div>
-            </div>
-            <div class="row valign-wrapper center-align">
-              <div class="col s4"></div>
-                <div class="col s4">
-                  <a href="http://echoar.xyz/" target="_blank"><img class="responsive-img" src="images/sponsors/Echo AR.png" alt="" /></a>
-                </div>
-                <div class="col s4"></div>
-            </div>
-            <!-- <div class="row">
+            -->
+    <div class="row ">
+      <div class="col s12">
+        <h4 class="center-align">In-kind partners</h4>
+        <div class="row valign-wrapper center-align">
+          <div class="col s2"></div>
+          <div class="col s4">
+            <a href="https://balsamiq.com/" target="_blank"><img class="responsive-img"
+                src="images/sponsors/balsamiq.png"></a>
+          </div>
+          <div class="col s4">
+            <a href="" target="_blank"><img class="responsive-img" src="images/sponsors/under-the-cloche.png"></a>
+          </div>
+          <div class="col s2"></div>
+        </div>
+        <!-- <div class="row">
               <div class="col s6 offset-s3">
                 <h4 class="center-align">Virtual venue Partner</h4>
               </div>
             </div> -->
-            <!-- <div class="row">
+        <!-- <div class="row">
               <div class="col s2 offset-s5" style="background-color: rgba(255, 255, 255, 0.5); border-radius: 100px; padding: 10px;">
                 <center>
                   <a href="http://branch.gg/" target="_blank"><img class="responsive-img"  src="images/sponsors/branchgg.png"></a>
                 </center>
               </div>
             </div> -->
-            </section>
+  </section>
 
-                              <div class="container">
-                                <section class="grey darken-4">
-                                  <div class="row" style="padding-top:10px;padding-bottom:-150px;">
-                                    <div class="col s12" style="padding-top:20px;margin-bottom:0">
-                                        <center>
-                                          <div style="font-size: 60px;"><b>Photo archive</b></div>
-                                        </center>
-                                    </div>
-                                  </div>
-                                  <div class="row" style="padding:0px 25px;padding-bottom:15px">
-                                    <div class="col s4 photo-archive-image-container add-blur" id="photos-2018-container">
-                                      <center>
-                                        <h1><a href="https://photos.app.goo.gl/d1dYMX6xvNrVfUwJ3">2018</a></h1>
-                                      </center>
-                                      <div id="photos-2018" class="photo-archive-image">
+  <div class="container">
+    <section class="grey darken-4">
+      <div class="row" style="padding-top:10px;padding-bottom:-150px;">
+        <div class="col s12" style="padding-top:20px;margin-bottom:0">
+          <center>
+            <div style="font-size: 60px;"><b>Photo archive</b></div>
+          </center>
+        </div>
+      </div>
+      <div class="row" style="padding:0px 25px;padding-bottom:15px">
+        <div class="col s4 photo-archive-image-container add-blur" id="photos-2018-container">
+          <center>
+            <h1><a href="https://photos.app.goo.gl/d1dYMX6xvNrVfUwJ3">2018</a></h1>
+          </center>
+          <div id="photos-2018" class="photo-archive-image">
 
-                                      </div>
-                                    </div>
-                                    <div class="col s4 photo-archive-image-container add-blur" id="photos-2019-container">
-                                      <center>
-                                        <h1><a href="https://photos.app.goo.gl/gGYJ8jutArw5ewnJ7">2019</a></h1>
-                                      </center>
-                                      <div id="photos-2019" class='photo-archive-image'>
+          </div>
+        </div>
+        <div class="col s4 photo-archive-image-container add-blur" id="photos-2019-container">
+          <center>
+            <h1><a href="https://photos.app.goo.gl/gGYJ8jutArw5ewnJ7">2019</a></h1>
+          </center>
+          <div id="photos-2019" class='photo-archive-image'>
 
-                                      </div>
-                                    </div>
-                                    <div class="col s4 photo-archive-image-container add-blur" id="photos-2020-container">
-                                      <center>
-                                        <h1><a href="https://photos.app.goo.gl/RsQdaypjbmtdctnt8">2020</a></h1>
-                                      </center>
-                                      <div id="photos-2020" class='photo-archive-image'>
+          </div>
+        </div>
+        <div class="col s4 photo-archive-image-container add-blur" id="photos-2020-container">
+          <center>
+            <h1><a href="https://photos.app.goo.gl/RsQdaypjbmtdctnt8">2020</a></h1>
+          </center>
+          <div id="photos-2020" class='photo-archive-image'>
 
-                                      </div>
-                                    </div>
-                                  </div>
-                                </section>
-                              </div>
-                <div class="container">
-                    <section id="Codefest-18">
-                        <div class="row">
-                            <h1 class="center-align">Winners of Codefest 2018</h1>
-                        </div>
-                    </section>
-                </div>
-            </div>
-            <div class="parallax-container">
-                <div class="parallax"><img src="images/winners.jpg"></div>
-            </div>
-            <br>
-            <br>
-            <div class="container">
-                <section id="Codefest-19">
-                    <div class="row">
-                        <h1 class="center-align">Winners of Codefest 2019</h1>
-                    </div>
-                </section>
-            </div>
-            <div class="parallax-container">
-                <div class="parallax"><img src="images/winners2019.jpg"></div>
-            </div>
-            <br>
-            <br>
-            <div class="container">
-                <section id="Codefest-20">
-                    <div class="row">
-                        <h1 class="center-align">Winners of Codefest 2020</h1>
-                    </div>
-                </section>
-            </div>
-            <div class="parallax-container">
-              <div class="parallax"><img src="images/winners2020.png"></div>
-            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="container">
+    <section id="Codefest-18">
+      <div class="row">
+        <h1 class="center-align">Winners of Codefest 2018</h1>
+      </div>
+    </section>
+  </div>
+  </div>
+  <div class="parallax-container">
+    <div class="parallax"><img src="images/winners.jpg"></div>
+  </div>
+  <br>
+  <br>
+  <div class="container">
+    <section id="Codefest-19">
+      <div class="row">
+        <h1 class="center-align">Winners of Codefest 2019</h1>
+      </div>
+    </section>
+  </div>
+  <div class="parallax-container">
+    <div class="parallax"><img src="images/winners2019.jpg"></div>
+  </div>
+  <br>
+  <br>
+  <div class="container">
+    <section id="Codefest-20">
+      <div class="row">
+        <h1 class="center-align">Winners of Codefest 2020</h1>
+      </div>
+    </section>
+  </div>
+  <div class="parallax-container">
+    <div class="parallax"><img src="images/winners2020.png"></div>
+  </div>
 
-            <div class="container">
-                <!--<div class="divider white"></div>
+  <div class="container">
+    <!--<div class="divider white"></div>
             <div class="row"></div>
             <section id="venue">
                 <div class="row">
@@ -857,62 +957,85 @@ themes:[
             </section> -->
 
 
-                <!-- <div class="divider white"></div> -->
+    <!-- <div class="divider white"></div> -->
 
+  </div>
+  </section>
+
+
+
+
+  <!-- Modal Structure -->
+  <div id="terms" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <div class="row">
+        <h3 class="black-text center-align">Terms and Conditions</h3>
+      </div>
+      <div class="row">
+        <ul class="collection">
+          <li class="collection-item black-text">No one over the age of 19 is allowed to participate. Oakridge
+            International insists that all participants carry their official Identification (government and school
+            identification are accepted). </li>
+          <li class="collection-item black-text">If the identification is found to be invalid, Oakridge International
+            reserves the right to deny admission.</li>
+          <li class="collection-item black-text">No use of illegal substances, smoking, drinking or any such activities
+            on the premises.</li>
+          <li class="collection-item black-text">No littering on the premises.</li>
+          <li class="collection-item black-text">No use of physical violence.</li>
+          <li class="collection-item black-text">Violation of these clauses will lead to immediate disqualification.
+          </li>
+          <li class="collection-item black-text">The judges' decisions are final.</li>
+          <li class="collection-item black-text">The management reserves the right to admission. The management reserves
+            the right to make final decisions regarding disputes that may arise.</li>
+          <li class="collection-item black-text">Oakridge International reserves all rights to the event and all
+            decision made by Oakridge International are final.</li>
+        </ul>
+      </div>
     </div>
-    </section>
-
-
-
-
-    <!-- Modal Structure -->
-    <div id="terms" class="modal modal-fixed-footer">
-        <div class="modal-content">
-            <div class="row">
-                <h3 class="black-text center-align">Terms and Conditions</h3>
-            </div>
-            <div class="row">
-                <ul class="collection">
-                    <li class="collection-item black-text">No one over the age of 19 is allowed to participate. Oakridge International insists that all participants carry their official Identification (government and school identification are accepted). </li>
-                    <li class="collection-item black-text">If the identification is found to be invalid, Oakridge International reserves the right to deny admission.</li>
-                    <li class="collection-item black-text">No use of illegal substances, smoking, drinking or any such activities on the premises.</li>
-                    <li class="collection-item black-text">No littering on the premises.</li>
-                    <li class="collection-item black-text">No use of physical violence.</li>
-                    <li class="collection-item black-text">Violation of these clauses will lead to immediate disqualification.</li>
-                    <li class="collection-item black-text">The judges' decisions are final.</li>
-                    <li class="collection-item black-text">The management reserves the right to admission. The management reserves the right to make final decisions regarding disputes that may arise.</li>
-                    <li class="collection-item black-text">Oakridge International reserves all rights to the event and all decision made by Oakridge International are final.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="modal-footer">
-            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
-        </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
     </div>
-    <footer class="page-footer grey darken-4">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text"><b>Contact Us</b></h5>
-                    <p class="grey-text text-lighten-4">Email us at <a href="mailto:oakcodefest@oakridge.in">oakcodefest@oakridge.in</a></p>
-                </div>
-
-                <div class="col l3 s12">
-                    <h5 class="white-text"><b>Codefest Core-Team</b></h5>
-                    <p class="grey-text text-lighten-4">Aarush Mehrotra</p>
-                    <p class="grey-text text-lighten-4">Ram Velamuri</p>
-                    <p class="grey-text text-lighten-4">Pranav Menon</p>
-                    <p class="grey-text text-lighten-4">Saanika Gupta</p>
-                </div>
-                <div class="col l3 s12">
-                  <p class="grey-text text-lighten-4"></br></p>
-                    <p class="grey-text text-lighten-4">Bhumika Kalaimalai</p>
-                    <p class="grey-text text-lighten-4">Jahnavi Thejo Prakash</p>
-                    <p class="grey-text text-lighten-4">Aditya Lingam</p>
-                    <p class="grey-text text-lighten-4">Pratham Mishra</p>
-                </div>
-            </div>
+  </div>
+  <footer class="page-footer grey darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text"><b>Contact Us</b></h5>
+          <p class="grey-text text-lighten-4">Email us at <a
+              href="mailto:oakcodefest@oakridge.in">oakcodefest@oakridge.in</a></p>
         </div>
+
+        <div class="col l3 s12">
+          <h5 class="white-text"><b>Codefest Core-Team</b></h5>
+          <p class="grey-text text-lighten-4">Aarush Mehrotra</p>
+          <p class="grey-text text-lighten-4">Ram Velamuri</p>
+          <p class="grey-text text-lighten-4">Pranav Menon</p>
+          <p class="grey-text text-lighten-4">Saanika Gupta</p>
+        </div>
+        <div class="col l3 s12">
+          <p class="grey-text text-lighten-4"></br></p>
+          <p class="grey-text text-lighten-4">Bhumika Kalaimalai</p>
+          <p class="grey-text text-lighten-4">Jahnavi Thejo Prakash</p>
+          <p class="grey-text text-lighten-4">Aditya Lingam</p>
+          <p class="grey-text text-lighten-4">Pratham Mishra</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            &copy 2022 Oakridge Codefest
+          </div>
+          <div class="col s5">
+            <b>Developed</b> by <a href="https://github.com/BK-Modding">BK-Modding</a>,
+            <a href="https://github.com/CryogenicPlanet"> CryogenicPlanet</a>,
+            <a href="https://github.com/Nexus987"> Nexus</a>,
+            <a href="https://github.com/gaurangbharti1"> GBHacker</a> and
+            <a href="https://github.com/YeshYyyK"> Yeshy</a>
+          </div>
+        </div>
+        
         <div class="footer-copyright">
             <div class="container">
                 <div class="row">
@@ -935,97 +1058,100 @@ themes:[
                         <b>Renovated</b> by <a href="https://github.com/aklingam7">aklingam7</a>,
                           <a href="https://github.com/EnderDuckLikesCoding"> Pranav</a> and 
                           <a href="https://github.com/iAarush"> iAarush</a>
-
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col l6 s12">
-                        <a onclick="openTerms();">Terms and conditions</a>
-                    </div>
-                    <div class="col s6 offset-s6">
-                        <div class="col s2"><a href="https://www.facebook.com/oakcf/"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
-                          <path id="fb"fill="#fff" d="M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6A4,4 0 0,1 14,2H17Z" />
-                      </svg></a></div>
-                                              <div class="col s2"> <a href="https://www.instagram.com/oakcodefest/"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
-                          <path id="insta"fill="#fff" d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
-                      </svg></a></div>
-
-
-
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-    </footer>
+        <div class="row">
+          <div class="col l6 s12">
+            <a onclick="openTerms();">Terms and conditions</a>
+          </div>
+          <div class="col s6 offset-s6">
+            <div class="col s2"><a href="https://www.facebook.com/oakcf/"><svg style="width:24px;height:24px"
+                  viewBox="0 0 24 24">
+                  <path id="fb" fill="#fff"
+                    d="M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6A4,4 0 0,1 14,2H17Z" />
+                </svg></a></div>
+            <div class="col s2"> <a href="https://www.instagram.com/oakcodefest/"><svg style="width:24px;height:24px"
+                  viewBox="0 0 24 24">
+                  <path id="insta" fill="#fff"
+                    d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
+                </svg></a></div>
+
+
+
+          </div>
+        </div>
+      </div>
     </div>
-    <script type="text/javascript" src="js/website.js"></script>
-    <script type="text/javascript">
-     console.log(document.getElementById("bgvid"))
-    </script>
+  </footer>
+  </div>
+  <script type="text/javascript" src="js/website.js"></script>
+  <script type="text/javascript">
+    console.log(document.getElementById("bgvid"))
+  </script>
 
 
-    <script>
+  <script>
     function getTimeRemaining(endtime) {
-         var t = Date.parse(endtime) - Date.parse(new Date());
-         var seconds = Math.floor((t / 1000) % 60);
-         var minutes = Math.floor((t / 1000 / 60) % 60);
-         var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-         var days = Math.floor(t / (1000 * 60 * 60 * 24));
-         return {
-             'total': t,
-             'days': days,
-             'hours': hours,
-             'minutes': minutes,
-             'seconds': seconds
-         };
-     }
+      var t = Date.parse(endtime) - Date.parse(new Date());
+      var seconds = Math.floor((t / 1000) % 60);
+      var minutes = Math.floor((t / 1000 / 60) % 60);
+      var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+      var days = Math.floor(t / (1000 * 60 * 60 * 24));
+      return {
+        'total': t,
+        'days': days,
+        'hours': hours,
+        'minutes': minutes,
+        'seconds': seconds
+      };
+    }
 
-     function initializeClock(id, endtime) {
-         var clock = document.getElementById(id);
-         var daysSpan = clock.querySelector('.days');
-         var hoursSpan = clock.querySelector('.hours');
-         var minutesSpan = clock.querySelector('.minutes');
-         var secondsSpan = clock.querySelector('.seconds');
+    function initializeClock(id, endtime) {
+      var clock = document.getElementById(id);
+      var daysSpan = clock.querySelector('.days');
+      var hoursSpan = clock.querySelector('.hours');
+      var minutesSpan = clock.querySelector('.minutes');
+      var secondsSpan = clock.querySelector('.seconds');
 
-         function updateClock() {
-             var t = getTimeRemaining(endtime);
+      function updateClock() {
+        var t = getTimeRemaining(endtime);
 
-             daysSpan.innerHTML = t.days;
-             hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-             minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-             secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+        daysSpan.innerHTML = t.days;
+        hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+        minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+        secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
 
-             if (t.total <= 0) {
-                 clearInterval(timeinterval);
-             }
-         }
+        if (t.total <= 0) {
+          clearInterval(timeinterval);
+        }
+      }
 
-         updateClock();
-         var timeinterval = setInterval(updateClock, 1000);
-     }
-     // setTimeout(function () {
-     //   $('#bigbtn1')[0].classList.remove("pulse")
-     //   $('#bigbtn2')[0].classList.remove("pulse")
-     //   $('#noticeicon')[0].classList.remove("pulse")
-     // }, 5000);
-     var deadline = 'January 22 2022 11:00:00 GMT+0530';
-     initializeClock('clockdiv', deadline);
-     // console.log("%c   uwu  ","font-size:250px;background-color:black;color:white;font-weight:bold;")
+      updateClock();
+      var timeinterval = setInterval(updateClock, 1000);
+    }
+    // setTimeout(function () {
+    //   $('#bigbtn1')[0].classList.remove("pulse")
+    //   $('#bigbtn2')[0].classList.remove("pulse")
+    //   $('#noticeicon')[0].classList.remove("pulse")
+    // }, 5000);
+    var deadline = 'January 22 2022 11:00:00 GMT+0530';
+    initializeClock('clockdiv', deadline);
+    // console.log("%c   uwu  ","font-size:250px;background-color:black;color:white;font-weight:bold;")
     // muh_uncomment_anchor
     // UNCOMMENT FOR TESTING, AND THEN COMMENT AFTER DONE BECAUSE THEY HAVEN'T SENT VIDEO YET
     // $("#titleSponsorContainer").on("mouseover.customEvent",(event) => {
     //   setTimeout(koolHGSAnimation,1000)
     //   $("#titleSponsorContainer").unbind("mouseover.customEvent")
     // })
-    $('.sponsor-container:not(.disabled)').on('mouseover',function(){
+    $('.sponsor-container:not(.disabled)').on('mouseover', function () {
       sponsorContainer = $(this);
       sponsorLogo = sponsorContainer.find('.sponsor-logo');
       sponsorVideo = sponsorContainer.find('.sponsor-video');
       // console.log([sponsorContainer,sponsorLogo,sponsorVideo])
-      sponsorAnimation(sponsorContainer,sponsorLogo,sponsorVideo)
+      sponsorAnimation(sponsorContainer, sponsorLogo, sponsorVideo)
       sponsorContainer.unbind('mouseover')
     })
-    function sponsorAnimation(sponsorContainer,sponsorLogo,sponsorVideo){
+    function sponsorAnimation(sponsorContainer, sponsorLogo, sponsorVideo) {
       // sponsorLogo.animate({height:"400px"})
       sponsorVideo.hide()
       sponsorVideo.parent().removeClass('hidden');
@@ -1040,51 +1166,51 @@ themes:[
     //     var elems = document.querySelectorAll('.tap-target');
     //     var instances = M.TapTarget.init(elems, options);
     //   });
-      // $('#photos-2019-container a').on('mouseover',() => {
-      //   $('#photos-2019').addClass("blurred")
-      // })
-      // $('#photos-2019-container a').on('mouseout',() => {
-      //   $('#photos-2019').removeClass("blurred")
-      // })
-      // $('#photos-2018-container a').on('mouseover',() => {
-      //   $('#photos-2018').addClass("blurred")
-      // })
-      // $('#photos-2018-container a').on('mouseout',() => {
-      //   $('#photos-2018').removeClass("blurred")
-      // })
-      $('.add-blur a').on('mouseover',function(){
-        elem = $(this).parents()[2];
-        $(elem).find('.photo-archive-image').addClass('blurred')
-      })
-      $('.add-blur a').on('mouseout',function(){
-        elem = $(this).parents()[2];
-        $(elem).find('.photo-archive-image').removeClass('blurred')
-      })
+    // $('#photos-2019-container a').on('mouseover',() => {
+    //   $('#photos-2019').addClass("blurred")
+    // })
+    // $('#photos-2019-container a').on('mouseout',() => {
+    //   $('#photos-2019').removeClass("blurred")
+    // })
+    // $('#photos-2018-container a').on('mouseover',() => {
+    //   $('#photos-2018').addClass("blurred")
+    // })
+    // $('#photos-2018-container a').on('mouseout',() => {
+    //   $('#photos-2018').removeClass("blurred")
+    // })
+    $('.add-blur a').on('mouseover', function () {
+      elem = $(this).parents()[2];
+      $(elem).find('.photo-archive-image').addClass('blurred')
+    })
+    $('.add-blur a').on('mouseout', function () {
+      elem = $(this).parents()[2];
+      $(elem).find('.photo-archive-image').removeClass('blurred')
+    })
 
-      $("#fb").on("hover", function(){
-        this.attr("fill", "#3b5998")
-      })
+    $("#fb").on("hover", function () {
+      this.attr("fill", "#3b5998")
+    })
 
-      $("#twit").on("hover", function(){
-        this.attr("fill", "#00acee")
-      })
+    $("#twit").on("hover", function () {
+      this.attr("fill", "#00acee")
+    })
 
-      $("#fb").on("hover", function(){
-        this.attr("fill", "#dd2a7b")
-      })
+    $("#fb").on("hover", function () {
+      this.attr("fill", "#dd2a7b")
+    })
 
-      setTimeout(function(){
-        $(".register-btn").removeClass("pulse")
-      }, 10000);
+    setTimeout(function () {
+      $(".register-btn").removeClass("pulse")
+    }, 10000);
 
-      $(".register-btn").on("mouseover", function(){
-        $(".register-btn").addClass("pulse")
-      })
+    $(".register-btn").on("mouseover", function () {
+      $(".register-btn").addClass("pulse")
+    })
 
-      $(".register-btn").on("mouseout", function(){
-        $(".register-btn").removeClass("pulse")
-      })
-    </script>
+    $(".register-btn").on("mouseout", function () {
+      $(".register-btn").removeClass("pulse")
+    })
+  </script>
 
 </body>
 

@@ -8,11 +8,6 @@ function noscroll() {
   window.scrollTo(0, 0);
 }
 
-function openTerms() {
-  console.log("Hello");
-  $("#terms").modal("open");
-}
-
 var mobileAndTabletcheck = function () {
   var check = false;
   (function (a) {

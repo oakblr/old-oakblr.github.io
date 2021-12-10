@@ -8,6 +8,11 @@ function noscroll() {
   window.scrollTo(0, 0);
 }
 
+function openTerms() {
+  console.log("Hello");
+  $("#terms").modal("open");
+}
+
 var mobileAndTabletcheck = function () {
   var check = false;
   (function (a) {
@@ -124,11 +129,6 @@ $(document).ready(function () {
         );
     }
   });
-
-  function openTerms() {
-    console.log("Hello");
-    $("#terms").modal("open");
-  }
 
   /*let timerId = setTimeout(function tick() {
    if (document.getElementById("fp").className == "card-panel blue-grey darken-2 pulse center-align hoverable")

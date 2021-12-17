@@ -214,7 +214,7 @@ $(document).ready(function () {
       tag = "",
       writingTag = false,
       tagOpen = false,
-      typeSpeed = 40,
+      typeSpeed = 30,
       tempTypeSpeed = 0;
 
     var type = function () {
@@ -241,12 +241,12 @@ $(document).ready(function () {
         if (HTML[cursorPosition] === " ") {
           tempTypeSpeed = 0;
         } else {
-          tempTypeSpeed = Math.random() * typeSpeed + 50;
+          tempTypeSpeed = Math.random() * typeSpeed + 40;
         }
         t.innerHTML += HTML[cursorPosition];
       }
       if (writingTag === true && HTML[cursorPosition] === ">") {
-        tempTypeSpeed = Math.random() * typeSpeed + 50;
+        tempTypeSpeed = Math.random() * typeSpeed + 40;
         writingTag = false;
         if (tagOpen) {
           var newSpan = document.createElement("span");

@@ -1146,7 +1146,12 @@ themes:[
     })
     
     var early_reg_deadline = 'January 11 2022 23:59:59 GMT+0530';
-    $(".register-btn").text("Early Bird Registration Ends In " + getTimeRemaining(early_reg_deadline)["days"] + " Days");
+    var days_to_early_reg_deadline = getTimeRemaining(early_reg_deadline)["days"];
+    $(".register-btn").text("Early Bird Registration Ends In " + days_to_early_reg_deadline + " Days");
+    if (days_to_early_reg_deadline <= 0) {
+      $(".register-btn").text(Registerations Open);
+      $(".register-btn").attr ('href', "");
+    }
   </script>
 
 </body>

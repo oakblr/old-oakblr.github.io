@@ -213,7 +213,7 @@ ul.collapsible > li {
   background-size: cover;
   /* width: 100%; */
   /* background-color:darkblue; */
-  background-image: url("../images/2022_bg.png");
+  background-image: url("../images/garbage.png");
   z-index: -100;
   transform: translateX(-50%) translateY(-50%);
   transition: 1s opacity;

@@ -714,7 +714,7 @@ themes:[
         <div class="col s6 offset-s3">
           <center>
             <a href="https://www.teamhgs.com" target="_blank">
-              <img class="responsive-img sponsor-logo" id="HGSLogo" src="images/sponsors/hgs-white.png" />
+              <img class="responsive-img cf-sponsor-logo" id="HGSLogo" src="images/sponsors/hgs-white.png" />
             </a>
             <div class="hidden">
               <video height="300px" class="sponsor-video" autoplay muted controls id="">
@@ -780,7 +780,7 @@ themes:[
     <!--
             <div class="row valign-wrapper center-align">
                 <div class="col s4 offset-s4">
-                    <a href="https://www.volvo.com/" target="_blank"><img class="responsive-img sponsor-logo"  src="images/sponsors/Volvo_iron_mark_CMYK_EPS/Volvo_iron_mark_CMYK.png"></a>
+                    <a href="https://www.volvo.com/" target="_blank"><img class="responsive-img cf-sponsor-logo"  src="images/sponsors/Volvo_iron_mark_CMYK_EPS/Volvo_iron_mark_CMYK.png"></a>
                     <div class="hidden">
                       <video height="300px" muted controls id="" class="sponsor-video">
                         <source src="Volvo trucks processed.mp4" type="video/mp4">
@@ -816,7 +816,7 @@ themes:[
           <div class="col s3"></div>
           <div class="col s6">
               <a href="https://www.teamhgs.com" target="_blank">
-                <img class="responsive-img sponsor-logo" id="HGSLogo" src="images/sponsors/hgs-white.png">
+                <img class="responsive-img cf-sponsor-logo" id="HGSLogo" src="images/sponsors/hgs-white.png">
               </a>
               <div class="hidden">
                 <video height="300px" class="sponsor-video" autoplay muted controls id="">
@@ -1093,7 +1093,7 @@ themes:[
     // })
     $('.sponsor-container:not(.disabled)').on('mouseover', function () {
       sponsorContainer = $(this);
-      sponsorLogo = sponsorContainer.find('.sponsor-logo');
+      sponsorLogo = sponsorContainer.find('.cf-sponsor-logo');
       sponsorVideo = sponsorContainer.find('.sponsor-video');
       // console.log([sponsorContainer,sponsorLogo,sponsorVideo])
       sponsorAnimation(sponsorContainer, sponsorLogo, sponsorVideo)

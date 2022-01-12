@@ -1,3 +1,4 @@
 # Miscellaneous
 .DS_Store
 ._*
+.vscode/**/*
